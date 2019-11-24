@@ -5,17 +5,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class Template extends AppCompatActivity {
+
+int a;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_template);
+        a=0;
     }
 
     public void showMashroom(View view) {
-
+        a=1;
 
 
     }
+
+
 }
