@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">PizzApp</string>
+    <string name="family_size">פיצה משפחתית</string>
+    <string name="personal_size">פיצה אישית</string>
+    <string name="big_size">פיצה ענקית</string>
+    <string name="personal_size_description">Personal pizza size button</string>
+    <string name="big_size_description">big pizza size button</string>
+    <string name="family_size_description">family pizza size button</string>
+    <string name="next_button_description">next button</string>
+    <string name="personal_size_message">Great, You chose personal size pizza</string>
+    <string name="family_size_message">Great, You chose family size pizza</string>
+    <string name="big_size_message">Great, You chose big size pizza</string>
+    <string name="size_choose_headline_text">בחרו גודל</string>
+    <string name="first_dots_description">pages indicator</string>
 </resources>
