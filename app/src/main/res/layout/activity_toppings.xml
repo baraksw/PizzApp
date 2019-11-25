@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Template"
+    tools:context=".Toppings"
     android:background="@drawable/backgroung_picture"
     >
 
@@ -123,8 +123,8 @@
 
             <Button
                 android:id="@+id/Topping_Pineapple"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="103dp"
+                android:layout_height="51dp"
                 android:layout_weight="1"
                 android:onClick="showPineapple"
                 android:text="Pineapple" />

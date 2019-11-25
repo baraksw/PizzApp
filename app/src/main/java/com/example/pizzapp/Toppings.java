@@ -5,9 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
-public class Template extends AppCompatActivity {
+public class Toppings extends AppCompatActivity {
 
     private ImageView mashrooms_image;
     private boolean mashrooms_view=false;
@@ -26,7 +25,7 @@ public class Template extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_template);
+        setContentView(R.layout.activity_toppings);
         mashrooms_image = findViewById(R.id.mashrooms);
         olives_image = findViewById(R.id.olives);
         onion_image = findViewById(R.id.onion);
