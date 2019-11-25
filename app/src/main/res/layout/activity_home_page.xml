@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_picture"
+    android:background="@drawable/background"
     android:hapticFeedbackEnabled="false"
     android:isScrollContainer="false"
     tools:context=".HomePage">
 
     <ImageView
-        android:id="@+id/dots_pictures"
+        android:id="@+id/dots_level_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dots_up_margin"
@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/first_dot" />
+        app:srcCompat="@drawable/dots_1" />
 
     <TextView
         android:id="@+id/page_headline_textView"
@@ -33,7 +33,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dots_pictures" />
+        app:layout_constraintTop_toBottomOf="@+id/dots_level_1" />
 
     <HorizontalScrollView
         android:id="@+id/size_choose_scrollView"
@@ -97,6 +97,7 @@
         android:contentDescription="@string/next_button_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/next_button_picture" />
+        app:srcCompat="@drawable/next_button"
+        android:onClick="launchToppingsPage"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,45 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Toppings"
-    android:background="@drawable/backgroung_picture"
-    >
+    android:background="@drawable/background"
+    android:hapticFeedbackEnabled="false">
 
-    <Button
-        android:id="@+id/Button_Next"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/dots_level_2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:text="Button"
-        app:layout_constraintBaseline_toBaselineOf="@+id/Button_Back"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/Button_Back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="32dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginTop="@dimen/dots_up_margin"
+        android:layout_marginBottom="@dimen/dots_down_margin"
+        android:contentDescription="@string/first_dots_description"
+        app:layout_constraintBottom_toTopOf="@+id/page_headline_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dots_2"/>
 
     <TextView
-        android:id="@+id/Toppings"
-        android:layout_width="106dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="65dp"
-        android:gravity="center"
-        android:text="Toppings"
-        android:textColor="#CC2F22"
-        android:textColorLink="#CC2F22"
-        android:textSize="50px"
+        android:id="@+id/page_headline_textView_toppings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dots_down_margin"
+        android:gravity="start|end"
+        android:text="Choose Your Toppings"
+        android:textSize="@dimen/page_headline_size"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/dots_level_2" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -56,18 +45,6 @@
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
         app:layout_constraintVertical_bias="0.504"
         app:srcCompat="@drawable/pizza" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:layout_marginBottom="696dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/circles" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
@@ -151,7 +128,34 @@
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/mashroon" />
+        app:srcCompat="@drawable/mashroon"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/next_button"
+        android:onClick="launchDrinksPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/next_button_left_margin"
+        android:layout_marginLeft="@dimen/next_button_left_margin"
+        android:layout_marginBottom="@dimen/next_button_bottom_margin"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/next_button_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/next_button" />
+
+    <ImageButton
+        android:id="@+id/previous_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/next_button_bottom_margin"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/next_button_description"
+        android:onClick="launchHomePage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/previous_button" />
 
     <ImageView
         android:id="@+id/cheese"
