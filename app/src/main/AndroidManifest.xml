@@ -9,14 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Toppings"></activity>
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".CreditOrCash"
+            android:label = "Credit Or Cash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Credit"
+            android:label = "Credit"
+            android:parentActivityName=".CreditOrCash">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pizzapp.CreditOrCash" />
+        </activity>
     </application>
-
 </manifest>
