@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">PizzApp</string>
+    <string name="num_of_card">Num Of Card</string>
     <string name="family_size">פיצה משפחתית</string>
     <string name="personal_size">פיצה אישית</string>
     <string name="big_size">פיצה ענקית</string>
