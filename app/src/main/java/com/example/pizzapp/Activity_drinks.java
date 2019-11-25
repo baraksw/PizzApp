@@ -1,19 +1,22 @@
 package com.example.pizzapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
-public class HomePage extends AppCompatActivity {
-    private static final String LOG_TAG = HomePage.class.getSimpleName();
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Activity_drinks extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
+        setContentView(R.layout.activity_drinks);
+    }
+
+    public void launchPaymentPage(View view) {
+        Intent intent = new Intent(this, CreditOrCash.class);
+        startActivity(intent);
     }
 
     public void launchToppingsPage(View view) {
@@ -21,3 +24,4 @@ public class HomePage extends AppCompatActivity {
         startActivity(intent);
     }
 }
+

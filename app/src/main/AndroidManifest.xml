@@ -28,5 +28,7 @@
             android:label = "Credit Or Cash"></activity>
 
         <activity android:name=".Toppings"></activity>
+
+        <activity android:name=".Activity_drinks"></activity>
     </application>
 </manifest>
