@@ -23,6 +23,6 @@
         </activity>
         <activity android:name=".CreditOrCash"
             android:label = "Credit Or Cash"></activity>
-        <activity android:name=".Template"></activity>
+        <activity android:name=".Toppings"></activity>
     </application>
 </manifest>

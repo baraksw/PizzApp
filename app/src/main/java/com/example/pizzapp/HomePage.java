@@ -15,12 +15,4 @@ public class HomePage extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
     }
 
-    public void launchToppingsPage(View view) {
-        Log.d(LOG_TAG, "Next button clicked!");
-        Intent intent = new Intent(this, Toppings.class);
-        startActivity(intent);
-    }
-
-    private void startActivity(Intent intent) {
-    }
 }
