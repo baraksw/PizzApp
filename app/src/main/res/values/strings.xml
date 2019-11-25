@@ -13,4 +13,5 @@
     <string name="big_size_message">Great, You chose big size pizza</string>
     <string name="size_choose_headline_text">בחרו גודל</string>
     <string name="first_dots_description">pages indicator</string>
+    <string name="drink_choose_headline_text">Select a drink</string>
 </resources>

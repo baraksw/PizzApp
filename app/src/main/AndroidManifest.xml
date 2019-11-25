@@ -8,6 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".HomePage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,3 +27,9 @@
         <activity android:name=".Toppings"></activity>
     </application>
 </manifest>
+=======
+        <activity android:name=".Activity_drinks"></activity>
+    </application>
+
+</manifest>
+>>>>>>> Drinks
