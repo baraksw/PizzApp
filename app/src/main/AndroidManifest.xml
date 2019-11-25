@@ -8,6 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".HomePage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,5 +26,13 @@
             android:label = "Credit Or Cash"></activity>
         <activity android:name=".Toppings"></activity>
         <activity android:name=".Activity_drinks"></activity>
+=======
+        <activity android:name=".Toppings">
+            <intent-filter>
+                <action android:name="android.intent.category.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+>>>>>>> e26c610e3b36c81794d99b9dface162b066de92f
     </application>
 </manifest>
