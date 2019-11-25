@@ -1,11 +1,11 @@
 package com.example.pizzapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 
-public class activity_drinks extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Activity_drinks extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,10 +13,10 @@ public class activity_drinks extends AppCompatActivity {
         setContentView(R.layout.activity_drinks);
     }
 
-    public void next_page(View view) {
-
+    public void launchPaymentPage(View view) {
     }
 
-    public void previous_page(View view) {
+    public void launchToppingsPage(View view) {
     }
 }
+
