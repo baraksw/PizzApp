@@ -13,9 +13,4 @@ public class Credit extends AppCompatActivity {
         setContentView(R.layout.activity_credit);
     }
 
-    public void showMashroom(View view) {
-
-
-
-    }
 }

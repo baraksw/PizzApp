@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_picture"
+    android:background="@drawable/background"
     android:hapticFeedbackEnabled="false"
     android:isScrollContainer="false"
     tools:context=".Activity_drinks">
 
     <ImageView
-        android:id="@+id/dots_pictures_4"
+        android:id="@+id/dots_level_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dots_up_margin"
@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/level_4" />
+        app:srcCompat="@drawable/dots_3" />
 
     <TextView
         android:id="@+id/page_headline_textView"
@@ -33,7 +33,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dots_pictures_4" />
+        app:layout_constraintTop_toBottomOf="@+id/dots_level_3" />
 
     <HorizontalScrollView
         android:id="@+id/drink_choose_scrollView"
@@ -100,19 +100,19 @@
         android:contentDescription="@string/next_button_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/next_button_picture"
+        app:srcCompat="@drawable/next_button"
         android:onClick="launchPaymentPage"/>
 
     <ImageButton
         android:id="@+id/previous_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginRight="@dimen/next_button_left_margin"
+        android:layout_marginBottom="@dimen/next_button_bottom_margin"
         android:background="#00FFFFFF"
         android:contentDescription="@string/next_button_description"
-        android:onClick="launchToppingsPage"
-        android:layout_marginRight="@dimen/next_button_left_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/drink_choose_scrollView"
-        app:srcCompat="@drawable/previous_button" />
+        app:srcCompat="@drawable/previous_button"
+        android:onClick="launchToppingsPage" />
 </androidx.constraintlayout.widget.ConstraintLayout>
