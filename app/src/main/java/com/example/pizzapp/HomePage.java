@@ -20,4 +20,8 @@ public class HomePage extends AppCompatActivity {
         Intent intent = new Intent(this, Toppings.class);
         startActivity(intent);
     }
+
+    public void choosePizzaSize(View view) {
+
+    }
 }

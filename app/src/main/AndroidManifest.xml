@@ -17,15 +17,8 @@
         </activity>
 
         <activity android:name=".Credit"
-            android:label = "Credit"
-            android:parentActivityName=".CreditOrCash">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.pizzapp.CreditOrCash" />
+            android:label = "Credit">
         </activity>
-
-        <activity android:name=".CreditOrCash"
-            android:label = "Credit Or Cash"></activity>
 
         <activity android:name=".Toppings"></activity>
 
