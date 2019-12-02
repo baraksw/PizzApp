@@ -15,7 +15,7 @@ public class Activity_drinks extends AppCompatActivity {
     }
 
     public void launchPaymentPage(View view) {
-        Intent intent = new Intent(this, CreditOrCash.class);
+        Intent intent = new Intent(this, );
         startActivity(intent);
     }
 

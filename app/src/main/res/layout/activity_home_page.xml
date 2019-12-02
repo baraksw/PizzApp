@@ -13,36 +13,37 @@
         android:id="@+id/dots_level_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dots_up_margin"
-        android:layout_marginBottom="@dimen/dots_down_margin"
+        android:layout_marginBottom="@dimen/bottom_margin"
         android:contentDescription="@string/first_dots_description"
-        app:layout_constraintBottom_toTopOf="@+id/page_headline_textView"
+        android:foregroundGravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dots_1" />
 
     <TextView
         android:id="@+id/page_headline_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dots_down_margin"
+        android:layout_marginTop="@dimen/upper_margin"
         android:gravity="start|end"
         android:text="@string/size_choose_headline_text"
         android:textSize="@dimen/page_headline_size"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dots_level_1" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <HorizontalScrollView
         android:id="@+id/size_choose_scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="172dp"
         android:foregroundGravity="center_vertical"
+        android:onClick="choosePizzaSize"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -56,12 +57,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_marginLeft="@dimen/margin_wide"
-                android:layout_marginRight="@dimen/margin_wide"
+                android:layout_marginLeft="@dimen/wide_margin"
+                android:layout_marginRight="@dimen/wide_margin"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/personal_size_description"
                 android:fadeScrollbars="false"
-                app:srcCompat="@drawable/personal_pizza" />
+                app:srcCompat="@drawable/pizza_size_small" />
 
             <ImageView
                 android:id="@+id/family_size_button"
@@ -70,19 +71,19 @@
                 android:layout_gravity="bottom"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/family_size_description"
-                app:srcCompat="@drawable/family_pizza" />
+                app:srcCompat="@drawable/pizza_size_medium" />
 
             <ImageView
                 android:id="@+id/big_size_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_marginLeft="@dimen/margin_wide"
-                android:layout_marginRight="@dimen/margin_wide"
+                android:layout_marginLeft="@dimen/wide_margin"
+                android:layout_marginRight="@dimen/wide_margin"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/big_size_description"
-                app:srcCompat="@drawable/big_pizza" />
+                app:srcCompat="@drawable/pizza_size_large" />
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -90,14 +91,14 @@
         android:id="@+id/next_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/next_button_left_margin"
-        android:layout_marginLeft="@dimen/next_button_left_margin"
-        android:layout_marginBottom="@dimen/next_button_bottom_margin"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginBottom="@dimen/bottom_margin"
         android:background="#00FFFFFF"
         android:contentDescription="@string/next_button_description"
+        android:onClick="launchToppingsPage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/next_button"
-        android:onClick="launchToppingsPage"/>
+        app:srcCompat="@drawable/next_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
