@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margin_wide">20dp</dimen>
-    <dimen name="next_button_left_margin">16dp</dimen>
-    <dimen name="next_button_bottom_margin">32dp</dimen>
-    <dimen name="dots_up_margin">8dp</dimen>
-    <dimen name="dots_left_margin">8dp</dimen>
-    <dimen name="dots_right_margin">8dp</dimen>
-    <dimen name="dots_down_margin">16dp</dimen>
-    <dimen name="page_headline_size">30sp</dimen>
+    <dimen name="wide_margin">20dp</dimen>
+    <dimen name="left_margin">16dp</dimen>
+    <dimen name="right_margin">16dp</dimen>
+    <dimen name="bottom_margin">32dp</dimen>
+    <dimen name="upper_margin">32dp</dimen>
+    <dimen name="page_headline_size">45 sp</dimen>
 
 </resources>
