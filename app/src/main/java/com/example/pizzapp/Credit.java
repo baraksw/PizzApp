@@ -22,10 +22,5 @@ public class Credit extends AppCompatActivity {
         String howToPay = intent.getStringExtra(Customer_Details.EXTRA_MESSAGE2);
         intent.putExtra(EXTRA_MESSAGE3, howToPay);
         startActivity(intent);
-
-
-
-
-
     }
 }
