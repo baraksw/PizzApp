@@ -7,7 +7,7 @@
     android:background="@drawable/background"
     android:hapticFeedbackEnabled="false"
     android:isScrollContainer="false"
-    tools:context=".Activity_drinks">
+    tools:context=".Drinks">
 
     <ImageView
         android:id="@+id/dots_level_3"
@@ -100,7 +100,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/next_button"
-        android:onClick="launchPaymentPage"/>
+        android:onClick="launchCustomerDetailsPage"/>
 
     <ImageButton
         android:id="@+id/previous_button"

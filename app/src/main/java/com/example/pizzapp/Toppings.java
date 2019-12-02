@@ -127,6 +127,14 @@ public class Toppings extends AppCompatActivity {
     }
 
 
+    public void launchHomePage(View view) {
+        Intent homePageIntent = new Intent(this, HomePage.class);
+        startActivity(homePageIntent);
+    }
 
+    public void launchDrinksPage(View view) {
+        Intent drinksIntent = new Intent(this, Drinks.class);
+        startActivity(drinksIntent);
+    }
 }
 

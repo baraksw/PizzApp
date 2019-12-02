@@ -5,6 +5,6 @@
     <dimen name="right_margin">16dp</dimen>
     <dimen name="bottom_margin">32dp</dimen>
     <dimen name="upper_margin">32dp</dimen>
-    <dimen name="page_headline_size">45 sp</dimen>
+    <dimen name="page_headline_size">45sp</dimen>
 
 </resources>

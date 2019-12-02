@@ -6,7 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Activity_drinks extends AppCompatActivity {
+public class Drinks extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,14 +14,14 @@ public class Activity_drinks extends AppCompatActivity {
         setContentView(R.layout.activity_drinks);
     }
 
-    public void launchPaymentPage(View view) {
-        Intent intent = new Intent(this, );
-        startActivity(intent);
+    public void launchCustomerDetailsPage(View view) {
+        Intent customerDetailsIntent = new Intent(this, Customer_Details.class);
+        startActivity(customerDetailsIntent);
     }
 
     public void launchToppingsPage(View view) {
-        Intent intent = new Intent(this, Toppings.class);
-        startActivity(intent);
+        Intent toppingsIntent = new Intent(this, Toppings.class);
+        startActivity(toppingsIntent);
     }
 }
 
