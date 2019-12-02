@@ -119,15 +119,17 @@
     </HorizontalScrollView>
 
 
-    <Button
+    <ImageView
         android:id="@+id/full"
         android:layout_width="80dp"
         android:layout_height="50dp"
-        android:gravity="center_horizontal"
         android:onClick="showFull"
-        android:text="full"
-        android:layout_marginTop="@dimen/upper_margin"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        app:srcCompat="@drawable/full" />
+
     <ImageView
         android:id="@+id/mashrooms"
         android:layout_width="wrap_content"
@@ -139,29 +141,27 @@
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Button
+    <ImageView
         android:id="@+id/r_half"
         android:layout_width="80dp"
         android:layout_height="50dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="@dimen/upper_margin"
-        android:gravity="center_horizontal"
         android:onClick="showR_half"
-        android:text="RIGHT"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/full"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        app:srcCompat="@drawable/half_right" />
 
-    <Button
+    <ImageView
         android:id="@+id/l_half"
         android:layout_width="80dp"
         android:layout_height="50dp"
-        android:layout_marginTop="@dimen/upper_margin"
-        android:layout_marginRight="32dp"
-        android:gravity="center_horizontal"
         android:onClick="showL_half"
-        android:text="LEFT"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toStartOf="@+id/full"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        app:srcCompat="@drawable/half_left" />
 
     <ImageButton
         android:id="@+id/next_button"
@@ -172,10 +172,10 @@
         android:layout_marginBottom="@dimen/bottom_margin"
         android:background="#00FFFFFF"
         android:contentDescription="@string/next_button_description"
+        android:onClick="launchDrinksPage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/next_button"
-        android:onClick="launchDrinksPage"/>
+        app:srcCompat="@drawable/next_button" />
 
     <ImageButton
         android:id="@+id/previous_button"
@@ -184,10 +184,10 @@
         android:layout_marginBottom="@dimen/bottom_margin"
         android:background="#00FFFFFF"
         android:contentDescription="@string/next_button_description"
+        android:onClick="launchHomePage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/previous_button"
-        android:onClick="launchHomePage"/>
+        app:srcCompat="@drawable/previous_button" />
 
     <ImageView
         android:id="@+id/mushrooms_r"
