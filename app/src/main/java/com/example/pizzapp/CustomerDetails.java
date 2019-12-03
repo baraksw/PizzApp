@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 
 
-public class Customer_Details extends AppCompatActivity {
+public class CustomerDetails extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.pizzapp.extra.MESSAGE";
     public static final String EXTRA_MESSAGE2 = "com.example.pizzapp.extra.MESSAGE2";
@@ -19,8 +19,8 @@ public class Customer_Details extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_customer__details);
-        AdressEditText = findViewById(R.id.editText_Adress);
+        setContentView(R.layout.activity_customer_details);
+        AdressEditText = findViewById(R.id.editText_adress);
     }
 
     public void launchCredit(View view) {
@@ -37,5 +37,11 @@ public class Customer_Details extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, messageAdress);
         intent.putExtra(EXTRA_MESSAGE2, howToPay);
         startActivity(intent);
+    }
+
+    public void launchToppingsPage(View view) {
+        Intent intent = new Intent(this, Credit.class);
+        startActivity(intent);
+
     }
 }

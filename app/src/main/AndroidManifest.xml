@@ -17,15 +17,15 @@
 
         <activity android:name=".Credit"
             android:label="Credit"
-            android:parentActivityName=".Customer_Details">
+            android:parentActivityName=".CustomerDetails">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.pizzapp.Customer_Details" />
+                android:value="com.example.pizzapp.CustomerDetails" />
         </activity>
 
         <activity android:name=".Toppings"></activity>
 
-        <activity android:name=".Customer_Details"
+        <activity android:name=".CustomerDetails"
             android:label="Customer Details"></activity>
 
         <activity android:name=".Drinks"></activity>

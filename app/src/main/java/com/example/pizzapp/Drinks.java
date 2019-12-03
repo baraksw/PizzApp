@@ -22,7 +22,7 @@ public class Drinks extends AppCompatActivity {
     }
 
     public void launchCustomerDetailsPage(View view) {
-        Intent customerDetailsIntent = new Intent(this, Customer_Details.class);
+        Intent customerDetailsIntent = new Intent(this, CustomerDetails.class);
         startActivity(customerDetailsIntent);
     }
 

@@ -14,4 +14,15 @@
     <string name="size_choose_headline_text">בחרו גודל</string>
     <string name="first_dots_description">pages indicator</string>
     <string name="drink_choose_headline_text">Select a drink</string>
+    <string name="second_headline_text">בחרו אמצעי תשלום</string>
+    <string name="payment_text">תשלום</string>
+    <string name="address_text">כתובת</string>
+    <string name="phone_text">טלפון</string>
+    <string name="price_text">מחיר ההזמנה</string>
+    <string name="creditPayment">תשלום באשראי</string>
+    <string name="price">:מחיר</string>
+    <string name="creditCardNum">מספר כרטיס אשראי</string>
+    <string name="cvv">CVV</string>
+    <string name="validity">תוקף</string>
+    <string name="email">אימייל</string>
 </resources>

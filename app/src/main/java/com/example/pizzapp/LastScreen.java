@@ -14,17 +14,15 @@ public class LastScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_last_screen);
         Intent intent = getIntent();
-        String message = intent.getStringExtra(Customer_Details.EXTRA_MESSAGE);
+        String message = intent.getStringExtra(CustomerDetails.EXTRA_MESSAGE);
         String howToPay;
 
-        howToPay = intent.getStringExtra(Customer_Details.EXTRA_MESSAGE2);
+        howToPay = intent.getStringExtra(CustomerDetails.EXTRA_MESSAGE2);
         howToPay = intent.getStringExtra(Credit.EXTRA_MESSAGE3);
         TextView textView = findViewById(R.id.text_message);
         TextView textView1 = findViewById(R.id.text_howToPay);
         textView.setText(message);
         textView1.setText(howToPay);
-
-
     }
 
     public void launchLastScreen(View view) {
