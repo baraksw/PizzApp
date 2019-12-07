@@ -10,9 +10,11 @@ import android.widget.ImageView;
 
 public class Toppings extends AppCompatActivity {
 
-    public static final String PIZZAPRICE = "price_for_pizza";
-    private String price="0";
-    private int count=0;
+    public static final String TOPPINGSPRICE = "price_for_toppings";
+    private String pizza_price;
+    private int total_price=0;
+    private String pizza_price_for_size;
+    private int toppings_price=0;
 
     private int topping;
     private ImageView mushrooms_image_r, mushrooms_image_l;
@@ -39,8 +41,8 @@ public class Toppings extends AppCompatActivity {
         pineapple_image_r = findViewById(R.id.pineapple_r);
         pineapple_image_l = findViewById(R.id.pineapple_l);
 
-
-
+        Intent intent = getIntent();
+        pizza_price_for_size = intent.getStringExtra(HomePage.SIZESPRICE);
     }
 
     public void showView(View view, ImageView vr, ImageView vl, int vis) {
@@ -91,46 +93,46 @@ public class Toppings extends AppCompatActivity {
             case 0:
                 if(mushrooms_visible !=0 ) {
                     mushrooms_visible = 0;
-                    count -= 10;
+                    toppings_price -= 10;
                 }
                 else { mushrooms_visible=1;
-                count+=10;
+                    toppings_price+=10;
                 }
                 break;
             case 1:
                 if(onion_visible !=0) {
                     onion_visible = 0;
-                    count -= 10;
+                    toppings_price -= 10;
                 }
                 else { onion_visible=1;
-                    count+=10;
+                    toppings_price+=10;
                 }
                 break;
             case 2:
                 if(tomatos_visible !=0) {
                     tomatos_visible = 0;
-                    count -= 10;
+                    toppings_price -= 10;
                 }
                 else { tomatos_visible=1;
-                    count+=10;
+                    toppings_price+=10;
                 }
                 break;
             case 3:
                 if(pineapple_visible !=0) {
                     pineapple_visible = 0;
-                    count -= 10;
+                    toppings_price -= 10;
                 }
                 else { pineapple_visible=1;
-                    count+=10;
+                    toppings_price+=10;
                 }
                 break;
             case 4:
                 if(olives_visible !=0) {
                     olives_visible = 0;
-                    count -= 10;
+                    toppings_price -= 10;
                 }
                 else { olives_visible=1;
-                    count+=10;
+                    toppings_price+=10;
                 }
                 break;
         }
@@ -143,46 +145,46 @@ public class Toppings extends AppCompatActivity {
             case 0:
                 if(mushrooms_visible !=0) {
                     mushrooms_visible = 0;
-                    count -= 5;
+                    toppings_price -= 5;
                 }
                 else { mushrooms_visible=2;
-                    count+=5;
+                    toppings_price+=5;
                 }
                 break;
             case 1:
                 if(onion_visible !=0) {
                     onion_visible = 0;
-                    count -= 5;
+                    toppings_price -= 5;
                 }
                 else { onion_visible=2;
-                    count+=5;
+                    toppings_price+=5;
                 }
                 break;
             case 2:
                 if(tomatos_visible !=0) {
                     tomatos_visible = 0;
-                    count -= 10;
+                    toppings_price -= 10;
                 }
                 else { tomatos_visible=2;
-                    count+=10;
+                    toppings_price+=10;
                 }
                 break;
             case 3:
                 if(pineapple_visible !=0) {
                     pineapple_visible = 0;
-                    count -= 5;
+                    toppings_price -= 5;
                 }
                 else { pineapple_visible=2;
-                    count+=5;
+                    toppings_price+=5;
                 }
                 break;
             case 4:
                 if(olives_visible !=0) {
                     olives_visible = 0;
-                    count -= 5;
+                    toppings_price -= 5;
                 }
                 else { olives_visible=2;
-                    count+=5;
+                    toppings_price+=5;
                 }
                 break;
         }
@@ -196,46 +198,46 @@ public class Toppings extends AppCompatActivity {
             case 0:
                 if(mushrooms_visible !=0) {
                     mushrooms_visible = 0;
-                    count -= 5;
+                    toppings_price -= 5;
                 }
                 else { mushrooms_visible=3;
-                    count+=5;
+                    toppings_price+=5;
                 }
                 break;
             case 1:
                 if(onion_visible !=0) {
                     onion_visible = 0;
-                    count -= 5;
+                    toppings_price -= 5;
                 }
                 else { onion_visible=3;
-                    count+=5;
+                    toppings_price+=5;
                 }
                 break;
             case 2:
                 if(tomatos_visible !=0) {
                     tomatos_visible = 0;
-                    count -= 5;
+                    toppings_price -= 5;
                 }
                 else { tomatos_visible=3;
-                    count+=5;
+                    toppings_price+=5;
                 }
                 break;
             case 3:
                 if(pineapple_visible !=0) {
                     pineapple_visible = 0;
-                    count -= 5;
+                    toppings_price -= 5;
                 }
                 else { pineapple_visible=3;
-                    count+=5;
+                    toppings_price+=5;
                 }
                 break;
             case 4:
                 if(olives_visible !=0) {
                     olives_visible = 0;
-                    count -= 5;
+                    toppings_price -= 5;
                 }
                 else { olives_visible=3;
-                    count+=5;
+                    toppings_price+=5;
                 }
                 break;
         }
@@ -272,8 +274,9 @@ public class Toppings extends AppCompatActivity {
 
     public void launchDrinksPage(View view) {
         Intent drinksIntent = new Intent(this, Drinks.class);
-        price = String.valueOf(count);
-        drinksIntent.putExtra(PIZZAPRICE,price);
+        total_price=toppings_price+Integer.parseInt(pizza_price_for_size);
+        pizza_price = String.valueOf(total_price);
+        drinksIntent.putExtra(TOPPINGSPRICE,pizza_price);
         startActivity(drinksIntent);
     }
 }

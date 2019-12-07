@@ -62,7 +62,9 @@
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/personal_size_description"
                 android:fadeScrollbars="false"
-                app:srcCompat="@drawable/pizza_size_small" />
+                app:srcCompat="@drawable/pizza_size_small"
+                android:onClick="personal_size"
+                />
 
             <ImageView
                 android:id="@+id/family_size_button"
@@ -71,7 +73,9 @@
                 android:layout_gravity="bottom"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/family_size_description"
-                app:srcCompat="@drawable/pizza_size_medium" />
+                app:srcCompat="@drawable/pizza_size_medium"
+                android:onClick="family_size"
+                />
 
             <ImageView
                 android:id="@+id/big_size_button"
@@ -83,7 +87,8 @@
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/big_size_description"
-                app:srcCompat="@drawable/pizza_size_large" />
+                app:srcCompat="@drawable/pizza_size_large"
+                android:onClick="big_size"/>
         </LinearLayout>
     </HorizontalScrollView>
 

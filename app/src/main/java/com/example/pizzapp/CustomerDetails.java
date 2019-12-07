@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class CustomerDetails extends AppCompatActivity {
@@ -16,11 +17,17 @@ public class CustomerDetails extends AppCompatActivity {
     private EditText AdressEditText;
     private String howToPay;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_details);
         AdressEditText = findViewById(R.id.editText_adress);
+
+        Intent intent = getIntent();
+        String pizza_price_for_details = intent.getStringExtra(Drinks.DRINKSPRICE);
+        TextView textView1 = findViewById(R.id.tomer_view);
+        textView1.setText(pizza_price_for_details);
     }
 
     public void launchCredit(View view) {
