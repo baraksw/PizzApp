@@ -135,4 +135,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/dots_4" />
 
+    <TextView
+        android:id="@+id/tomer_view"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/creditCard_button"
+        app:layout_constraintEnd_toStartOf="@+id/second_headline"
+        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_pizza" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

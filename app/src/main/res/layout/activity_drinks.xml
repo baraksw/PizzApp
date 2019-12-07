@@ -61,7 +61,9 @@
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/personal_size_description"
                 android:fadeScrollbars="false"
-                app:srcCompat="@drawable/coke_bottle" />
+                app:srcCompat="@drawable/coke_bottle"
+                android:onClick="add_price"
+                />
 
             <ImageView
                 android:id="@+id/sprite_bottle"
@@ -73,7 +75,9 @@
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/personal_size_description"
                 android:fadeScrollbars="false"
-                app:srcCompat="@drawable/sprite_bottle"/>
+                app:srcCompat="@drawable/sprite_bottle"
+                android:onClick="add_price"
+                />
 
             <ImageView
                 android:id="@+id/fanta_bottle"
@@ -85,7 +89,9 @@
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/big_size_description"
-                app:srcCompat="@drawable/fanta_bottle" />
+                app:srcCompat="@drawable/fanta_bottle"
+                android:onClick="add_price"
+                />
         </LinearLayout>
     </HorizontalScrollView>
 
