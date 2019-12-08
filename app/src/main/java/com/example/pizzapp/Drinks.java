@@ -15,11 +15,13 @@ public class Drinks extends AppCompatActivity {
     public static final String TOMATOVISIBLE = "tomato_visable";
     public static final String ONIONVISIBLE = "onion_visable";
     public static final String PINEAPPLEVISIBLE = "pineapple_visable";
+    public static final String DRINKTYPE="drink_type";
+
+    private int drink_type=0;
     private int pizza_price_for_toppings=0;
     private int pizza_price_for_drink=0;
     private int drinks_price=0;
     private int mushrooms_visible, olives_visible, onion_visible, tomatos_visible , pineapple_visible;
-    public int cola_flag=0,sprite_flag=0,fanta_flag=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,14 +41,42 @@ public class Drinks extends AppCompatActivity {
     }
 
 
+    public void add_cola(View view)
+    {
+        if(drink_type==1)
+            drink_type=0;
+        else
+            drink_type=1;
+        add_price(view);
+    }
+
+    public void add_sprite(View view)
+    {
+        if(drink_type==2)
+            drink_type=0;
+        else
+            drink_type=2;
+        add_price(view);
+    }
+
+    public void add_fanta(View view)
+    {
+        if(drink_type==3)
+            drink_type=0;
+        else
+            drink_type=3;
+        add_price(view);
+    }
+
     public void add_price(View view) {
-        if (cola_flag==1) {
-            drinks_price -= 7;
-            cola_flag = 0;
-        } else {
-            drinks_price += 7;
-            cola_flag = 1;
-        }
+        if(drink_type!=0)
+            drinks_price=7;
+        else
+            drinks_price=0;
+
+        pizza_price_for_drink = pizza_price_for_toppings+drinks_price;
+        TextView textView1 = findViewById(R.id.tomer_text);
+        textView1.setText(String.valueOf(pizza_price_for_drink));
     }
 
     public void launchToppingsPage(View view) {
@@ -64,6 +94,7 @@ public class Drinks extends AppCompatActivity {
         customerDetailsIntent.putExtra(TOMATOVISIBLE,tomatos_visible);
         customerDetailsIntent.putExtra(ONIONVISIBLE,onion_visible);
         customerDetailsIntent.putExtra(PINEAPPLEVISIBLE,pineapple_visible);
+        customerDetailsIntent.putExtra(DRINKTYPE,drink_type);
         startActivity(customerDetailsIntent);
 
     }
