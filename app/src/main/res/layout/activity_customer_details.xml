@@ -74,15 +74,6 @@
         app:layout_constraintTop_toBottomOf="@+id/editText_phoneNumber"
         app:srcCompat="@drawable/pizza" />
 
-    <ImageView
-        android:id="@+id/imageView_drink"
-        android:layout_width="82dp"
-        android:layout_height="200dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/coke_bottle" />
 
     <TextView
         android:id="@+id/second_headline"
@@ -143,5 +134,46 @@
         app:layout_constraintHorizontal_bias="0.355"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_pizza" />
+
+    <ImageView
+        android:id="@+id/fanta_drink"
+        android:layout_width="72dp"
+        android:layout_height="211dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.691"
+        app:layout_constraintStart_toEndOf="@+id/imageView_pizza"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.413"
+        app:srcCompat="@drawable/fanta_bottle"
+        android:visibility="invisible"
+        />
+
+    <ImageView
+        android:id="@+id/sprite_drink"
+        android:layout_width="81dp"
+        android:layout_height="282dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.725"
+        app:layout_constraintStart_toEndOf="@+id/imageView_pizza"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.401"
+        app:srcCompat="@drawable/sprite_bottle"
+        android:visibility="invisible"
+        />
+
+    <ImageView
+        android:id="@+id/cola_drink"
+        android:layout_width="82dp"
+        android:layout_height="200dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/coke_bottle"
+        android:visibility="invisible"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
