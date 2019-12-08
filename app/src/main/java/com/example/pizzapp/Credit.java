@@ -19,13 +19,11 @@ public class Credit extends AppCompatActivity {
 
     public void launchLastScreen(View view) {
         Intent intent = new Intent(this, LastScreen.class);
-        String howToPay = intent.getStringExtra(CustomerDetails.EXTRA_MESSAGE2);
-        intent.putExtra(EXTRA_MESSAGE3, howToPay);
         startActivity(intent);
     }
 
-    public void launchToppingsPage(View view) {
-        Intent intent = new Intent(this, Toppings.class);
+    public void launchCustomerDetailsPage(View view) {
+        Intent intent = new Intent(this, CustomerDetails.class);
         startActivity(intent);
     }
 }

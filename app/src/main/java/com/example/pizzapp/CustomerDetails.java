@@ -15,17 +15,18 @@ public class CustomerDetails extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.pizzapp.extra.MESSAGE";
     public static final String EXTRA_MESSAGE2 = "com.example.pizzapp.extra.MESSAGE2";
     private EditText AdressEditText;
-    private String howToPay;
+    private String howToPay; 
+
     private int pizza_price_for_drink;
     private int mushrooms_visible, olives_visible, onion_visible, tomatos_visible , pineapple_visible;
     private int drink_type=0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_details);
         AdressEditText = findViewById(R.id.editText_adress);
-
         Intent intent = getIntent();
         pizza_price_for_drink = intent.getIntExtra(Drinks.DRINKSPRICE,0);
         TextView current_price = findViewById(R.id.tomer_view);
@@ -66,9 +67,8 @@ public class CustomerDetails extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void launchToppingsPage(View view) {
-        Intent intent = new Intent(this, Credit.class);
+    public void launchDrinksPagePage(View view) {
+        Intent intent = new Intent(this, Drinks.class);
         startActivity(intent);
-
     }
 }

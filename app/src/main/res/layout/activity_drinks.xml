@@ -10,46 +10,59 @@
     tools:context=".Drinks">
 
     <ImageView
-        android:id="@+id/dots_level_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/drinks_headline"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/page_headline_size"
         android:layout_marginTop="@dimen/upper_margin"
-        android:layout_marginBottom="@dimen/bottom_margin"
-        android:contentDescription="@string/first_dots_description"
-        app:layout_constraintBottom_toTopOf="@+id/page_headline_textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dots_3" />
+        app:srcCompat="@drawable/drinks_headline" />
 
-    <TextView
-        android:id="@+id/page_headline_textView"
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/bottom_margin"
-        android:gravity="start|end"
-        android:text="@string/drink_choose_headline_text"
-        android:textSize="@dimen/page_headline_size"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dots_level_3" />
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="440dp"
+            android:layout_height="519dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_button" />
+
+            <RadioButton
+                android:id="@+id/radio_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fanta_bottle" />
+
+            <RadioButton
+                android:id="@+id/radio_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sprite_bottle"/>
+        </RadioGroup>
+    </LinearLayout>
 
     <HorizontalScrollView
         android:id="@+id/drink_choose_scrollView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="172dp"
+        android:layout_width="262dp"
+        android:layout_height="381dp"
         android:foregroundGravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.66"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/coke_bottle"
@@ -62,8 +75,8 @@
                 android:contentDescription="@string/personal_size_description"
                 android:fadeScrollbars="false"
                 app:srcCompat="@drawable/coke_bottle"
-                android:onClick="add_cola"
-                />
+                android:onClick="add_cola"/>
+
 
             <ImageView
                 android:id="@+id/sprite_bottle"
@@ -90,8 +103,7 @@
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/big_size_description"
                 app:srcCompat="@drawable/fanta_bottle"
-                android:onClick="add_fanta"
-                />
+                android:onClick="add_fanta />
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -99,27 +111,29 @@
         android:id="@+id/next_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/left_margin"
         android:layout_marginLeft="@dimen/left_margin"
-        android:layout_marginBottom="@dimen/bottom_margin"
         android:background="#00FFFFFF"
         android:contentDescription="@string/next_button_description"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="launchCustomerDetailsPage"
+        app:layout_constraintBottom_toBottomOf="@+id/dots_level_3"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/next_button"
-        android:onClick="launchCustomerDetailsPage"/>
+        app:layout_constraintTop_toTopOf="@+id/dots_level_3"
+        app:srcCompat="@drawable/next_button" />
 
     <ImageButton
         android:id="@+id/previous_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/left_margin"
-        android:layout_marginBottom="@dimen/bottom_margin"
+        android:layout_marginEnd="@dimen/right_margin"
+        android:layout_marginRight="@dimen/right_margin"
         android:background="#00FFFFFF"
         android:contentDescription="@string/next_button_description"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="launchToppingsPage"
+        app:layout_constraintBottom_toBottomOf="@+id/dots_level_3"
         app:layout_constraintEnd_toEndOf="@+id/drink_choose_scrollView"
-        app:srcCompat="@drawable/previous_button"
-        android:onClick="launchToppingsPage" />
+        app:layout_constraintTop_toTopOf="@+id/dots_level_3"
+        app:srcCompat="@drawable/previous_button" />
 
     <TextView
         android:id="@+id/tomer_text"
@@ -128,6 +142,22 @@
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/drink_choose_scrollView" />
+        app:layout_constraintTop_toBottomOf="@+id/drink_choose_scrollView"
+        app:layout_constraintVertical_bias="0.286" />
+
+    <ImageView
+        android:id="@+id/dots_level_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bottom_margin"
+        android:contentDescription="@string/first_dots_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/dots_3" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

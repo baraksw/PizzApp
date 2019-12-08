@@ -3,6 +3,9 @@ package com.example.pizzapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,14 +24,20 @@ public class Drinks extends AppCompatActivity {
     private int pizza_price_for_toppings=0;
     private int pizza_price_for_drink=0;
     private int drinks_price=0;
+
+    public int flag=0;
+    RadioGroup radioGroup;
+    RadioButton radioButton;
+    TextView textView;
+
     private int mushrooms_visible, olives_visible, onion_visible, tomatos_visible , pineapple_visible;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drinks);
-
         Intent intent = getIntent();
+
         pizza_price_for_toppings = intent.getIntExtra(Toppings.TOPPINGSPRICE,0);
         mushrooms_visible = intent.getIntExtra(Toppings.MUSHROOMVISIBLE,0);
         olives_visible = intent.getIntExtra(Toppings.OLIVESVISIBLE,0);

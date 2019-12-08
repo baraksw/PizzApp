@@ -7,18 +7,15 @@
     tools:context=".Credit"
     android:background="@drawable/background">
 
-    <TextView
-        android:id="@+id/creditCard_headline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/cardCredit_headline"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/page_headline_size"
         android:layout_marginTop="@dimen/upper_margin"
-        android:text="@string/creditPayment"
-        android:textSize="30sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/creditcard_headline" />
 
 
     <ImageView
@@ -40,7 +37,7 @@
         android:layout_marginLeft="48dp"
         android:layout_marginTop="@dimen/field_headline_space"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/creditCard_headline"
+        app:layout_constraintTop_toBottomOf="@+id/cardCredit_headline"
         app:srcCompat="@drawable/pizza" />
 
     <TextView
@@ -118,12 +115,13 @@
         android:id="@+id/previous_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/right_margin"
+        android:layout_marginRight="@dimen/right_margin"
         android:background="#00FFFFFF"
         android:contentDescription="@string/next_button_description"
-        android:onClick="launchToppingsPage"
+        android:onClick="launchCustomerDetailsPage"
         app:layout_constraintBottom_toBottomOf="@+id/dots_level_5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/dots_level_5"
         app:layout_constraintTop_toTopOf="@+id/dots_level_5"
         app:srcCompat="@drawable/previous_button" />
 
@@ -142,10 +140,12 @@
         android:id="@+id/payment_button"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="@+id/previous_button"
-        app:layout_constraintEnd_toStartOf="@+id/dots_level_5"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginLeft="@dimen/left_margin"
+        app:layout_constraintBottom_toBottomOf="@+id/dots_level_5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/previous_button"
+        android:onClick="launchLastScreen"
+        app:layout_constraintTop_toTopOf="@+id/dots_level_5"
         app:srcCompat="@drawable/vi2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
