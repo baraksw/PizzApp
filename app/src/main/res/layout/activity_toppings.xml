@@ -320,4 +320,15 @@
         app:layout_constraintVertical_bias="0.388"
         app:srcCompat="@drawable/olives_r" />
 
+    <TextView
+        android:id="@+id/Current_Price"
+        android:layout_width="81dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="7dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/previous_button"
+        app:layout_constraintStart_toEndOf="@+id/next_button"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
