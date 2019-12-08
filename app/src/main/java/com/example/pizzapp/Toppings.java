@@ -6,14 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class Toppings extends AppCompatActivity {
 
     public static final String TOPPINGSPRICE = "price_for_toppings";
-    private String pizza_price;
-    private int total_price=0;
-    private String pizza_price_for_size;
+    public static final String MUSHROOMVISIBLE = "mushroom_visable";
+    public static final String OLIVESVISIBLE = "olives_visable";
+    public static final String TOMATOVISIBLE = "tomato_visable";
+    public static final String ONIONVISIBLE = "onion_visable";
+    public static final String PINEAPPLEVISIBLE = "pineapple_visable";
+    private int pizza_price_for_size=0;
+    private int pizza_price_for_toppings=0;
     private int toppings_price=0;
 
     private int topping;
@@ -23,13 +28,20 @@ public class Toppings extends AppCompatActivity {
     private ImageView tomato_image_r, tomato_image_l;
     private ImageView pineapple_image_r, pineapple_image_l;
 
-    private int mushrooms_visible = 0, olives_visible = 0, onion_visible = 0, tomatos_visible = 0, pineapple_visible = 0, cheese_visible = 0;
-
+    private int mushrooms_visible = 0, olives_visible = 0, onion_visible = 0, tomatos_visible = 0, pineapple_visible = 0;
+    private int toppings_visible[]={mushrooms_visible,olives_visible,olives_visible,tomatos_visible,pineapple_visible};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_toppings);
+
+        Intent intent = getIntent();
+        pizza_price_for_size = intent.getIntExtra(HomePage.SIZEPRICE,0);
+        pizza_price_for_toppings=pizza_price_for_size;
+        TextView current_price_view = findViewById(R.id.Current_Price);
+        current_price_view.setText(String.valueOf(pizza_price_for_toppings));
+
         mushrooms_image_r = findViewById(R.id.mushrooms_r);
         mushrooms_image_l = findViewById(R.id.mushrooms_l);
         olives_image_r = findViewById(R.id.olives_r);
@@ -41,8 +53,7 @@ public class Toppings extends AppCompatActivity {
         pineapple_image_r = findViewById(R.id.pineapple_r);
         pineapple_image_l = findViewById(R.id.pineapple_l);
 
-        Intent intent = getIntent();
-        pizza_price_for_size = intent.getStringExtra(HomePage.SIZESPRICE);
+
     }
 
     public void showView(View view, ImageView vr, ImageView vl, int vis) {
@@ -91,157 +102,114 @@ public class Toppings extends AppCompatActivity {
     public void showFull(View view) {
         switch(topping) {
             case 0:
-                if(mushrooms_visible !=0 ) {
-                    mushrooms_visible = 0;
-                    toppings_price -= 10;
-                }
-                else { mushrooms_visible=1;
-                    toppings_price+=10;
-                }
+                if(mushrooms_visible==1)
+                    mushrooms_visible=0;
+                else
+                    mushrooms_visible=1;
                 break;
             case 1:
-                if(onion_visible !=0) {
-                    onion_visible = 0;
-                    toppings_price -= 10;
-                }
-                else { onion_visible=1;
-                    toppings_price+=10;
-                }
+                if(onion_visible==1)
+                    onion_visible=0;
+                else
+                    onion_visible=1;
                 break;
             case 2:
-                if(tomatos_visible !=0) {
-                    tomatos_visible = 0;
-                    toppings_price -= 10;
-                }
-                else { tomatos_visible=1;
-                    toppings_price+=10;
-                }
+                if(tomatos_visible==1)
+                    tomatos_visible=0;
+                else
+                    tomatos_visible=1;
                 break;
             case 3:
-                if(pineapple_visible !=0) {
-                    pineapple_visible = 0;
-                    toppings_price -= 10;
-                }
-                else { pineapple_visible=1;
-                    toppings_price+=10;
-                }
+                if(pineapple_visible==1)
+                    pineapple_visible=0;
+                else
+                    pineapple_visible=1;
                 break;
             case 4:
-                if(olives_visible !=0) {
-                    olives_visible = 0;
-                    toppings_price -= 10;
-                }
-                else { olives_visible=1;
-                    toppings_price+=10;
-                }
+                if(olives_visible==1)
+                    olives_visible=0;
+                else
+                    olives_visible=1;
                 break;
         }
 
+        add_toppings_price();
         add_topping(view);
     }
 
     public void showR_half(View view) {
         switch(topping) {
             case 0:
-                if(mushrooms_visible !=0) {
-                    mushrooms_visible = 0;
-                    toppings_price -= 5;
-                }
-                else { mushrooms_visible=2;
-                    toppings_price+=5;
-                }
+                if(mushrooms_visible==2)
+                    mushrooms_visible=0;
+                else
+                    mushrooms_visible=2;
                 break;
+
             case 1:
-                if(onion_visible !=0) {
-                    onion_visible = 0;
-                    toppings_price -= 5;
-                }
-                else { onion_visible=2;
-                    toppings_price+=5;
-                }
+                if(onion_visible==2)
+                    onion_visible=0;
+                else
+                    onion_visible=2;
                 break;
             case 2:
-                if(tomatos_visible !=0) {
-                    tomatos_visible = 0;
-                    toppings_price -= 10;
-                }
-                else { tomatos_visible=2;
-                    toppings_price+=10;
-                }
+                if(tomatos_visible==2)
+                    tomatos_visible=0;
+                else
+                    tomatos_visible=2;
                 break;
             case 3:
-                if(pineapple_visible !=0) {
-                    pineapple_visible = 0;
-                    toppings_price -= 5;
-                }
-                else { pineapple_visible=2;
-                    toppings_price+=5;
-                }
+                if(pineapple_visible==2)
+                    pineapple_visible=0;
+                else
+                    pineapple_visible=2;
                 break;
             case 4:
-                if(olives_visible !=0) {
-                    olives_visible = 0;
-                    toppings_price -= 5;
-                }
-                else { olives_visible=2;
-                    toppings_price+=5;
-                }
+                if(olives_visible==2)
+                    olives_visible=0;
+                else
+                    olives_visible=2;
                 break;
         }
 
-
+        add_toppings_price();
         add_topping(view);
     }
 
     public void showL_half(View view) {
         switch(topping) {
             case 0:
-                if(mushrooms_visible !=0) {
-                    mushrooms_visible = 0;
-                    toppings_price -= 5;
-                }
-                else { mushrooms_visible=3;
-                    toppings_price+=5;
-                }
+                if(mushrooms_visible==3)
+                    mushrooms_visible=0;
+                else
+                    mushrooms_visible=3;
                 break;
             case 1:
-                if(onion_visible !=0) {
-                    onion_visible = 0;
-                    toppings_price -= 5;
-                }
-                else { onion_visible=3;
-                    toppings_price+=5;
-                }
+                if(onion_visible==3)
+                    onion_visible=0;
+                else
+                    onion_visible=3;
                 break;
             case 2:
-                if(tomatos_visible !=0) {
-                    tomatos_visible = 0;
-                    toppings_price -= 5;
-                }
-                else { tomatos_visible=3;
-                    toppings_price+=5;
-                }
+                if(tomatos_visible==3)
+                    tomatos_visible=0;
+                else
+                    tomatos_visible=3;
                 break;
             case 3:
-                if(pineapple_visible !=0) {
-                    pineapple_visible = 0;
-                    toppings_price -= 5;
-                }
-                else { pineapple_visible=3;
-                    toppings_price+=5;
-                }
+                if(pineapple_visible==3)
+                    pineapple_visible=0;
+                else
+                    pineapple_visible=3;
                 break;
             case 4:
-                if(olives_visible !=0) {
-                    olives_visible = 0;
-                    toppings_price -= 5;
-                }
-                else { olives_visible=3;
-                    toppings_price+=5;
-                }
+                if(olives_visible==3)
+                    olives_visible=0;
+                else
+                    olives_visible=3;
                 break;
         }
-
+        add_toppings_price();
         add_topping(view);
     }
 
@@ -267,6 +235,51 @@ public class Toppings extends AppCompatActivity {
     }
 
 
+    public void add_toppings_price(){
+        toppings_price=0;
+
+        if(mushrooms_visible==1)
+            toppings_price+=10;
+        if(mushrooms_visible==2)
+            toppings_price+=5;
+        if(mushrooms_visible==3)
+            toppings_price+=5;
+
+        if(olives_visible==1)
+            toppings_price+=10;
+        if(olives_visible==2)
+            toppings_price+=5;
+        if(olives_visible==3)
+            toppings_price+=5;
+
+        if(onion_visible==1)
+            toppings_price+=10;
+        if(onion_visible==2)
+            toppings_price+=5;
+        if(onion_visible==3)
+            toppings_price+=5;
+
+        if(tomatos_visible==1)
+            toppings_price+=10;
+        if(tomatos_visible==2)
+            toppings_price+=5;
+        if(tomatos_visible==3)
+            toppings_price+=5;
+
+        if(pineapple_visible==1)
+            toppings_price+=10;
+        if(pineapple_visible==2)
+            toppings_price+=5;
+        if(pineapple_visible==3)
+            toppings_price+=5;
+
+        pizza_price_for_toppings=toppings_price+pizza_price_for_size;
+        TextView current_price_view = findViewById(R.id.Current_Price);
+        current_price_view.setText(String.valueOf(pizza_price_for_toppings));
+
+    }
+
+
     public void launchHomePage(View view) {
         Intent homePageIntent = new Intent(this, HomePage.class);
         startActivity(homePageIntent);
@@ -274,9 +287,13 @@ public class Toppings extends AppCompatActivity {
 
     public void launchDrinksPage(View view) {
         Intent drinksIntent = new Intent(this, Drinks.class);
-        total_price=toppings_price+Integer.parseInt(pizza_price_for_size);
-        pizza_price = String.valueOf(total_price);
-        drinksIntent.putExtra(TOPPINGSPRICE,pizza_price);
+        /*pizza_price_for_toppings=toppings_price+pizza_price_for_size;*/
+        drinksIntent.putExtra(TOPPINGSPRICE,pizza_price_for_toppings);
+        drinksIntent.putExtra(MUSHROOMVISIBLE,mushrooms_visible);
+        drinksIntent.putExtra(OLIVESVISIBLE,olives_visible);
+        drinksIntent.putExtra(TOMATOVISIBLE,tomatos_visible);
+        drinksIntent.putExtra(ONIONVISIBLE,onion_visible);
+        drinksIntent.putExtra(PINEAPPLEVISIBLE,pineapple_visible);
         startActivity(drinksIntent);
     }
 }

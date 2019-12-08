@@ -13,9 +13,10 @@ public class CustomerDetails extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.pizzapp.extra.MESSAGE";
     public static final String EXTRA_MESSAGE2 = "com.example.pizzapp.extra.MESSAGE2";
-
     private EditText AdressEditText;
     private String howToPay;
+    private int pizza_price_for_drink;
+    private int mushrooms_visible, olives_visible, onion_visible, tomatos_visible , pineapple_visible;
 
 
     @Override
@@ -25,9 +26,15 @@ public class CustomerDetails extends AppCompatActivity {
         AdressEditText = findViewById(R.id.editText_adress);
 
         Intent intent = getIntent();
-        String pizza_price_for_details = intent.getStringExtra(Drinks.DRINKSPRICE);
-        TextView textView1 = findViewById(R.id.tomer_view);
-        textView1.setText(pizza_price_for_details);
+        pizza_price_for_drink = intent.getIntExtra(Drinks.DRINKSPRICE,0);
+        TextView current_price = findViewById(R.id.tomer_view);
+        current_price.setText(String.valueOf(pizza_price_for_drink));
+
+        mushrooms_visible = intent.getIntExtra(Toppings.MUSHROOMVISIBLE,0);
+        olives_visible = intent.getIntExtra(Toppings.OLIVESVISIBLE,0);
+        tomatos_visible = intent.getIntExtra(Toppings.TOMATOVISIBLE,0);
+        onion_visible = intent.getIntExtra(Toppings.ONIONVISIBLE,0);
+        pineapple_visible = intent.getIntExtra(Toppings.PINEAPPLEVISIBLE,0);
     }
 
     public void launchCredit(View view) {
