@@ -17,13 +17,11 @@ public class CustomerDetails extends AppCompatActivity {
     private EditText AdressEditText;
     private String howToPay;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_details);
         AdressEditText = findViewById(R.id.editText_adress);
-
         Intent intent = getIntent();
         String pizza_price_for_details = intent.getStringExtra(Drinks.DRINKSPRICE);
         TextView textView1 = findViewById(R.id.tomer_view);
@@ -46,9 +44,8 @@ public class CustomerDetails extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void launchToppingsPage(View view) {
-        Intent intent = new Intent(this, Credit.class);
+    public void launchDrinksPagePage(View view) {
+        Intent intent = new Intent(this, Drinks.class);
         startActivity(intent);
-
     }
 }
