@@ -1,13 +1,21 @@
 package com.example.pizzapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+import android.support.v4.view.pagerAdapter;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HomePage extends AppCompatActivity {
+
+    ViewPager pizza_size_viewPager;
+    Adapter adapter;
+    List<Model> models;
     private static final String LOG_TAG = HomePage.class.getSimpleName();
 
     public static final String SIZESPRICE = "price_for_size";
@@ -19,6 +27,36 @@ public class HomePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
+        models = new ArrayList<>();
+        models.add(new Model(R.drawable.pizza_size_small, "40 שקלים"));
+        models.add(new Model(R.drawable.pizza_size_medium, "50 שקלים"));
+        models.add(new Model(R.drawable.pizza_size_large, "60 שקלים"));
+
+        adapter = new Adapter(models, this);
+
+        pizza_size_viewPager = findViewById(R.id.pizza_size_viewPager);
+        pizza_size_viewPager.setAdapter(adapter);
+        pizza_size_viewPager.setPadding(130, 0, 0, 130);
+
+        pizza_size_viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                if (position < (adapter.getCount() -1)) {
+
+                }
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
 
     }
 

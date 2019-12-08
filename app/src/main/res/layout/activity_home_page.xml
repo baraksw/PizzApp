@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,17 +9,24 @@
     android:isScrollContainer="false"
     tools:context=".HomePage">
 
+    <android.support.v4.view.viewPager
+        android:foregroundGravity="center"
+        android:id="@+id/pizza_size_viewPager"
+        android:layout_centerInParent="true"
+        android:overScrollmode="never"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.viewPager>
+
     <ImageView
         android:id="@+id/dots_level_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/bottom_margin"
         android:contentDescription="@string/first_dots_description"
-        android:foregroundGravity="center_horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/dots_1" />
+        android:foregroundGravity="center_horizontal" />
 
     <TextView
         android:id="@+id/page_headline_textView"
@@ -29,23 +36,14 @@
         android:gravity="start|end"
         android:text="@string/size_choose_headline_text"
         android:textSize="@dimen/page_headline_size"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
 
     <HorizontalScrollView
         android:id="@+id/size_choose_scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:foregroundGravity="center_vertical"
-        android:onClick="choosePizzaSize"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:onClick="choosePizzaSize">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -62,9 +60,8 @@
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/personal_size_description"
                 android:fadeScrollbars="false"
-                app:srcCompat="@drawable/pizza_size_small"
                 android:onClick="personal_size"
-                />
+                app:srcCompat="@drawable/pizza_size_small" />
 
             <ImageView
                 android:id="@+id/family_size_button"
@@ -73,9 +70,8 @@
                 android:layout_gravity="bottom"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/family_size_description"
-                app:srcCompat="@drawable/pizza_size_medium"
                 android:onClick="family_size"
-                />
+                app:srcCompat="@drawable/pizza_size_medium" />
 
             <ImageView
                 android:id="@+id/big_size_button"
@@ -87,8 +83,8 @@
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/big_size_description"
-                app:srcCompat="@drawable/pizza_size_large"
-                android:onClick="big_size"/>
+                android:onClick="big_size"
+                app:srcCompat="@drawable/pizza_size_large" />
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -101,9 +97,6 @@
         android:layout_marginBottom="@dimen/bottom_margin"
         android:background="#00FFFFFF"
         android:contentDescription="@string/next_button_description"
-        android:onClick="launchToppingsPage"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/next_button" />
+        android:onClick="launchToppingsPage" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
