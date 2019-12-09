@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/toppings_headline" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/pizza_image"
         android:layout_width="320dp"
         android:layout_height="353dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -123,11 +123,11 @@
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:onClick="showFull"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/pizza_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
-        app:srcCompat="@drawable/full" />
+        app:srcCompat="@drawable/full_pizza" />
 
     <ImageView
         android:id="@+id/mashrooms"
@@ -145,7 +145,8 @@
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:onClick="showR_half"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        android:layout_marginRight="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/pizza_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/full"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
@@ -156,7 +157,8 @@
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:onClick="showL_half"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/pizza_image"
         app:layout_constraintEnd_toStartOf="@+id/full"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
@@ -168,9 +170,9 @@
         android:layout_height="216dp"
         android:visibility="invisible"
         android:src="@drawable/mushroom_r"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
+        app:layout_constraintEnd_toEndOf="@+id/pizza_image"
+        app:layout_constraintTop_toTopOf="@+id/pizza_image" />
 
     <ImageView
         android:id="@+id/mushrooms_l"
@@ -179,9 +181,9 @@
         android:layout_marginLeft="30dp"
         android:src="@drawable/mushroom_l"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
+        app:layout_constraintStart_toStartOf="@+id/pizza_image"
+        app:layout_constraintTop_toTopOf="@+id/pizza_image" />
 
     <ImageView
         android:id="@+id/olives_r"
@@ -189,9 +191,9 @@
         android:layout_height="251dp"
         android:layout_marginRight="30dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
+        app:layout_constraintEnd_toEndOf="@+id/pizza_image"
+        app:layout_constraintTop_toTopOf="@+id/pizza_image"
         app:srcCompat="@drawable/olives_r" />
 
 
@@ -202,9 +204,9 @@
         android:layout_marginLeft="30dp"
         android:visibility="invisible"
         android:src="@drawable/olives_l"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
+        app:layout_constraintStart_toStartOf="@+id/pizza_image"
+        app:layout_constraintTop_toTopOf="@+id/pizza_image" />
 
     <ImageView
         android:id="@+id/onion_r"
@@ -212,9 +214,9 @@
         android:layout_height="194dp"
         android:layout_marginRight="30dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
+        app:layout_constraintEnd_toEndOf="@+id/pizza_image"
+        app:layout_constraintTop_toTopOf="@+id/pizza_image"
         app:srcCompat="@drawable/onion_r" />
 
     <ImageView
@@ -223,9 +225,9 @@
         android:layout_height="178dp"
         android:layout_marginLeft="30dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
+        app:layout_constraintStart_toStartOf="@+id/pizza_image"
+        app:layout_constraintTop_toTopOf="@+id/pizza_image"
         app:srcCompat="@drawable/onion_l" />
 
     <ImageView
@@ -234,9 +236,9 @@
         android:layout_height="235dp"
         android:layout_marginRight="30dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
+        app:layout_constraintEnd_toEndOf="@+id/pizza_image"
+        app:layout_constraintTop_toTopOf="@+id/pizza_image"
         app:srcCompat="@drawable/pineapple_r" />
 
     <ImageView
@@ -245,9 +247,9 @@
         android:layout_height="223dp"
         android:layout_marginLeft="30dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
+        app:layout_constraintStart_toStartOf="@+id/pizza_image"
+        app:layout_constraintTop_toTopOf="@+id/pizza_image"
         app:srcCompat="@drawable/pineapple_l" />
 
     <ImageView
@@ -255,9 +257,9 @@
         android:layout_width="197dp"
         android:layout_height="237dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
+        app:layout_constraintEnd_toEndOf="@+id/pizza_image"
+        app:layout_constraintTop_toTopOf="@+id/pizza_image"
         app:srcCompat="@drawable/tomato_r" />
 
     <ImageView
@@ -266,21 +268,26 @@
         android:layout_height="247dp"
         android:layout_marginLeft="30dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
+        app:layout_constraintStart_toStartOf="@+id/pizza_image"
+        app:layout_constraintTop_toTopOf="@+id/pizza_image"
         app:srcCompat="@drawable/tomato_l" />
 
     <TextView
         android:id="@+id/Current_Price"
         android:layout_width="81dp"
         android:layout_height="34dp"
-        android:layout_marginTop="7dp"
-        android:text="TextView"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#E8961F1F"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/previous_button"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toEndOf="@+id/next_button"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/mashrooms"
+        app:layout_constraintVertical_bias="0.476" />
 
     <ImageButton
         android:id="@+id/previous_button"

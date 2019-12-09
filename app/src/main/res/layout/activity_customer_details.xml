@@ -75,17 +75,6 @@
         app:srcCompat="@drawable/pizza" />
 
 
-    <ImageView
-        android:id="@+id/second_headline"
-        android:layout_width="86dp"
-        android:layout_height="93dp"
-        android:src="@drawable/price"
-        app:layout_constraintBottom_toBottomOf="@+id/dots_image_4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.588"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phoneNumber_editText" />
-
     <ImageButton
         android:id="@+id/creditCard_button"
         android:layout_width="132dp"
@@ -97,7 +86,7 @@
         android:onClick="launchCredit"
         app:layout_constraintBottom_toTopOf="@+id/dots_image_4"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/creditcard" />
+        app:srcCompat="@drawable/creditcard_button" />
 
     <ImageButton
         android:id="@+id/cash_button"
@@ -134,7 +123,8 @@
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/creditCard_button"
-        app:layout_constraintEnd_toStartOf="@+id/second_headline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mushrooms_r" />
 
     <ImageView
