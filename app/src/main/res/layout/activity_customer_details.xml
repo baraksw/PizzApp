@@ -104,8 +104,8 @@
 
     <ImageView
         android:id="@+id/dots_image_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/dots_width"
+        android:layout_height="@dimen/dots_height"
         android:layout_marginBottom="@dimen/bottom_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

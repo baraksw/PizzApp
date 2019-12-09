@@ -31,6 +31,7 @@ public class Toppings extends AppCompatActivity {
     private int total_price = 0;
     private int topping;
 
+
     private boolean is_mushroom_pressed = false;
     private boolean is_tomato_pressed = false;
     private boolean is_onion_pressed = false;
@@ -42,6 +43,7 @@ public class Toppings extends AppCompatActivity {
     private ImageView onion_image_right, onion_image_left;
     private ImageView tomato_image_right, tomato_image_left;
     private ImageView pineapple_image_right, pineapple_image_left;
+
     private Button button_mushrooms;
     private Button button_olives;
     private Button button_tomato;
