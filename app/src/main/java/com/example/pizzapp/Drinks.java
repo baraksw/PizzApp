@@ -68,7 +68,7 @@ public class Drinks extends AppCompatActivity {
 
         drinks_viewPager = findViewById(R.id.drinks_viewPager);
         drinks_viewPager.setAdapter(drinks_adapter);
-        drinks_viewPager.setPadding(130, 0, 0, 130);
+        drinks_viewPager.setPadding(0, 0, 0, 110);
 
         drinks_viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
