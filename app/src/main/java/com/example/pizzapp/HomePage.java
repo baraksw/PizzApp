@@ -71,8 +71,6 @@ public class HomePage extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                TextView t1 = findViewById(R.id.textView);
-                t1.setText(String.valueOf(position));
                 pizza_size=position;
                 add_size_price();
             }

@@ -10,13 +10,31 @@
     tools:context=".HomePage">
 
     <ImageView
-        android:layout_width="@dimen/headline_width"
-        android:layout_height="@dimen/headline_height"
         android:id="@+id/size_choosing_page_headline"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/headline_height"
         android:layout_marginTop="@dimen/upper_margin"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
         app:srcCompat="@drawable/size_headline" />
+
+    <ImageView
+        android:id="@+id/left_arrow"
+        android:layout_width="@dimen/arrow_width"
+        android:layout_height="@dimen/arrow_height"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:src="@drawable/left_arrow"/>
+
+    <ImageView
+        android:id="@+id/right_arrow"
+        android:layout_width="@dimen/arrow_width"
+        android:layout_height="@dimen/arrow_height"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/right_margin"
+        android:src="@drawable/right_arrow"/>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pizza_size_viewPager"
@@ -42,7 +60,6 @@
         android:layout_height="@dimen/next_and_previous_button_size"
         android:layout_marginStart="@dimen/left_margin"
         android:layout_marginLeft="@dimen/left_margin"
-        android:layout_marginBottom="@dimen/bottom_margin"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:background="#00FFFFFF"
@@ -52,22 +69,13 @@
 
     <ImageView
         android:id="@+id/dots_level_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/dots_width"
+        android:layout_height="@dimen/dots_height"
+        android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:layout_marginBottom="@dimen/bottom_margin"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:contentDescription="@string/first_dots_description"
         android:foregroundGravity="center_horizontal"
-        android:src="@drawable/dots_1"/>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"/>
+        android:src="@drawable/dots_1" />
 
 </RelativeLayout>

@@ -333,8 +333,8 @@
 
     <ImageView
         android:id="@+id/dots_level_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/dots_width"
+        android:layout_height="@dimen/dots_height"
         android:layout_marginBottom="@dimen/bottom_margin"
         android:contentDescription="@string/first_dots_description"
         app:layout_constraintBottom_toBottomOf="parent"

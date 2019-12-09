@@ -30,7 +30,6 @@ public class Toppings extends AppCompatActivity {
     private int pizza_price_for_toppings=0;
     public int drink_type;
     private int pizza_price_for_drink=0;
-    private int toppings_price=0;
 
     private int topping;
     private ImageView mushrooms_image_r, mushrooms_image_l;
