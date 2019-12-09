@@ -22,7 +22,10 @@
         android:id="@+id/pizza_size_viewPager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="choosePizzaSize">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:onClick="choosePizzaSize"
+        android:layout_alignParentLeft="true">
         android:layout_below="@id/size_choosing_page_headline"
         android:layout_centerInParent="true"
         android:layout_centerHorizontal="true"

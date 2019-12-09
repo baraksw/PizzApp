@@ -18,6 +18,7 @@
         android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/drinks_headline" />
 
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/drinks_viewPager"
         android:layout_width="match_parent"
