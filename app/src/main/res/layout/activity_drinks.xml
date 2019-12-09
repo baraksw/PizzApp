@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,13 +11,28 @@
 
     <ImageView
         android:id="@+id/drinks_headline"
-        android:layout_width="@dimen/headline_width"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/headline_height"
         android:layout_marginTop="@dimen/upper_margin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/drinks_headline" />
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/drinks_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/drinks_headline"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:background="#00FFFFFF"
+        android:clipToPadding="false"
+        android:foregroundGravity="center"
+        android:overScrollMode="never">
+
+    </androidx.viewpager.widget.ViewPager>
+
 
 
     <ImageButton
@@ -26,13 +41,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/left_margin"
         android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginBottom="@dimen/bottom_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
         android:background="#00FFFFFF"
         android:contentDescription="@string/next_button_description"
         android:onClick="launchCustomerDetailsPage"
-        app:layout_constraintBottom_toBottomOf="@+id/dots_level_3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/dots_level_3"
-        app:srcCompat="@drawable/next_button" />
+        app:srcCompat="@drawable/next_button"/>
 
     <ImageButton
         android:id="@+id/previous_button"
@@ -40,12 +55,12 @@
         android:layout_height="@dimen/next_and_previous_button_size"
         android:layout_marginEnd="@dimen/right_margin"
         android:layout_marginRight="@dimen/right_margin"
+        android:layout_marginBottom="@dimen/bottom_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
         android:background="#00FFFFFF"
         android:contentDescription="@string/next_button_description"
         android:onClick="launchToppingsPage"
-        app:layout_constraintBottom_toBottomOf="@+id/dots_level_3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/dots_level_3"
         app:srcCompat="@drawable/previous_button" />
 
     <ImageView
@@ -53,11 +68,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/bottom_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:contentDescription="@string/first_dots_description"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/dots_3" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
