@@ -12,30 +12,31 @@ import android.widget.TextView;
 
 public class Toppings extends AppCompatActivity {
 
+    public static final String SIZEPRICE = "price_for_size";
+    public static final String PIZZASIZE="size_of_pizza";
+    public static final String DRINKSPRICE = "price_for_drink";
+    public static final String DRINKTYPE="drink_type";
     public static final String TOPPINGSPRICE = "price_for_toppings";
     public static final String MUSHROOMVISIBLE = "mushroom_visable";
     public static final String OLIVESVISIBLE = "olives_visable";
     public static final String TOMATOVISIBLE = "tomato_visable";
     public static final String ONIONVISIBLE = "onion_visable";
     public static final String PINEAPPLEVISIBLE = "pineapple_visable";
+
+    private int size_price=0;
+    private int toppings_price=0;
+    private int drink_price=0;
+    private int pizza_size=0;
+    private int drink_type=0;
+    private int total_price=0;
+
+
     private boolean is_mushroom_pressed = false;
     private boolean is_tomato_pressed = false;
     private boolean is_onion_pressed = false;
     private boolean is_pineapple_pressed = false;
     private boolean is_olives_pressed = false;
 
-    public static final String SIZEPRICE = "price_for_size";
-    public static final String DRINKTYPE="drink_type";
-    public static final String PIZZASIZE="size_of_pizza";
-
-    private int size_price=0;
-    private int drink_price=0;
-    private int pizza_size=0;
-    private int pizza_price_for_size=0;
-    private int pizza_price_for_toppings=0;
-    public int drink_type;
-    private int pizza_price_for_drink=0;
-    private int toppings_price=0;
 
     private int topping;
     private ImageView mushrooms_image_r, mushrooms_image_l;
@@ -51,7 +52,6 @@ public class Toppings extends AppCompatActivity {
 
 
     private int mushrooms_visible = 0, olives_visible = 0, onion_visible = 0, tomatos_visible = 0, pineapple_visible = 0;
-    private int toppings_visible[] = {mushrooms_visible, olives_visible, olives_visible, tomatos_visible, pineapple_visible};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,12 +73,16 @@ public class Toppings extends AppCompatActivity {
         pizza_size=intent.getIntExtra(HomePage.PIZZASIZE,0);
         drink_type=intent.getIntExtra(Drinks.DRINKTYPE,0);
 
+        size_price = intent.getIntExtra(HomePage.SIZEPRICE,0);
+        toppings_price = intent.getIntExtra(HomePage.TOPPINGSPRICE,0);
+        drink_price = intent.getIntExtra(HomePage.DRINKSPRICE,0);
+        total_price = size_price+toppings_price+drink_price;
+
         add_toppings_price();
-        pizza_price_for_size = intent.getIntExtra(HomePage.SIZEPRICE,0)+intent.getIntExtra(Drinks.DRINKSPRICE,0)-toppings_price;
-        pizza_price_for_drink=intent.getIntExtra(Drinks.DRINKSPRICE,0);
+        total_price=intent.getIntExtra(Drinks.DRINKSPRICE,0);
 
         TextView current_price_view = findViewById(R.id.Current_Price);
-        current_price_view.setText(String.valueOf(pizza_price_for_toppings));
+        current_price_view.setText(String.valueOf(total_price));
 
         mushrooms_image_r = findViewById(R.id.mushrooms_r);
         mushrooms_image_l = findViewById(R.id.mushrooms_l);
@@ -393,10 +397,9 @@ public class Toppings extends AppCompatActivity {
         if(pineapple_visible==3)
             toppings_price+=5;
 
-        pizza_price_for_toppings=pizza_price_for_size+toppings_price;
-
+        total_price=size_price+toppings_price+drink_price;
         TextView current_price_view = findViewById(R.id.Current_Price);
-        current_price_view.setText(String.valueOf(pizza_price_for_toppings));
+        current_price_view.setText(String.valueOf(total_price));
 
     }
 
@@ -418,8 +421,11 @@ public class Toppings extends AppCompatActivity {
 
     public void launchHomePage(View view) {
         Intent homePageIntent = new Intent(this, HomePage.class);
+        homePageIntent.putExtra(SIZEPRICE,size_price);
         homePageIntent.putExtra(PIZZASIZE,pizza_size);
-        homePageIntent.putExtra(TOPPINGSPRICE,pizza_price_for_toppings);
+        homePageIntent.putExtra(TOPPINGSPRICE,toppings_price);
+        homePageIntent.putExtra(DRINKSPRICE,drink_price);
+        homePageIntent.putExtra(DRINKTYPE,drink_type);
         homePageIntent.putExtra(MUSHROOMVISIBLE,mushrooms_visible);
         homePageIntent.putExtra(OLIVESVISIBLE,olives_visible);
         homePageIntent.putExtra(TOMATOVISIBLE,tomatos_visible);
@@ -431,13 +437,16 @@ public class Toppings extends AppCompatActivity {
 
     public void launchDrinksPage(View view) {
         Intent drinksIntent = new Intent(this, Drinks.class);
-        drinksIntent.putExtra(TOPPINGSPRICE, pizza_price_for_toppings);
-        drinksIntent.putExtra(MUSHROOMVISIBLE, mushrooms_visible);
-        drinksIntent.putExtra(OLIVESVISIBLE, olives_visible);
-        drinksIntent.putExtra(TOMATOVISIBLE, tomatos_visible);
-        drinksIntent.putExtra(ONIONVISIBLE, onion_visible);
-        drinksIntent.putExtra(PINEAPPLEVISIBLE, pineapple_visible);
-        drinksIntent.putExtra(PIZZASIZE, pizza_size);
+        drinksIntent.putExtra(SIZEPRICE,size_price);
+        drinksIntent.putExtra(PIZZASIZE,pizza_size);
+        drinksIntent.putExtra(TOPPINGSPRICE,toppings_price);
+        drinksIntent.putExtra(DRINKSPRICE,drink_price);
+        drinksIntent.putExtra(DRINKTYPE,drink_type);
+        drinksIntent.putExtra(MUSHROOMVISIBLE,mushrooms_visible);
+        drinksIntent.putExtra(OLIVESVISIBLE,olives_visible);
+        drinksIntent.putExtra(TOMATOVISIBLE,tomatos_visible);
+        drinksIntent.putExtra(ONIONVISIBLE,onion_visible);
+        drinksIntent.putExtra(PINEAPPLEVISIBLE,pineapple_visible);
 
         startActivity(drinksIntent);
     }
