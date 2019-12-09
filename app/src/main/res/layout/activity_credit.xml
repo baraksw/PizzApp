@@ -18,55 +18,22 @@
         app:srcCompat="@drawable/creditcard_headline" />
 
 
-    <ImageView
-        android:id="@+id/drink_image"
-        android:layout_width="82dp"
-        android:layout_height="200dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/pizza_image"
-        app:srcCompat="@drawable/coke_bottle" />
-
-    <ImageView
-        android:id="@+id/pizza_image"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="@dimen/under_headline_space"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardCredit_headline"
-        app:srcCompat="@drawable/pizza" />
-
-    <TextView
-        android:id="@+id/price_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/price"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pizza_image" />
-
     <EditText
         android:id="@+id/numOfCard_editText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="@dimen/upper_margin"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:ems="10"
         android:hint="@string/creditCardNum"
         android:inputType="textLongMessage|textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/dots_level_5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/price_text" />
+        app:layout_constraintTop_toBottomOf="@+id/cardCredit_headline" />
 
     <EditText
         android:id="@+id/CVV_editText"
@@ -147,5 +114,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/dots_level_5"
         app:srcCompat="@drawable/vi2" />
+
+    <ImageView
+        android:id="@+id/creditCardOnly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/numOfCard_editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardCredit_headline"
+        app:srcCompat="@drawable/credit_card_only" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
