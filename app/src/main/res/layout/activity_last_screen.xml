@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/thanks_imageView"
-        android:layout_width="268dp"
-        android:layout_height="259dp"
+        android:layout_width="@dimen/thanksText_size"
+        android:layout_height="@dimen/thanksText_size"
         android:layout_marginTop="@dimen/upper_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,38 +18,20 @@
         app:srcCompat="@drawable/order_ready" />
 
     <ImageView
-        android:id="@+id/vSign_imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:id="@+id/V_Sign_imageView"
+        android:layout_width="@dimen/next_and_previous_button_size"
+        android:layout_height="@dimen/next_and_previous_button_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/thanks_imageView"
         app:srcCompat="@drawable/aprrove_payment" />
 
-    <TextView
-        android:id="@+id/text_message"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vSign_imageView" />
-
-    <TextView
-        android:id="@+id/text_howToPay"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_message" />
-
     <ImageView
         android:id="@+id/motorcycle_imageView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="@dimen/motorcycle_size"
+        android:layout_height="@dimen/motorcycle_size"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_howToPay"
         app:srcCompat="@drawable/motor" />
 </androidx.constraintlayout.widget.ConstraintLayout>

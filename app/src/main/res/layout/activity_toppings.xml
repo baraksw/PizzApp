@@ -9,15 +9,14 @@
     tools:context=".Toppings">
 
     <ImageView
-        android:id="@+id/dots_level_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/bottom_margin"
-        android:contentDescription="@string/first_dots_description"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/toppings_headline"
+        android:layout_width="@dimen/headline_width"
+        android:layout_height="@dimen/headline_height"
+        android:layout_marginTop="@dimen/upper_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/dots_2" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/toppings_headline" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -31,16 +30,17 @@
         app:layout_constraintVertical_bias="0.495"
         app:srcCompat="@drawable/pizza" />
 
+
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
         android:layout_width="418dp"
         android:layout_height="51dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.276">
+        app:layout_constraintVertical_bias="0.177">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,9 +53,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@android:dimen/app_icon_size"
                 android:layout_weight="1"
-                android:endColor="#6ca752"
+                android:background="@drawable/toppings_button_shape"
                 android:onClick="showMushroom"
-                android:text="Mushrooms" />
+                android:text="@string/mushrooms" />
+                android:textColor="#A34326"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
 
             <Button
                 android:id="@+id/Topping_Olives"
@@ -63,26 +67,35 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@android:dimen/app_icon_size"
                 android:layout_weight="1"
+                android:background="@drawable/toppings_button_shape"
                 android:onClick="showOlives"
-                android:text="Olives" />
+                android:text="@string/olives" />
+                android:textColor="#A34326"
+                android:textSize="10sp" />
 
             <Button
                 android:id="@+id/Topping_Onion"
+                android:textColor="#A34326"
+                android:textSize="10sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/toppings_button_shape"
                 android:layout_marginLeft="@android:dimen/app_icon_size"
                 android:layout_weight="1"
                 android:onClick="showOnion"
-                android:text="Onion" />
+                android:text="@string/onion" />
 
             <Button
                 android:id="@+id/Topping_Tomatos"
+                android:textColor="#A34326"
+                android:textSize="10sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/toppings_button_shape"
                 android:layout_marginLeft="@android:dimen/app_icon_size"
                 android:layout_weight="1"
                 android:onClick="showTomatos"
-                android:text="Tomatos" />
+                android:text="@string/tomatos" />
 
             <Button
                 android:id="@+id/Topping_Pineapple"
@@ -90,12 +103,15 @@
                 android:layout_height="51dp"
                 android:layout_weight="1"
                 android:onClick="showPineapple"
+                android:text="@string/pineapple" 
+                android:textColor="#A34326"
+                android:textSize="10sp" 
+                android:onClick="showPineapple"
                 android:text="Pineapple" />
 
 
         </LinearLayout>
     </HorizontalScrollView>
-
 
     <ImageView
         android:id="@+id/full"
@@ -140,34 +156,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
         app:srcCompat="@drawable/half_left" />
-
-    <ImageButton
-        android:id="@+id/next_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/left_margin"
-        android:layout_marginLeft="@dimen/left_margin"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/next_button_description"
-        android:onClick="launchDrinksPage"
-        app:layout_constraintBottom_toBottomOf="@+id/dots_level_2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/dots_level_2"
-        app:srcCompat="@drawable/next_button" />
-
-    <ImageButton
-        android:id="@+id/previous_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/right_margin"
-        android:layout_marginRight="@dimen/right_margin"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/next_button_description"
-        android:onClick="launchHomePage"
-        app:layout_constraintBottom_toBottomOf="@+id/dots_level_2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/dots_level_2"
-        app:srcCompat="@drawable/previous_button" />
 
     <ImageView
         android:id="@+id/mushrooms_r"
@@ -301,16 +289,6 @@
         app:srcCompat="@drawable/olives_r" />
 
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/page_headline_size"
-        android:layout_marginTop="@dimen/upper_margin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/toppings_headline" />
-
     <TextView
         android:id="@+id/Current_Price"
         android:layout_width="81dp"
@@ -321,6 +299,44 @@
         app:layout_constraintEnd_toStartOf="@+id/previous_button"
         app:layout_constraintStart_toEndOf="@+id/next_button"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageButton
+        android:id="@+id/previous_button"
+        android:layout_width="@dimen/next_and_previous_button_size"
+        android:layout_height="@dimen/next_and_previous_button_size"
+        android:layout_marginEnd="@dimen/right_margin"
+        android:layout_marginRight="@dimen/right_margin"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/next_button_description"
+        android:onClick="launchHomePage"
+        app:layout_constraintBottom_toBottomOf="@+id/dots_level_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dots_level_2"
+        app:srcCompat="@drawable/previous_button" />
+
+    <ImageButton
+        android:id="@+id/next_button"
+        android:layout_width="@dimen/next_and_previous_button_size"
+        android:layout_height="@dimen/next_and_previous_button_size"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/next_button_description"
+        android:onClick="launchDrinksPage"
+        app:layout_constraintBottom_toBottomOf="@+id/dots_level_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dots_level_2"
+        app:srcCompat="@drawable/next_button" />
+
+    <ImageView
+        android:id="@+id/dots_level_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bottom_margin"
+        android:contentDescription="@string/first_dots_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/dots_2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
