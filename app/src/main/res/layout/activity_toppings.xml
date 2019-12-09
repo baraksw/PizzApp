@@ -31,16 +31,17 @@
         app:layout_constraintVertical_bias="0.495"
         app:srcCompat="@drawable/pizza" />
 
+
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
         android:layout_width="418dp"
         android:layout_height="51dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.276">
+        app:layout_constraintVertical_bias="0.177">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,9 +54,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@android:dimen/app_icon_size"
                 android:layout_weight="1"
+                android:background="@drawable/toppings_button_shape"
                 android:endColor="#6ca752"
                 android:onClick="showMushroom"
-                android:text="Mushrooms" />
+                android:text="פטריות"
+                android:textColor="#A34326"
+                android:textSize="10sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/Topping_Olives"
@@ -63,13 +68,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@android:dimen/app_icon_size"
                 android:layout_weight="1"
+                android:background="@drawable/toppings_button_shape"
                 android:onClick="showOlives"
-                android:text="Olives" />
+                android:text="זיתים"
+                android:textColor="#A34326"
+                android:textSize="10sp" />
 
             <Button
                 android:id="@+id/Topping_Onion"
+                android:textColor="#A34326"
+                android:textSize="10sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/toppings_button_shape"
                 android:layout_marginLeft="@android:dimen/app_icon_size"
                 android:layout_weight="1"
                 android:onClick="showOnion"
@@ -77,8 +88,11 @@
 
             <Button
                 android:id="@+id/Topping_Tomatos"
+                android:textColor="#A34326"
+                android:textSize="10sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/toppings_button_shape"
                 android:layout_marginLeft="@android:dimen/app_icon_size"
                 android:layout_weight="1"
                 android:onClick="showTomatos"
@@ -86,23 +100,18 @@
 
             <Button
                 android:id="@+id/Topping_Pineapple"
-                android:layout_width="103dp"
-                android:layout_height="51dp"
+                android:textColor="#A34326"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/toppings_button_shape"
+                android:layout_marginLeft="@android:dimen/app_icon_size"
                 android:layout_weight="1"
                 android:onClick="showPineapple"
                 android:text="Pineapple" />
 
-            <Button
-                android:id="@+id/Topping_Cheese"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@android:dimen/app_icon_size"
-                android:layout_weight="1"
-                android:text="Cheese" />
-
         </LinearLayout>
     </HorizontalScrollView>
-
 
     <ImageView
         android:id="@+id/full"

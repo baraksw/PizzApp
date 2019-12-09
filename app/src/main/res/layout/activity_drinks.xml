@@ -23,7 +23,11 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/previous_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/drinks_headline">
 
         <RadioGroup
             android:layout_width="440dp"
@@ -46,7 +50,7 @@
                 android:id="@+id/radio_three"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/sprite_bottle"/>
+                android:background="@drawable/sprite_bottle" />
         </RadioGroup>
     </LinearLayout>
 
@@ -103,7 +107,7 @@
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/big_size_description"
                 app:srcCompat="@drawable/fanta_bottle"
-                android:onClick="add_fanta />
+                android:onClick="add_fanta" />
         </LinearLayout>
     </HorizontalScrollView>
 
