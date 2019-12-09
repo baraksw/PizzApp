@@ -10,9 +10,9 @@
     tools:context=".HomePage">
 
     <ImageView
+        android:layout_width="@dimen/headline_width"
+        android:layout_height="@dimen/headline_height"
         android:id="@+id/size_choosing_page_headline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/upper_margin"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
@@ -22,6 +22,7 @@
         android:id="@+id/pizza_size_viewPager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="choosePizzaSize">
         android:layout_below="@id/size_choosing_page_headline"
         android:layout_centerInParent="true"
         android:layout_centerHorizontal="true"
@@ -32,11 +33,10 @@
 
     </androidx.viewpager.widget.ViewPager>
 
-
     <ImageButton
         android:id="@+id/next_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/next_and_previous_button_size"
+        android:layout_height="@dimen/next_and_previous_button_size"
         android:layout_marginStart="@dimen/left_margin"
         android:layout_marginLeft="@dimen/left_margin"
         android:layout_marginBottom="@dimen/bottom_margin"

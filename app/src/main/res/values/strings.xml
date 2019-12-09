@@ -25,4 +25,10 @@
     <string name="cvv">CVV</string>
     <string name="validity">תוקף</string>
     <string name="email">אימייל</string>
+    <string name="mushrooms">פטריות</string>
+    <string name="olives">זיתים</string>
+    <string name="onion">בצל</string>
+    <string name="tomatos">עגבניה</string>
+    <string name="pineapple">אננס</string>
+    <string name="cheese">גבינה</string>
 </resources>
