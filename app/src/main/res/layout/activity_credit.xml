@@ -35,7 +35,7 @@
         android:layout_height="200dp"
         android:layout_marginStart="48dp"
         android:layout_marginLeft="48dp"
-        android:layout_marginTop="@dimen/field_headline_space"
+        android:layout_marginTop="@dimen/under_headline_space"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardCredit_headline"
         app:srcCompat="@drawable/pizza" />

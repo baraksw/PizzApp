@@ -55,9 +55,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/toppings_button_shape"
                 android:onClick="showMushroom"
-                android:text="@string/mushrooms" />
+                android:text="@string/mushrooms"
                 android:textColor="#A34326"
-                android:textSize="10sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
 
@@ -69,45 +69,49 @@
                 android:layout_weight="1"
                 android:background="@drawable/toppings_button_shape"
                 android:onClick="showOlives"
-                android:text="@string/olives" />
+                android:text="@string/olives"
                 android:textColor="#A34326"
-                android:textSize="10sp" />
+                android:textSize="15sp"
+                android:textStyle="bold"/>
 
             <Button
                 android:id="@+id/Topping_Onion"
-                android:textColor="#A34326"
-                android:textSize="10sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/toppings_button_shape"
                 android:layout_marginLeft="@android:dimen/app_icon_size"
                 android:layout_weight="1"
+                android:background="@drawable/toppings_button_shape"
                 android:onClick="showOnion"
-                android:text="@string/onion" />
+                android:text="@string/onion"
+                android:textColor="#A34326"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
 
             <Button
                 android:id="@+id/Topping_Tomatos"
-                android:textColor="#A34326"
-                android:textSize="10sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/toppings_button_shape"
                 android:layout_marginLeft="@android:dimen/app_icon_size"
                 android:layout_weight="1"
+                android:background="@drawable/toppings_button_shape"
                 android:onClick="showTomatos"
-                android:text="@string/tomatos" />
+                android:text="@string/tomatos"
+                android:textColor="#A34326"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
 
             <Button
                 android:id="@+id/Topping_Pineapple"
-                android:layout_width="103dp"
-                android:layout_height="51dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginLeft="@android:dimen/app_icon_size"
                 android:onClick="showPineapple"
-                android:text="@string/pineapple" 
+                android:text="@string/pineapple"
+                android:background="@drawable/toppings_button_shape"
                 android:textColor="#A34326"
-                android:textSize="10sp" 
-                android:onClick="showPineapple"
-                android:text="Pineapple" />
+                android:textSize="15sp"
+                android:textStyle="bold"/>
 
 
         </LinearLayout>
