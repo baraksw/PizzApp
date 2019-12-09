@@ -13,32 +13,32 @@
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp">
 
-    <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-
-
-            <ImageView
-                android:id="@+id/family_size_button"
-                android:layout_width="wrap_content"
+        <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:contentDescription="@string/family_size_description"
-                android:scaleType="center"
-                android:src="@drawable/pizza_size_medium" />
+                android:gravity="center">
 
 
-            <TextView
-                android:id="@+id/personal_pizza_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentBottom="true"
-                android:text="50 שקלים"
-                android:textSize="24sp" />
+                <ImageView
+                    android:id="@+id/family_size_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/family_size_description"
+                    android:scaleType="center"
+                    android:src="@drawable/pizza_size_medium" />
 
-        </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/personal_pizza_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:text="50 שקלים"
+                    android:textSize="24sp" />
+
+            </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 

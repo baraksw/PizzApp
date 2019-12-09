@@ -15,7 +15,9 @@
     <dimen name="bigButton_height">150dp</dimen>
     <dimen name="thanksText_size">270dp</dimen>
     <dimen name="motorcycle_size">300dp</dimen>
-    />
-    />
+    <dimen name="dots_width">170dp</dimen>
+    <dimen name="dots_height">25dp</dimen>
+    <dimen name="arrow_width">30dp</dimen>
+    <dimen name="arrow_height">60dp</dimen>
 
 </resources>

@@ -27,6 +27,10 @@ public class Toppings extends AppCompatActivity {
     private int toppings_price=0;
     private int drink_price=0;
     private int pizza_size=0;
+    private int pizza_price_for_size=0;
+    private int pizza_price_for_toppings=0;
+    public int drink_type;
+    private int pizza_price_for_drink=0;
     private int drink_type=0;
     private int total_price=0;
 
@@ -36,6 +40,7 @@ public class Toppings extends AppCompatActivity {
     private boolean is_onion_pressed = false;
     private boolean is_pineapple_pressed = false;
     private boolean is_olives_pressed = false;
+
 
 
     private int topping;

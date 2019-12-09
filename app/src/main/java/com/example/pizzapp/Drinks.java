@@ -61,13 +61,12 @@ public class Drinks extends AppCompatActivity {
         onion_visible = intent.getIntExtra(Toppings.ONIONVISIBLE,0);
         pineapple_visible = intent.getIntExtra(Toppings.PINEAPPLEVISIBLE,0);
         pizza_size=intent.getIntExtra(Toppings.PIZZASIZE,0);
-
+        pizza_price_for_drink = pizza_price_for_toppings+drinks_price;
         size_price = intent.getIntExtra(Toppings.SIZEPRICE,0);
         toppings_price = intent.getIntExtra(Toppings.TOPPINGSPRICE,0);
         drink_price = intent.getIntExtra(Toppings.DRINKSPRICE,0);
         add_price();
         total_price = size_price+toppings_price+drink_price;
-
 
         drinks_models = new ArrayList<>();
         drinks_models.add(new Model(R.drawable.coke_bottle, "7 שקלים"));
@@ -78,7 +77,7 @@ public class Drinks extends AppCompatActivity {
 
         drinks_viewPager = findViewById(R.id.drinks_viewPager);
         drinks_viewPager.setAdapter(drinks_adapter);
-        drinks_viewPager.setPadding(130, 0, 0, 130);
+        drinks_viewPager.setPadding(0, 0, 0, 110);
 
         drinks_viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
