@@ -4,12 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v4.view.pagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -48,7 +47,7 @@ public class Adapter extends PagerAdapter {
         price = view.findViewById(R.id.personal_pizza_price);
 
         imageView.setImageResource(models.get(position).getPizza_size());
-        price.setPrice(models.get(position).getPrice());
+        price.setText(models.get(position).getPrice());
 
         container.addView(view, 0);
         return view;

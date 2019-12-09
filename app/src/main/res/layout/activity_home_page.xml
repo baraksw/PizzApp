@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,84 +8,43 @@
     android:isScrollContainer="false"
     tools:context=".HomePage">
 
-    <android.support.v4.view.viewPager
-        android:foregroundGravity="center"
-        android:id="@+id/pizza_size_viewPager"
-        android:layout_centerInParent="true"
-        android:overScrollmode="never"
-        android:clipToPadding="false"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </android.support.v4.view.viewPager>
-
-    <ImageView
-        android:id="@+id/dots_level_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/bottom_margin"
-        android:contentDescription="@string/first_dots_description"
-        android:foregroundGravity="center_horizontal" />
-
     <TextView
         android:id="@+id/page_headline_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/upper_margin"
-        android:gravity="start|end"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
         android:text="@string/size_choose_headline_text"
         android:textSize="@dimen/page_headline_size"
         android:textStyle="bold" />
 
-    <HorizontalScrollView
-        android:id="@+id/size_choose_scrollView"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pizza_size_viewPager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:foregroundGravity="center_vertical"
-        android:onClick="choosePizzaSize">
+        android:layout_below="@id/page_headline_textView"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="false"
+        android:background="#00FFFFFF"
+        android:clipToPadding="false"
+        android:foregroundGravity="center"
+        android:overScrollMode="never">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    </androidx.viewpager.widget.ViewPager>
 
-            <ImageView
-                android:id="@+id/personal_size_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginLeft="@dimen/wide_margin"
-                android:layout_marginRight="@dimen/wide_margin"
-                android:background="#00FFFFFF"
-                android:contentDescription="@string/personal_size_description"
-                android:fadeScrollbars="false"
-                android:onClick="personal_size"
-                app:srcCompat="@drawable/pizza_size_small" />
 
-            <ImageView
-                android:id="@+id/family_size_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:background="#00FFFFFF"
-                android:contentDescription="@string/family_size_description"
-                android:onClick="family_size"
-                app:srcCompat="@drawable/pizza_size_medium" />
-
-            <ImageView
-                android:id="@+id/big_size_button"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginLeft="@dimen/wide_margin"
-                android:layout_marginRight="@dimen/wide_margin"
-                android:layout_weight="1"
-                android:background="#00FFFFFF"
-                android:contentDescription="@string/big_size_description"
-                android:onClick="big_size"
-                app:srcCompat="@drawable/pizza_size_large" />
-        </LinearLayout>
-    </HorizontalScrollView>
+    <ImageView
+        android:id="@+id/dots_level_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/bottom_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/first_dots_description"
+        android:foregroundGravity="center_horizontal"
+        android:src="@drawable/dots_1"/>
 
     <ImageButton
         android:id="@+id/next_button"
@@ -95,8 +53,11 @@
         android:layout_marginStart="@dimen/left_margin"
         android:layout_marginLeft="@dimen/left_margin"
         android:layout_marginBottom="@dimen/bottom_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
         android:background="#00FFFFFF"
         android:contentDescription="@string/next_button_description"
-        android:onClick="launchToppingsPage" />
+        android:onClick="launchToppingsPage"
+        android:src="@drawable/next_button"/>
 
 </RelativeLayout>

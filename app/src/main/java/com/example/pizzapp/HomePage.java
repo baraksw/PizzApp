@@ -2,7 +2,6 @@ package com.example.pizzapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
-import android.support.v4.view.pagerAdapter;
 
 import android.content.Intent;
 import android.os.Bundle;
