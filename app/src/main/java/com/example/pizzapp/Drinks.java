@@ -90,6 +90,7 @@ public class Drinks extends AppCompatActivity {
 
     public void launchToppingsPage(View view) {
         Intent toppingsIntent = new Intent(this, Toppings.class);
+        toppingsIntent.putExtra(DRINKSPRICE,pizza_price_for_drink);
         toppingsIntent.putExtra(MUSHROOMVISIBLE,mushrooms_visible);
         toppingsIntent.putExtra(OLIVESVISIBLE,olives_visible);
         toppingsIntent.putExtra(TOMATOVISIBLE,tomatos_visible);

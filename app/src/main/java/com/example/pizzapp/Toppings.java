@@ -19,6 +19,7 @@ public class Toppings extends AppCompatActivity {
     public static final String PINEAPPLEVISIBLE = "pineapple_visable";
     private int pizza_price_for_size=0;
     private int pizza_price_for_toppings=0;
+    private int pizza_price_for_drink=0;
     private int toppings_price=0;
 
     private int topping;
@@ -48,7 +49,7 @@ public class Toppings extends AppCompatActivity {
         tomatos_visible=intent.getIntExtra(Drinks.TOMATOVISIBLE,0);
         onion_visible=intent.getIntExtra(Drinks.ONIONVISIBLE,0);
         pineapple_visible=intent.getIntExtra(Drinks.PINEAPPLEVISIBLE,0);
-
+        pizza_price_for_drink=intent.getIntExtra(Drinks.DRINKSPRICE,0);
 
 
         pizza_price_for_toppings=pizza_price_for_size;
@@ -65,7 +66,7 @@ public class Toppings extends AppCompatActivity {
         tomato_image_l = findViewById(R.id.tomato_l);
         pineapple_image_r = findViewById(R.id.pineapple_r);
         pineapple_image_l = findViewById(R.id.pineapple_l);
-        show_from_drinks();
+        show_default();
 
 
     }
@@ -293,7 +294,7 @@ public class Toppings extends AppCompatActivity {
 
     }
 
-    public void show_from_drinks()
+    public void show_default()
     {
        topping=0;
        add_topping();
@@ -306,8 +307,6 @@ public class Toppings extends AppCompatActivity {
         topping=4;
         add_topping();
         add_toppings_price();
-
-
     }
 
     public void launchHomePage(View view) {
