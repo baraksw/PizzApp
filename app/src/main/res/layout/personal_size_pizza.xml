@@ -34,7 +34,10 @@
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentBottom="true"
                 android:text="40 שקלים"
-                android:textSize="24sp" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#E8961F1F"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 

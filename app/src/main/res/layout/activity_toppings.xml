@@ -284,10 +284,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/previous_button"
-        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toEndOf="@+id/next_button"
         app:layout_constraintTop_toTopOf="@+id/mashrooms"
-        app:layout_constraintVertical_bias="0.476" />
+        android:layout_centerHorizontal="true" />
 
     <ImageButton
         android:id="@+id/previous_button"
