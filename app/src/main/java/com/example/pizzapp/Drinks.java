@@ -16,18 +16,22 @@ import java.util.List;
 
 public class Drinks extends AppCompatActivity {
 
+    public static final String DRINKSPRICE = "price_for_drink";
+  
     ViewPager drinks_viewPager;
     Adapter drinks_adapter;
     List<Model> drinks_models;
 
-    public static final String DRINKSPRICE = "price_for_pizza";
     public static final String MUSHROOMVISIBLE = "mushroom_visable";
     public static final String OLIVESVISIBLE = "olives_visable";
     public static final String TOMATOVISIBLE = "tomato_visable";
     public static final String ONIONVISIBLE = "onion_visable";
     public static final String PINEAPPLEVISIBLE = "pineapple_visable";
     public static final String DRINKTYPE="drink_type";
+    public static final String PIZZASIZE="size_of_pizza";
 
+
+    private int pizza_size=0;
     private int drink_type=0;
     private int pizza_price_for_toppings=0;
     private int pizza_price_for_drink=0;
@@ -52,6 +56,10 @@ public class Drinks extends AppCompatActivity {
         tomatos_visible = intent.getIntExtra(Toppings.TOMATOVISIBLE,0);
         onion_visible = intent.getIntExtra(Toppings.ONIONVISIBLE,0);
         pineapple_visible = intent.getIntExtra(Toppings.PINEAPPLEVISIBLE,0);
+        pizza_size=intent.getIntExtra(Toppings.PIZZASIZE,0);
+        TextView textView1 = findViewById(R.id.tomer_text);
+        textView1.setText(String.valueOf(pizza_price_for_toppings));
+        pizza_price_for_drink = pizza_price_for_toppings+drinks_price;
 
         drinks_models = new ArrayList<>();
         drinks_models.add(new Model(R.drawable.coke_bottle, "7 שקלים"));
@@ -129,6 +137,9 @@ public class Drinks extends AppCompatActivity {
         toppingsIntent.putExtra(TOMATOVISIBLE,tomatos_visible);
         toppingsIntent.putExtra(ONIONVISIBLE,onion_visible);
         toppingsIntent.putExtra(PINEAPPLEVISIBLE,pineapple_visible);
+        toppingsIntent.putExtra(PIZZASIZE,pizza_size);
+        toppingsIntent.putExtra(DRINKSPRICE,pizza_price_for_drink);
+        toppingsIntent.putExtra(DRINKTYPE,drink_type);
         startActivity(toppingsIntent);
 
     }
