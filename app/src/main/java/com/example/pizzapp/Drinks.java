@@ -57,8 +57,6 @@ public class Drinks extends AppCompatActivity {
         onion_visible = intent.getIntExtra(Toppings.ONIONVISIBLE,0);
         pineapple_visible = intent.getIntExtra(Toppings.PINEAPPLEVISIBLE,0);
         pizza_size=intent.getIntExtra(Toppings.PIZZASIZE,0);
-        TextView textView1 = findViewById(R.id.tomer_text);
-        textView1.setText(String.valueOf(pizza_price_for_toppings));
         pizza_price_for_drink = pizza_price_for_toppings+drinks_price;
 
         drinks_models = new ArrayList<>();
