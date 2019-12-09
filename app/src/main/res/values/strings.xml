@@ -18,11 +18,17 @@
     <string name="payment_text">תשלום</string>
     <string name="address_text">כתובת</string>
     <string name="phone_text">טלפון</string>
-    <string name="price_text">מחיר ההזמנה</string>
+    <string name="price_text">מחיר ההזמנה:</string>
     <string name="creditPayment">תשלום באשראי</string>
-    <string name="price">:מחיר</string>
+    <string name="price">מחיר:</string>
     <string name="creditCardNum">מספר כרטיס אשראי</string>
     <string name="cvv">CVV</string>
     <string name="validity">תוקף</string>
     <string name="email">אימייל</string>
+    <string name="mushrooms">פטריות</string>
+    <string name="olives">זיתים</string>
+    <string name="onion">בצל</string>
+    <string name="tomatos">עגבניה</string>
+    <string name="pineapple">אננס</string>
+    <string name="cheese">גבינה</string>
 </resources>

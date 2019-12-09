@@ -33,10 +33,10 @@ public class CustomerDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_details);
-        AdressEditText = findViewById(R.id.editText_adress);
+        AdressEditText = findViewById(R.id.adress_editText);
         Intent intent = getIntent();
         pizza_price_for_drink = intent.getIntExtra(Drinks.DRINKSPRICE,0);
-        TextView current_price = findViewById(R.id.tomer_view);
+        TextView current_price = findViewById(R.id.total_price_text_view);
         current_price.setText(String.valueOf(pizza_price_for_drink));
 
         mushrooms_visible = intent.getIntExtra(Drinks.MUSHROOMVISIBLE,0);

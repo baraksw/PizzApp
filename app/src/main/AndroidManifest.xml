@@ -15,6 +15,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".Toppings"></activity>
+
+        <activity android:name=".Drinks"></activity>
+
+        <activity android:name=".CustomerDetails"
+            android:label="Customer Details"></activity>
+
         <activity android:name=".Credit"
             android:label="Credit"
             android:parentActivityName=".CustomerDetails">
@@ -22,13 +29,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.pizzapp.CustomerDetails" />
         </activity>
-
-        <activity android:name=".Toppings"></activity>
-
-        <activity android:name=".CustomerDetails"
-            android:label="Customer Details"></activity>
-
-        <activity android:name=".Drinks"></activity>
 
         <activity android:name=".LastScreen"></activity>
     </application>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,96 +10,53 @@
     tools:context=".HomePage">
 
     <ImageView
-        android:id="@+id/size_headline"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/page_headline_size"
+        android:layout_width="@dimen/headline_width"
+        android:layout_height="@dimen/headline_height"
+        android:id="@+id/size_choosing_page_headline"
         android:layout_marginTop="@dimen/upper_margin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
         app:srcCompat="@drawable/size_headline" />
 
-    <HorizontalScrollView
-        android:id="@+id/size_choose_scrollView"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pizza_size_viewPager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:foregroundGravity="center_vertical"
-        android:onClick="choosePizzaSize"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:onClick="choosePizzaSize">
+        android:layout_below="@id/size_choosing_page_headline"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:background="#00FFFFFF"
+        android:clipToPadding="false"
+        android:foregroundGravity="center"
+        android:overScrollMode="never">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/personal_size_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginLeft="@dimen/wide_margin"
-                android:layout_marginRight="@dimen/wide_margin"
-                android:background="#00FFFFFF"
-                android:contentDescription="@string/personal_size_description"
-                android:fadeScrollbars="false"
-                app:srcCompat="@drawable/pizza_size_small"
-                android:onClick="personal_size"
-                />
-
-            <ImageView
-                android:id="@+id/family_size_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:background="#00FFFFFF"
-                android:contentDescription="@string/family_size_description"
-                app:srcCompat="@drawable/pizza_size_medium"
-                android:onClick="family_size"
-                />
-
-            <ImageView
-                android:id="@+id/big_size_button"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginLeft="@dimen/wide_margin"
-                android:layout_marginRight="@dimen/wide_margin"
-                android:layout_weight="1"
-                android:background="#00FFFFFF"
-                android:contentDescription="@string/big_size_description"
-                app:srcCompat="@drawable/pizza_size_large"
-                android:onClick="big_size"/>
-        </LinearLayout>
-    </HorizontalScrollView>
+    </androidx.viewpager.widget.ViewPager>
 
     <ImageButton
         android:id="@+id/next_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/next_and_previous_button_size"
+        android:layout_height="@dimen/next_and_previous_button_size"
         android:layout_marginStart="@dimen/left_margin"
         android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginBottom="@dimen/bottom_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
         android:background="#00FFFFFF"
         android:contentDescription="@string/next_button_description"
         android:onClick="launchToppingsPage"
-        app:layout_constraintBottom_toBottomOf="@+id/dots_level_1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/dots_level_1"
-        app:srcCompat="@drawable/next_button" />
+        android:src="@drawable/next_button"/>
 
     <ImageView
         android:id="@+id/dots_level_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:layout_marginBottom="@dimen/bottom_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:contentDescription="@string/first_dots_description"
         android:foregroundGravity="center_horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/dots_1" />
+        android:src="@drawable/dots_1"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
