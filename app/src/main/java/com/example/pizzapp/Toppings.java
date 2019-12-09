@@ -97,6 +97,7 @@ public class Toppings extends AppCompatActivity {
         button_pineapple = findViewById(R.id.Topping_Pineapple);
         button_tomato = findViewById(R.id.Topping_Tomatos);
 
+
         show_default();
     }
 

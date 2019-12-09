@@ -9,8 +9,8 @@
     tools:context=".Toppings">
 
     <ImageView
-        android:id="@+id/toppings_headline"
-        android:layout_width="@dimen/headline_width"
+        android:id="@+id/toppingsPage_headline"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/headline_height"
         android:layout_marginTop="@dimen/upper_margin"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,23 +18,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/toppings_headline" />
 
-    <ImageView
-        android:id="@+id/pizza_image"
-        android:layout_width="320dp"
-        android:layout_height="353dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
-        app:layout_constraintVertical_bias="0.495"
-        app:srcCompat="@drawable/pizza" />
-
-
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
-        android:layout_width="418dp"
-        android:layout_height="51dp"
+        android:layout_width="@dimen/toppings_horizontalScrollView_width"
+        android:layout_height="@dimen/toppings_horizontalScrollView_height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -48,7 +35,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/Topping_Mushrooms"
+                android:id="@+id/toppingMushrooms_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@android:dimen/app_icon_size"
@@ -58,12 +45,11 @@
                 android:text="@string/mushrooms"
                 android:textColor="#A34326"
                 android:textIsSelectable="false"
-                android:textSize="15sp"
+                android:textSize="@dimen/toppings_textSize"
                 android:textStyle="bold" />
 
-
             <Button
-                android:id="@+id/Topping_Olives"
+                android:id="@+id/toppingOlives_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@android:dimen/app_icon_size"
@@ -72,11 +58,11 @@
                 android:onClick="showOlives"
                 android:text="@string/olives"
                 android:textColor="#A34326"
-                android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:textSize="@dimen/toppings_textSize"
+                android:textStyle="bold" />
 
             <Button
-                android:id="@+id/Topping_Onion"
+                android:id="@+id/toppingOnion_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@android:dimen/app_icon_size"
@@ -85,11 +71,11 @@
                 android:onClick="showOnion"
                 android:text="@string/onion"
                 android:textColor="#A34326"
-                android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:textSize="@dimen/toppings_textSize"
+                android:textStyle="bold" />
 
             <Button
-                android:id="@+id/Topping_Tomatos"
+                android:id="@+id/toppingTomatos_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@android:dimen/app_icon_size"
@@ -98,195 +84,190 @@
                 android:onClick="showTomatos"
                 android:text="@string/tomatos"
                 android:textColor="#A34326"
-                android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:textSize="@dimen/toppings_textSize"
+                android:textStyle="bold" />
 
             <Button
-                android:id="@+id/Topping_Pineapple"
+                android:id="@+id/toppingPineapple_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginLeft="@android:dimen/app_icon_size"
+                android:layout_weight="1"
+                android:background="@drawable/toppings_button_shape"
                 android:onClick="showPineapple"
                 android:text="@string/pineapple"
-                android:background="@drawable/toppings_button_shape"
                 android:textColor="#A34326"
-                android:textSize="15sp"
-                android:textStyle="bold"/>
-
-
+                android:textSize="@dimen/toppings_textSize"
+                android:textStyle="bold" />
         </LinearLayout>
     </HorizontalScrollView>
 
     <ImageView
-        android:id="@+id/full"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
+        android:id="@+id/fullPizzaTopping_choose"
+        android:layout_width="@dimen/toppingsDeployment_width"
+        android:layout_height="@dimen/toppingsDeployment_height"
         android:onClick="showFull"
-        app:layout_constraintBottom_toTopOf="@+id/pizza_image"
+        app:layout_constraintBottom_toTopOf="@+id/pizza_imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
         app:srcCompat="@drawable/full_pizza" />
 
     <ImageView
-        android:id="@+id/mashrooms"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="420dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/r_half"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
+        android:id="@+id/rightHalfPizzaTopping_choose"
+        android:layout_width="@dimen/toppingsDeployment_width"
+        android:layout_height="@dimen/toppingsDeployment_height"
         android:onClick="showR_half"
-        android:layout_marginRight="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/pizza_image"
+        app:layout_constraintBottom_toTopOf="@+id/pizza_imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/full"
+        app:layout_constraintStart_toEndOf="@+id/fullPizzaTopping_choose"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
         app:srcCompat="@drawable/half_right" />
 
     <ImageView
-        android:id="@+id/l_half"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
+        android:id="@+id/leftHalfPizzaTopping_choose"
+        android:layout_width="@dimen/toppingsDeployment_width"
+        android:layout_height="@dimen/toppingsDeployment_height"
         android:onClick="showL_half"
-        android:layout_marginLeft="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/pizza_image"
-        app:layout_constraintEnd_toStartOf="@+id/full"
+        app:layout_constraintBottom_toTopOf="@+id/pizza_imageView"
+        app:layout_constraintEnd_toStartOf="@+id/fullPizzaTopping_choose"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
         app:srcCompat="@drawable/half_left" />
 
     <ImageView
-        android:id="@+id/mushrooms_r"
-        android:layout_width="183dp"
-        android:layout_height="216dp"
-        android:visibility="invisible"
-        android:src="@drawable/mushroom_r"
-        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
-        app:layout_constraintEnd_toEndOf="@+id/pizza_image"
-        app:layout_constraintTop_toTopOf="@+id/pizza_image" />
+        android:id="@+id/pizza_imageView"
+        android:layout_width="@dimen/pizza_imageView_width"
+        android:layout_height="@dimen/pizza_imageView_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        app:layout_constraintVertical_bias="0.495"
+        app:srcCompat="@drawable/pizza" />
 
     <ImageView
-        android:id="@+id/mushrooms_l"
-        android:layout_width="148dp"
-        android:layout_height="267dp"
-        android:layout_marginLeft="30dp"
+        android:id="@+id/mushrooms_rightHalf"
+        android:layout_width="185dp"
+        android:layout_height="215dp"
+        android:src="@drawable/mushroom_r"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/pizza_imageView"
+        app:layout_constraintTop_toTopOf="@+id/pizza_imageView" />
+
+    <ImageView
+        android:id="@+id/mushrooms_leftHalf"
+        android:layout_width="150dp"
+        android:layout_height="270dp"
+        android:layout_marginLeft="@dimen/toppings_sideMargine"
         android:src="@drawable/mushroom_l"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
-        app:layout_constraintStart_toStartOf="@+id/pizza_image"
-        app:layout_constraintTop_toTopOf="@+id/pizza_image" />
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_imageView"
+        app:layout_constraintStart_toStartOf="@+id/pizza_imageView"
+        app:layout_constraintTop_toTopOf="@+id/pizza_imageView" />
 
     <ImageView
-        android:id="@+id/olives_r"
-        android:layout_width="143dp"
-        android:layout_height="251dp"
-        android:layout_marginRight="30dp"
+        android:id="@+id/olives_rightHalf"
+        android:layout_width="140dp"
+        android:layout_height="250dp"
+        android:layout_marginRight="@dimen/toppings_sideMargine"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
-        app:layout_constraintEnd_toEndOf="@+id/pizza_image"
-        app:layout_constraintTop_toTopOf="@+id/pizza_image"
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/pizza_imageView"
+        app:layout_constraintTop_toTopOf="@+id/pizza_imageView"
         app:srcCompat="@drawable/olives_r" />
 
 
     <ImageView
-        android:id="@+id/olives_l"
-        android:layout_width="167dp"
+        android:id="@+id/olives_leftHalf"
+        android:layout_width="170dp"
         android:layout_height="260dp"
-        android:layout_marginLeft="30dp"
-        android:visibility="invisible"
+        android:layout_marginLeft="@dimen/toppings_sideMargine"
         android:src="@drawable/olives_l"
-        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
-        app:layout_constraintStart_toStartOf="@+id/pizza_image"
-        app:layout_constraintTop_toTopOf="@+id/pizza_image" />
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_imageView"
+        app:layout_constraintStart_toStartOf="@+id/pizza_imageView"
+        app:layout_constraintTop_toTopOf="@+id/pizza_imageView" />
 
     <ImageView
-        android:id="@+id/onion_r"
-        android:layout_width="127dp"
-        android:layout_height="194dp"
-        android:layout_marginRight="30dp"
+        android:id="@+id/onion_rightHalf"
+        android:layout_width="130dp"
+        android:layout_height="195dp"
+        android:layout_marginRight="@dimen/toppings_sideMargine"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
-        app:layout_constraintEnd_toEndOf="@+id/pizza_image"
-        app:layout_constraintTop_toTopOf="@+id/pizza_image"
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/pizza_imageView"
+        app:layout_constraintTop_toTopOf="@+id/pizza_imageView"
         app:srcCompat="@drawable/onion_r" />
 
     <ImageView
-        android:id="@+id/onion_l"
-        android:layout_width="131dp"
-        android:layout_height="178dp"
-        android:layout_marginLeft="30dp"
+        android:id="@+id/onion_leftHalf"
+        android:layout_width="130dp"
+        android:layout_height="180dp"
+        android:layout_marginLeft="@dimen/toppings_sideMargine"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
-        app:layout_constraintStart_toStartOf="@+id/pizza_image"
-        app:layout_constraintTop_toTopOf="@+id/pizza_image"
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_imageView"
+        app:layout_constraintStart_toStartOf="@+id/pizza_imageView"
+        app:layout_constraintTop_toTopOf="@+id/pizza_imageView"
         app:srcCompat="@drawable/onion_l" />
 
     <ImageView
-        android:id="@+id/pineapple_r"
+        android:id="@+id/pineapple_rightHalf"
         android:layout_width="115dp"
         android:layout_height="235dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="@dimen/toppings_sideMargine"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
-        app:layout_constraintEnd_toEndOf="@+id/pizza_image"
-        app:layout_constraintTop_toTopOf="@+id/pizza_image"
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/pizza_imageView"
+        app:layout_constraintTop_toTopOf="@+id/pizza_imageView"
         app:srcCompat="@drawable/pineapple_r" />
 
     <ImageView
-        android:id="@+id/pineapple_l"
+        android:id="@+id/pineapple_leftHalf"
         android:layout_width="140dp"
-        android:layout_height="223dp"
-        android:layout_marginLeft="30dp"
+        android:layout_height="225dp"
+        android:layout_marginLeft="@dimen/toppings_sideMargine"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
-        app:layout_constraintStart_toStartOf="@+id/pizza_image"
-        app:layout_constraintTop_toTopOf="@+id/pizza_image"
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_imageView"
+        app:layout_constraintStart_toStartOf="@+id/pizza_imageView"
+        app:layout_constraintTop_toTopOf="@+id/pizza_imageView"
         app:srcCompat="@drawable/pineapple_l" />
 
     <ImageView
-        android:id="@+id/tomato_r"
-        android:layout_width="197dp"
-        android:layout_height="237dp"
+        android:id="@+id/tomato_rightHalf"
+        android:layout_width="195dp"
+        android:layout_height="235dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
-        app:layout_constraintEnd_toEndOf="@+id/pizza_image"
-        app:layout_constraintTop_toTopOf="@+id/pizza_image"
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/pizza_imageView"
+        app:layout_constraintTop_toTopOf="@+id/pizza_imageView"
         app:srcCompat="@drawable/tomato_r" />
 
     <ImageView
-        android:id="@+id/tomato_l"
-        android:layout_width="148dp"
-        android:layout_height="247dp"
-        android:layout_marginLeft="30dp"
+        android:id="@+id/tomato_leftHalf"
+        android:layout_width="150dp"
+        android:layout_height="245dp"
+        android:layout_marginLeft="@dimen/toppings_sideMargine"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/pizza_image"
-        app:layout_constraintStart_toStartOf="@+id/pizza_image"
-        app:layout_constraintTop_toTopOf="@+id/pizza_image"
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_imageView"
+        app:layout_constraintStart_toStartOf="@+id/pizza_imageView"
+        app:layout_constraintTop_toTopOf="@+id/pizza_imageView"
         app:srcCompat="@drawable/tomato_l" />
 
     <TextView
         android:id="@+id/Current_Price"
-        android:layout_width="81dp"
-        android:layout_height="34dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text=""
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#E8961F1F"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        android:textSize="@dimen/priceText_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/previous_button"
         app:layout_constraintStart_toEndOf="@+id/next_button"
-        app:layout_constraintTop_toTopOf="@+id/mashrooms"
-        android:layout_centerHorizontal="true" />
+        app:layout_constraintTop_toBottomOf="@+id/olives_leftHalf"
+        android:layout_centerHorizontal="true"/>
+
 
     <ImageButton
         android:id="@+id/previous_button"
@@ -325,6 +306,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/dots_2" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
