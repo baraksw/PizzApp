@@ -22,7 +22,7 @@
         android:id="@+id/pizza_size_viewPager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="choosePizzaSize">
+        android:onClick="choosePizzaSize"
         android:layout_below="@id/size_choosing_page_headline"
         android:layout_centerInParent="true"
         android:layout_centerHorizontal="true"
@@ -58,5 +58,13 @@
         android:contentDescription="@string/first_dots_description"
         android:foregroundGravity="center_horizontal"
         android:src="@drawable/dots_1"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
 
 </RelativeLayout>
