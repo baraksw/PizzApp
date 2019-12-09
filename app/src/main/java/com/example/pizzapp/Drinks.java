@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -32,12 +33,14 @@ public class Drinks extends AppCompatActivity {
     public static final String ONIONVISIBLE = "onion_visable";
     public static final String PINEAPPLEVISIBLE = "pineapple_visable";
 
+
     private int size_price=0;
     private int toppings_price=0;
     private int drink_price=0;
     private int pizza_size=0;
     private int drink_type=1;
     private int total_price=0;
+
 
 
 
