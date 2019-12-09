@@ -12,6 +12,13 @@ import android.widget.TextView;
 
 public class CustomerDetails extends AppCompatActivity {
 
+    public static final String MUSHROOMVISIBLE = "mushroom_visable";
+    public static final String OLIVESVISIBLE = "olives_visable";
+    public static final String TOMATOVISIBLE = "tomato_visable";
+    public static final String ONIONVISIBLE = "onion_visable";
+    public static final String PINEAPPLEVISIBLE = "pineapple_visable";
+    public static final String DRINKTYPE="drink_type";
+
     public static final String EXTRA_MESSAGE = "com.example.pizzapp.extra.MESSAGE";
     public static final String EXTRA_MESSAGE2 = "com.example.pizzapp.extra.MESSAGE2";
     private EditText AdressEditText;
@@ -69,6 +76,13 @@ public class CustomerDetails extends AppCompatActivity {
 
     public void launchDrinksPagePage(View view) {
         Intent intent = new Intent(this, Drinks.class);
+        intent.putExtra(MUSHROOMVISIBLE,mushrooms_visible);
+        intent.putExtra(OLIVESVISIBLE,olives_visible);
+        intent.putExtra(TOMATOVISIBLE,tomatos_visible);
+        intent.putExtra(ONIONVISIBLE,onion_visible);
+        intent.putExtra(PINEAPPLEVISIBLE,pineapple_visible);
+        intent.putExtra(DRINKTYPE,drink_type);
+
         startActivity(intent);
     }
 }

@@ -92,13 +92,6 @@
                 android:onClick="showPineapple"
                 android:text="Pineapple" />
 
-            <Button
-                android:id="@+id/Topping_Cheese"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@android:dimen/app_icon_size"
-                android:layout_weight="1"
-                android:text="Cheese" />
 
         </LinearLayout>
     </HorizontalScrollView>

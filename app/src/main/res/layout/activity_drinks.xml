@@ -103,7 +103,7 @@
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/big_size_description"
                 app:srcCompat="@drawable/fanta_bottle"
-                android:onClick="add_fanta />
+                android:onClick="add_fanta" />
         </LinearLayout>
     </HorizontalScrollView>
 
