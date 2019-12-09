@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="upper_margin">32dp</dimen>
-    <dimen name="field_headline_space">32dp</dimen>
+    <dimen name="under_headline_space">32dp</dimen>
     <dimen name="second_headline_size">30sp</dimen>
-    <dimen name="wide_margin">20dp</dimen>
     <dimen name="left_margin">16dp</dimen>
     <dimen name="right_margin">16dp</dimen>
     <dimen name="bottom_margin">32dp</dimen>
-    <dimen name="page_headline_size">45dp</dimen>
-    <dimen name="closeFromDown_margin">16dp</dimen>
+    <dimen name="headline_height">45dp</dimen>
+    <dimen name="closeFromBottpm_margin">16dp</dimen>
     <dimen name="wideSize_margin">32dp</dimen>
+    <dimen name="next_and_previous_button_size">100dp</dimen>
+    <dimen name="headline_width">0dp</dimen>
+    <dimen name="bigButton_width">130dp</dimen>
+    <dimen name="bigButton_height">150dp</dimen>
+    <dimen name="thanksText_size">270dp</dimen>
+    <dimen name="motorcycle_size">300dp</dimen>
+    />
     />
 
 </resources>

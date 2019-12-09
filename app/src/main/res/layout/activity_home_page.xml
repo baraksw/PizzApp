@@ -10,9 +10,9 @@
     tools:context=".HomePage">
 
     <ImageView
-        android:id="@+id/size_headline"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/page_headline_size"
+        android:id="@+id/sizeChoose_headline"
+        android:layout_width="@dimen/headline_width"
+        android:layout_height="@dimen/headline_height"
         android:layout_marginTop="@dimen/upper_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,8 +41,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_marginLeft="@dimen/wide_margin"
-                android:layout_marginRight="@dimen/wide_margin"
+                android:layout_marginLeft="@dimen/left_margin"
+                android:layout_marginRight="@dimen/right_margin"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/personal_size_description"
                 android:fadeScrollbars="false"
@@ -66,8 +66,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_marginLeft="@dimen/wide_margin"
-                android:layout_marginRight="@dimen/wide_margin"
+                android:layout_marginLeft="@dimen/left_margin"
+                android:layout_marginRight="@dimen/right_margin"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/big_size_description"
@@ -78,8 +78,8 @@
 
     <ImageButton
         android:id="@+id/next_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/next_and_previous_button_size"
+        android:layout_height="@dimen/next_and_previous_button_size"
         android:layout_marginStart="@dimen/left_margin"
         android:layout_marginLeft="@dimen/left_margin"
         android:background="#00FFFFFF"
