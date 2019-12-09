@@ -87,7 +87,7 @@
         android:onClick="launchCredit"
         app:layout_constraintBottom_toTopOf="@+id/dots_level_4"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/creditcard" />
+        app:srcCompat="@drawable/creditcard_button" />
 
     <ImageButton
         android:id="@+id/cash_button"
@@ -127,6 +127,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mushrooms_rightHalf" />
+
 
     <ImageView
         android:id="@+id/fanta_drink"

@@ -111,7 +111,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
-        app:srcCompat="@drawable/full" />
+        app:srcCompat="@drawable/full_pizza" />
 
     <ImageView
         android:id="@+id/rightHalfPizzaTopping_choose"
@@ -265,7 +265,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/previous_button"
         app:layout_constraintStart_toEndOf="@+id/next_button"
-        app:layout_constraintTop_toBottomOf="@+id/olives_leftHalf" />
+        app:layout_constraintTop_toBottomOf="@+id/olives_leftHalf"
+        android:layout_centerHorizontal="true"/>
+
 
     <ImageButton
         android:id="@+id/previous_button"
@@ -296,8 +298,8 @@
 
     <ImageView
         android:id="@+id/dots_level_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/dots_width"
+        android:layout_height="@dimen/dots_height"
         android:layout_marginBottom="@dimen/bottom_margin"
         android:contentDescription="@string/first_dots_description"
         app:layout_constraintBottom_toBottomOf="parent"

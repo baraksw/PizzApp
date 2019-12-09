@@ -14,7 +14,6 @@ public class LastScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_last_screen);
         Intent intent = getIntent();
-        String message = intent.getStringExtra(CustomerDetails.EXTRA_MESSAGE);
     }
 
     public void launchLastScreen(View view) {

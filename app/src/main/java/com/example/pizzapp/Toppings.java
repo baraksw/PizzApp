@@ -13,9 +13,9 @@ import android.widget.TextView;
 public class Toppings extends AppCompatActivity {
 
     public static final String SIZEPRICE = "price_for_size";
-    public static final String PIZZASIZE="size_of_pizza";
+    public static final String PIZZASIZE = "size_of_pizza";
     public static final String DRINKSPRICE = "price_for_drink";
-    public static final String DRINKTYPE="drink_type";
+    public static final String DRINKTYPE = "drink_type";
     public static final String TOPPINGSPRICE = "price_for_toppings";
     public static final String MUSHROOMVISIBLE = "mushroom_visable";
     public static final String OLIVESVISIBLE = "olives_visable";
@@ -23,13 +23,13 @@ public class Toppings extends AppCompatActivity {
     public static final String ONIONVISIBLE = "onion_visable";
     public static final String PINEAPPLEVISIBLE = "pineapple_visable";
 
-    private int size_price=0;
-    private int toppings_price=0;
-    private int drink_price=0;
-    private int pizza_size=0;
-    private int drink_type=0;
-    private int total_price=0;
-
+    private int size_price = 0;
+    private int toppings_price = 0;
+    private int drink_price = 0;
+    private int pizza_size = 0;
+    private int drink_type = 0;
+    private int total_price = 0;
+    private int topping;
 
     private boolean is_mushroom_pressed = false;
     private boolean is_tomato_pressed = false;
@@ -37,13 +37,12 @@ public class Toppings extends AppCompatActivity {
     private boolean is_pineapple_pressed = false;
     private boolean is_olives_pressed = false;
 
+    private ImageView mushrooms_image_right, mushrooms_image_left;
+    private ImageView olives_image_right, olives_image_left;
+    private ImageView onion_image_right, onion_image_left;
+    private ImageView tomato_image_right, tomato_image_left;
+    private ImageView pineapple_image_right, pineapple_image_left;
 
-    private int topping;
-    private ImageView mushrooms_image_r, mushrooms_image_l;
-    private ImageView olives_image_r, olives_image_l;
-    private ImageView onion_image_r, onion_image_l;
-    private ImageView tomato_image_r, tomato_image_l;
-    private ImageView pineapple_image_r, pineapple_image_l;
     private Button button_mushrooms;
     private Button button_olives;
     private Button button_tomato;
@@ -51,7 +50,7 @@ public class Toppings extends AppCompatActivity {
     private Button button_pineapple;
 
 
-    private int mushrooms_visible = 0, olives_visible = 0, onion_visible = 0, tomatos_visible = 0, pineapple_visible = 0;
+    private int mushrooms_visible, olives_visible, onion_visible, tomatos_visible, pineapple_visible;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,67 +64,62 @@ public class Toppings extends AppCompatActivity {
         tomatos_visible = 0;
         pineapple_visible = 0;
 
-        mushrooms_visible=intent.getIntExtra(Drinks.MUSHROOMVISIBLE,0);
-        olives_visible=intent.getIntExtra(Drinks.OLIVESVISIBLE,0);
-        tomatos_visible=intent.getIntExtra(Drinks.TOMATOVISIBLE,0);
-        onion_visible=intent.getIntExtra(Drinks.ONIONVISIBLE,0);
-        pineapple_visible=intent.getIntExtra(Drinks.PINEAPPLEVISIBLE,0);
-        pizza_size=intent.getIntExtra(HomePage.PIZZASIZE,0);
-        drink_type=intent.getIntExtra(Drinks.DRINKTYPE,0);
-
-        size_price = intent.getIntExtra(HomePage.SIZEPRICE,0);
-        toppings_price = intent.getIntExtra(HomePage.TOPPINGSPRICE,0);
-        drink_price = intent.getIntExtra(HomePage.DRINKSPRICE,0);
-        total_price = size_price+toppings_price+drink_price;
+        mushrooms_visible = intent.getIntExtra(Drinks.MUSHROOMVISIBLE, 0);
+        olives_visible = intent.getIntExtra(Drinks.OLIVESVISIBLE, 0);
+        tomatos_visible = intent.getIntExtra(Drinks.TOMATOVISIBLE, 0);
+        onion_visible = intent.getIntExtra(Drinks.ONIONVISIBLE, 0);
+        pineapple_visible = intent.getIntExtra(Drinks.PINEAPPLEVISIBLE, 0);
+        pizza_size = intent.getIntExtra(HomePage.PIZZASIZE, 0);
+        drink_type = intent.getIntExtra(Drinks.DRINKTYPE, 0);
+        size_price = intent.getIntExtra(HomePage.SIZEPRICE, 0);
+        toppings_price = intent.getIntExtra(HomePage.TOPPINGSPRICE, 0);
+        drink_price = intent.getIntExtra(HomePage.DRINKSPRICE, 0);
+        total_price = size_price + toppings_price + drink_price;
 
         add_toppings_price();
-        total_price=intent.getIntExtra(Drinks.DRINKSPRICE,0);
+        total_price = intent.getIntExtra(Drinks.DRINKSPRICE, 0);
 
         TextView current_price_view = findViewById(R.id.Current_Price);
         current_price_view.setText(String.valueOf(total_price));
+        mushrooms_image_right = findViewById(R.id.mushrooms_r);
+        mushrooms_image_left = findViewById(R.id.mushrooms_l);
+        olives_image_right = findViewById(R.id.olives_r);
+        olives_image_left = findViewById(R.id.olives_l);
+        onion_image_right = findViewById(R.id.onion_r);
+        onion_image_left = findViewById(R.id.onion_l);
+        tomato_image_right = findViewById(R.id.tomato_r);
+        tomato_image_left = findViewById(R.id.tomato_l);
+        pineapple_image_right = findViewById(R.id.pineapple_r);
+        pineapple_image_left = findViewById(R.id.pineapple_l);
+        button_mushrooms = findViewById(R.id.Topping_Mushrooms);
+        button_olives = findViewById(R.id.Topping_Olives);
+        button_onion = findViewById(R.id.Topping_Onion);
+        button_pineapple = findViewById(R.id.Topping_Pineapple);
+        button_tomato = findViewById(R.id.Topping_Tomatos);
 
-        mushrooms_image_r = findViewById(R.id.mushrooms_rightHalf);
-        mushrooms_image_l = findViewById(R.id.mushrooms_leftHalf);
-        olives_image_r = findViewById(R.id.olives_rightHalf);
-        olives_image_l = findViewById(R.id.olives_leftHalf);
-        onion_image_r = findViewById(R.id.onion_rightHalf);
-        onion_image_l = findViewById(R.id.onion_leftHalf);
-        tomato_image_r = findViewById(R.id.tomato_rightHalf);
-        tomato_image_l = findViewById(R.id.tomato_leftHalf);
-        pineapple_image_r = findViewById(R.id.pineapple_rightHalf);
-        pineapple_image_l = findViewById(R.id.pineapple_leftHalf);
 
-        button_mushrooms = findViewById(R.id.toppingMushrooms_button);
-        button_olives = findViewById(R.id.toppingOlives_button);
-        button_onion = findViewById(R.id.toppingOnion_button);
-        button_pineapple = findViewById(R.id.toppingPineapple_button);
-        button_tomato = findViewById(R.id.toppingTomatos_button);
         show_default();
-
-
     }
 
-    public void showView(ImageView vr, ImageView vl, int vis) {
-        switch (vis) {
+    public void showView(ImageView view_right, ImageView view_left, int topping_visibility) {
+        switch (topping_visibility) {
             case 0:
-                vr.setVisibility(View.INVISIBLE);
-                vl.setVisibility(View.INVISIBLE);
+                view_right.setVisibility(View.INVISIBLE);
+                view_left.setVisibility(View.INVISIBLE);
                 break;
             case 1:
-                vr.setVisibility(View.VISIBLE);
-                vl.setVisibility(View.VISIBLE);
+                view_right.setVisibility(View.VISIBLE);
+                view_left.setVisibility(View.VISIBLE);
                 break;
             case 2:
-                vr.setVisibility(View.VISIBLE);
-                vl.setVisibility(View.INVISIBLE);
+                view_right.setVisibility(View.VISIBLE);
+                view_left.setVisibility(View.INVISIBLE);
                 break;
             case 3:
-                vr.setVisibility(View.INVISIBLE);
-                vl.setVisibility(View.VISIBLE);
+                view_right.setVisibility(View.INVISIBLE);
+                view_left.setVisibility(View.VISIBLE);
                 break;
-
         }
-
     }
 
     public void showMushroom(View view) {
@@ -257,8 +251,8 @@ public class Toppings extends AppCompatActivity {
                 break;
         }
 
-        add_toppings_price();
         add_topping();
+        add_toppings_price();
     }
 
     public void showR_half(View view) {
@@ -296,8 +290,8 @@ public class Toppings extends AppCompatActivity {
                 break;
         }
 
-        add_toppings_price();
         add_topping();
+        add_toppings_price();
     }
 
     public void showL_half(View view) {
@@ -333,82 +327,83 @@ public class Toppings extends AppCompatActivity {
                     olives_visible = 3;
                 break;
         }
-        add_toppings_price();
+
         add_topping();
+        add_toppings_price();
     }
+
 
     public void add_topping() {
         switch (topping) {
             case 0:
-                showView(mushrooms_image_r, mushrooms_image_l, mushrooms_visible);
+                showView(mushrooms_image_right, mushrooms_image_left, mushrooms_visible);
                 break;
             case 1:
-                showView(onion_image_r, onion_image_l, onion_visible);
+                showView(onion_image_right, onion_image_left, onion_visible);
                 break;
             case 2:
-                showView(tomato_image_r, tomato_image_l, tomatos_visible);
+                showView(tomato_image_right, tomato_image_left, tomatos_visible);
                 break;
             case 3:
-                showView(pineapple_image_r, pineapple_image_l, pineapple_visible);
+                showView(pineapple_image_right, pineapple_image_left, pineapple_visible);
                 break;
             case 4:
-                showView(olives_image_r, olives_image_l, olives_visible);
+                showView(olives_image_right, olives_image_left, olives_visible);
                 break;
 
         }
     }
 
 
-    public void add_toppings_price(){
-        toppings_price=0;
+    public void add_toppings_price() {
+        toppings_price = 0;
 
-        if(mushrooms_visible==1)
-            toppings_price+=10;
-        if(mushrooms_visible==2)
-            toppings_price+=5;
-        if(mushrooms_visible==3)
-            toppings_price+=5;
+        if (mushrooms_visible == 1)
+            toppings_price += 10;
+        if (mushrooms_visible == 2)
+            toppings_price += 5;
+        if (mushrooms_visible == 3)
+            toppings_price += 5;
 
-        if(olives_visible==1)
-            toppings_price+=10;
-        if(olives_visible==2)
-            toppings_price+=5;
-        if(olives_visible==3)
-            toppings_price+=5;
+        if (olives_visible == 1)
+            toppings_price += 10;
+        if (olives_visible == 2)
+            toppings_price += 5;
+        if (olives_visible == 3)
+            toppings_price += 5;
 
-        if(onion_visible==1)
-            toppings_price+=10;
-        if(onion_visible==2)
-            toppings_price+=5;
-        if(onion_visible==3)
-            toppings_price+=5;
+        if (onion_visible == 1)
+            toppings_price += 10;
+        if (onion_visible == 2)
+            toppings_price += 5;
+        if (onion_visible == 3)
+            toppings_price += 5;
 
-        if(tomatos_visible==1)
-            toppings_price+=10;
-        if(tomatos_visible==2)
-            toppings_price+=5;
-        if(tomatos_visible==3)
-            toppings_price+=5;
+        if (tomatos_visible == 1)
+            toppings_price += 10;
+        if (tomatos_visible == 2)
+            toppings_price += 5;
+        if (tomatos_visible == 3)
+            toppings_price += 5;
 
-        if(pineapple_visible==1)
-            toppings_price+=10;
-        if(pineapple_visible==2)
-            toppings_price+=5;
-        if(pineapple_visible==3)
-            toppings_price+=5;
+        if (pineapple_visible == 1)
+            toppings_price += 10;
+        if (pineapple_visible == 2)
+            toppings_price += 5;
+        if (pineapple_visible == 3)
+            toppings_price += 5;
 
-        total_price=size_price+toppings_price+drink_price;
+        total_price = size_price + toppings_price + drink_price;
+
         TextView current_price_view = findViewById(R.id.Current_Price);
-        current_price_view.setText(String.valueOf(total_price));
-
+        current_price_view.setText(String.valueOf(total_price)+'₪');
     }
 
 
-    public void show_default()
-    {
-       topping=0;
-       add_topping();
-        topping=1;
+    public void show_default() {
+        topping = 0;
+        add_topping();
+        topping = 1;
         add_topping();
         topping = 2;
         add_topping();
@@ -421,32 +416,32 @@ public class Toppings extends AppCompatActivity {
 
     public void launchHomePage(View view) {
         Intent homePageIntent = new Intent(this, HomePage.class);
-        homePageIntent.putExtra(SIZEPRICE,size_price);
-        homePageIntent.putExtra(PIZZASIZE,pizza_size);
-        homePageIntent.putExtra(TOPPINGSPRICE,toppings_price);
-        homePageIntent.putExtra(DRINKSPRICE,drink_price);
-        homePageIntent.putExtra(DRINKTYPE,drink_type);
-        homePageIntent.putExtra(MUSHROOMVISIBLE,mushrooms_visible);
-        homePageIntent.putExtra(OLIVESVISIBLE,olives_visible);
-        homePageIntent.putExtra(TOMATOVISIBLE,tomatos_visible);
-        homePageIntent.putExtra(ONIONVISIBLE,onion_visible);
-        homePageIntent.putExtra(PINEAPPLEVISIBLE,pineapple_visible);
+        homePageIntent.putExtra(SIZEPRICE, size_price);
+        homePageIntent.putExtra(PIZZASIZE, pizza_size);
+        homePageIntent.putExtra(TOPPINGSPRICE, toppings_price);
+        homePageIntent.putExtra(DRINKSPRICE, drink_price);
+        homePageIntent.putExtra(DRINKTYPE, drink_type);
+        homePageIntent.putExtra(MUSHROOMVISIBLE, mushrooms_visible);
+        homePageIntent.putExtra(OLIVESVISIBLE, olives_visible);
+        homePageIntent.putExtra(TOMATOVISIBLE, tomatos_visible);
+        homePageIntent.putExtra(ONIONVISIBLE, onion_visible);
+        homePageIntent.putExtra(PINEAPPLEVISIBLE, pineapple_visible);
 
         startActivity(homePageIntent);
     }
 
     public void launchDrinksPage(View view) {
         Intent drinksIntent = new Intent(this, Drinks.class);
-        drinksIntent.putExtra(SIZEPRICE,size_price);
-        drinksIntent.putExtra(PIZZASIZE,pizza_size);
-        drinksIntent.putExtra(TOPPINGSPRICE,toppings_price);
-        drinksIntent.putExtra(DRINKSPRICE,drink_price);
-        drinksIntent.putExtra(DRINKTYPE,drink_type);
-        drinksIntent.putExtra(MUSHROOMVISIBLE,mushrooms_visible);
-        drinksIntent.putExtra(OLIVESVISIBLE,olives_visible);
-        drinksIntent.putExtra(TOMATOVISIBLE,tomatos_visible);
-        drinksIntent.putExtra(ONIONVISIBLE,onion_visible);
-        drinksIntent.putExtra(PINEAPPLEVISIBLE,pineapple_visible);
+        drinksIntent.putExtra(SIZEPRICE, size_price);
+        drinksIntent.putExtra(PIZZASIZE, pizza_size);
+        drinksIntent.putExtra(TOPPINGSPRICE, toppings_price);
+        drinksIntent.putExtra(DRINKSPRICE, drink_price);
+        drinksIntent.putExtra(DRINKTYPE, drink_type);
+        drinksIntent.putExtra(MUSHROOMVISIBLE, mushrooms_visible);
+        drinksIntent.putExtra(OLIVESVISIBLE, olives_visible);
+        drinksIntent.putExtra(TOMATOVISIBLE, tomatos_visible);
+        drinksIntent.putExtra(ONIONVISIBLE, onion_visible);
+        drinksIntent.putExtra(PINEAPPLEVISIBLE, pineapple_visible);
 
         startActivity(drinksIntent);
     }

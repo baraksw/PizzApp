@@ -59,7 +59,7 @@ public class HomePage extends AppCompatActivity {
 
         pizza_size_viewPager = findViewById(R.id.pizza_size_viewPager);
         pizza_size_viewPager.setAdapter(adapter);
-        pizza_size_viewPager.setPadding(130, 0, 0, 130);
+        pizza_size_viewPager.setPadding(0, 0, 0, 0);
 
         Intent intent = getIntent();
         mushrooms_visible = intent.getIntExtra(Toppings.MUSHROOMVISIBLE,0);
@@ -78,8 +78,6 @@ public class HomePage extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                TextView t1 = findViewById(R.id.textView);
-                t1.setText(String.valueOf(position));
                 pizza_size=position;
                 add_size_price();
             }

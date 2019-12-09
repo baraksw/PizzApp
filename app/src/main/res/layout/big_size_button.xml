@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="420dp"
         app:cardBackgroundColor="#00FFFFFF"
+        app:cardElevation="0dp"
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp">
 
@@ -21,7 +22,7 @@
 
 
             <ImageView
-                android:id="@+id/big_size_button"
+                android:id="@+id/big_size_pizza"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -30,13 +31,16 @@
 
 
             <TextView
-                android:id="@+id/personal_pizza_price"
+                android:id="@+id/big_pizza_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentBottom="true"
                 android:text="60 שקלים"
-                android:textSize="24sp" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#E8961F1F"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 

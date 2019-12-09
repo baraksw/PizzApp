@@ -32,4 +32,7 @@
     <dimen name="toppingsLeftHalfFinal_width">105dp</dimen>
     <dimen name="toppingsLeftHalfFinal_height">205dp</dimen>
     <dimen name="halfScreenEditText_width">180dp</dimen>
+    <dimen name="arrow_width">30dp</dimen>
+    <dimen name="arrow_height">60dp</dimen>
+
 </resources>

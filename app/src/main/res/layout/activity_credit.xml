@@ -102,7 +102,7 @@
         app:layout_constraintTop_toTopOf="@+id/dots_level_5"
         app:srcCompat="@drawable/previous_button" />
 
-    <ImageView
+        <ImageView
         android:id="@+id/payment_button"
         android:layout_width="@dimen/next_and_previous_button_size"
         android:layout_height="@dimen/next_and_previous_button_size"
