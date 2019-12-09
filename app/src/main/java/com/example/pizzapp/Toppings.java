@@ -81,21 +81,21 @@ public class Toppings extends AppCompatActivity {
 
         TextView current_price_view = findViewById(R.id.Current_Price);
         current_price_view.setText(String.valueOf(total_price));
-        mushrooms_image_right = findViewById(R.id.mushrooms_r);
-        mushrooms_image_left = findViewById(R.id.mushrooms_l);
-        olives_image_right = findViewById(R.id.olives_r);
-        olives_image_left = findViewById(R.id.olives_l);
-        onion_image_right = findViewById(R.id.onion_r);
-        onion_image_left = findViewById(R.id.onion_l);
-        tomato_image_right = findViewById(R.id.tomato_r);
-        tomato_image_left = findViewById(R.id.tomato_l);
-        pineapple_image_right = findViewById(R.id.pineapple_r);
-        pineapple_image_left = findViewById(R.id.pineapple_l);
-        button_mushrooms = findViewById(R.id.Topping_Mushrooms);
-        button_olives = findViewById(R.id.Topping_Olives);
-        button_onion = findViewById(R.id.Topping_Onion);
-        button_pineapple = findViewById(R.id.Topping_Pineapple);
-        button_tomato = findViewById(R.id.Topping_Tomatos);
+        mushrooms_image_right = findViewById(R.id.mushrooms_rightHalf);
+        mushrooms_image_left = findViewById(R.id.mushrooms_leftHalf);
+        olives_image_right = findViewById(R.id.olives_rightHalf);
+        olives_image_left = findViewById(R.id.olives_leftHalf);
+        onion_image_right = findViewById(R.id.onion_rightHalf);
+        onion_image_left = findViewById(R.id.onion_leftHalf);
+        tomato_image_right = findViewById(R.id.tomato_rightHalf);
+        tomato_image_left = findViewById(R.id.tomato_leftHalf);
+        pineapple_image_right = findViewById(R.id.pineapple_rightHalf);
+        pineapple_image_left = findViewById(R.id.pineapple_leftHalf);
+        button_mushrooms = findViewById(R.id.toppingMushrooms_button);
+        button_olives = findViewById(R.id.toppingOlives_button);
+        button_onion = findViewById(R.id.toppingOnion_button);
+        button_pineapple = findViewById(R.id.toppingPineapple_button);
+        button_tomato = findViewById(R.id.toppingTomatos_button);
 
 
         show_default();

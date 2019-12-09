@@ -37,6 +37,7 @@
         android:src="@drawable/right_arrow"/>
 
     <androidx.viewpager.widget.ViewPager
+
         android:id="@+id/drinks_viewPager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,7 +59,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="@dimen/left_margin"
         android:layout_marginLeft="@dimen/left_margin"
-        android:layout_marginBottom="@dimen/bottom_margin"
         android:background="#00FFFFFF"
         android:contentDescription="@string/next_button_description"
         android:onClick="launchCustomerDetailsPage"
@@ -72,7 +72,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="@dimen/right_margin"
         android:layout_marginRight="@dimen/right_margin"
-        android:layout_marginBottom="@dimen/bottom_margin"
         android:background="#00FFFFFF"
         android:contentDescription="@string/next_button_description"
         android:onClick="launchToppingsPage"

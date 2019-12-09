@@ -31,4 +31,7 @@
     <string name="tomatos">עגבניה</string>
     <string name="pineapple">אננס</string>
     <string name="cheese">גבינה</string>
+    <string name="fifty_shekels">50 שקלים</string>
+    <string name="sixty_shekels">60 שקלים</string>
+    <string name="forty_shekels">40 שקלים</string>
 </resources>
