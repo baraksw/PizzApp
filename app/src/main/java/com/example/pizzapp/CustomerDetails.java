@@ -70,16 +70,16 @@ public class CustomerDetails extends AppCompatActivity {
         pineapple_visible = intent.getIntExtra(Drinks.PINEAPPLEVISIBLE, 0);
         drink_type = intent.getIntExtra(Drinks.DRINKTYPE, 4);
 
-        mushrooms_image_r = findViewById(R.id.mushrooms_r);
-        mushrooms_image_l = findViewById(R.id.mushrooms_l);
-        olives_image_r = findViewById(R.id.olives_r);
-        olives_image_l = findViewById(R.id.olives_l);
-        onion_image_r = findViewById(R.id.onion_r);
-        onion_image_l = findViewById(R.id.onion_l);
-        tomato_image_r = findViewById(R.id.tomato_r);
-        tomato_image_l = findViewById(R.id.tomato_l);
-        pineapple_image_r = findViewById(R.id.pineapple_r);
-        pineapple_image_l = findViewById(R.id.pineapple_l);
+        mushrooms_image_r = findViewById(R.id.mushrooms_rightHalf);
+        mushrooms_image_l = findViewById(R.id.mushrooms_leftHalf);
+        olives_image_r = findViewById(R.id.olives_rightHalf);
+        olives_image_l = findViewById(R.id.olives_leftHalf);
+        onion_image_r = findViewById(R.id.onion_rightHalf);
+        onion_image_l = findViewById(R.id.onion_leftHalf);
+        tomato_image_r = findViewById(R.id.tomato_rightHalf);
+        tomato_image_l = findViewById(R.id.tomato_leftHalf);
+        pineapple_image_r = findViewById(R.id.pineapple_rightHalf);
+        pineapple_image_l = findViewById(R.id.pineapple_leftHalf);
 
         ImageView cola_view = findViewById(R.id.cola_drink);
         ImageView sprite_view = findViewById(R.id.sprite_drink);

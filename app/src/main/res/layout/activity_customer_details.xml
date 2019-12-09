@@ -8,8 +8,8 @@
     tools:context=".CustomerDetails">
 
     <ImageView
-        android:id="@+id/payment_headline"
-        android:layout_width="@dimen/headline_width"
+        android:id="@+id/customerDetailsPage_headline"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/headline_height"
         android:layout_marginTop="@dimen/bottom_margin"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,18 +26,18 @@
         android:background="#00FFFFFF"
         android:contentDescription="@string/next_button_description"
         android:onClick="launchDrinksPagePage"
-        app:layout_constraintBottom_toBottomOf="@+id/dots_image_4"
+        app:layout_constraintBottom_toBottomOf="@+id/dots_level_4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/dots_image_4"
+        app:layout_constraintTop_toTopOf="@+id/dots_level_4"
         app:srcCompat="@drawable/previous_button" />
 
     <EditText
         android:id="@+id/adress_editText"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/left_margin"
         android:layout_marginLeft="@dimen/left_margin"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/closeFromBottom_margin"
         android:layout_marginEnd="@dimen/right_margin"
         android:layout_marginRight="@dimen/right_margin"
         android:ems="10"
@@ -46,11 +46,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/payment_headline" />
+        app:layout_constraintTop_toBottomOf="@+id/customerDetailsPage_headline" />
 
     <EditText
         android:id="@+id/phoneNumber_editText"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/left_margin"
         android:layout_marginLeft="@dimen/left_margin"
@@ -67,54 +67,44 @@
 
     <ImageView
         android:id="@+id/imageView_pizza"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/finalPizza_size"
+        android:layout_height="@dimen/finalPizza_size"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginTop="@dimen/closeFromBottom_margin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phoneNumber_editText"
         app:srcCompat="@drawable/pizza" />
 
-
-    <ImageView
-        android:id="@+id/second_headline"
-        android:layout_width="86dp"
-        android:layout_height="93dp"
-        android:src="@drawable/price"
-        app:layout_constraintBottom_toBottomOf="@+id/dots_image_4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.588"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phoneNumber_editText" />
-
     <ImageButton
         android:id="@+id/creditCard_button"
-        android:layout_width="132dp"
-        android:layout_height="147dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="130dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="@dimen/veryWide_margin"
+        android:layout_marginLeft="@dimen/veryWide_margin"
+        android:layout_marginBottom="@dimen/bottom_margin"
         android:background="#00FFFFFF"
         android:onClick="launchCredit"
-        app:layout_constraintBottom_toTopOf="@+id/dots_image_4"
+        app:layout_constraintBottom_toTopOf="@+id/dots_level_4"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/creditcard" />
 
     <ImageButton
         android:id="@+id/cash_button"
         android:layout_width="135dp"
-        android:layout_height="154dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginRight="72dp"
+        android:layout_height="155dp"
+        android:layout_marginEnd="@dimen/veryWide_margin"
+        android:layout_marginRight="@dimen/veryWide_margin"
         android:background="#00FFFFFF"
         android:onClick="launchLastScreen"
-        app:layout_constraintBottom_toTopOf="@+id/dots_image_4"
+        app:layout_constraintBottom_toBottomOf="@+id/creditCard_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/creditCard_button"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/cash" />
 
     <ImageView
-        android:id="@+id/dots_image_4"
+        android:id="@+id/dots_level_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/bottom_margin"
@@ -128,173 +118,172 @@
         android:id="@+id/total_price_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text=""
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#E8961F1F"
-        android:textSize="25sp"
+        android:textSize="@dimen/priceText_size"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/creditCard_button"
-        app:layout_constraintEnd_toStartOf="@+id/second_headline"
-        app:layout_constraintTop_toBottomOf="@+id/mushrooms_r" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mushrooms_rightHalf" />
 
     <ImageView
         android:id="@+id/fanta_drink"
-        android:layout_width="72dp"
-        android:layout_height="211dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.691"
-        app:layout_constraintStart_toEndOf="@+id/imageView_pizza"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.413"
+        android:layout_width="@dimen/drink_width"
+        android:layout_height="@dimen/drink_height"
+        android:layout_marginEnd="@dimen/wideSize_margin"
+        android:layout_marginRight="@dimen/wideSize_margin"
         android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
+        app:layout_constraintVertical_bias="0.413"
         app:srcCompat="@drawable/fanta_bottle" />
 
     <ImageView
         android:id="@+id/sprite_drink"
-        android:layout_width="81dp"
-        android:layout_height="282dp"
+        android:layout_width="@dimen/drink_width"
+        android:layout_height="@dimen/drink_height"
+        android:layout_marginEnd="@dimen/wideSize_margin"
+        android:layout_marginRight="@dimen/wideSize_margin"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.725"
-        app:layout_constraintStart_toEndOf="@+id/imageView_pizza"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
         app:layout_constraintVertical_bias="0.401"
         app:srcCompat="@drawable/sprite_bottle" />
 
     <ImageView
         android:id="@+id/cola_drink"
-        android:layout_width="82dp"
-        android:layout_height="200dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_width="@dimen/drink_width"
+        android:layout_height="@dimen/drink_height"
+        android:layout_marginEnd="@dimen/wideSize_margin"
+        android:layout_marginRight="@dimen/wideSize_margin"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
         app:layout_constraintEnd_toEndOf="parent"
-        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
         app:srcCompat="@drawable/coke_bottle" />
 
-
     <ImageView
-        android:id="@+id/mushrooms_r"
-        android:layout_width="119dp"
-        android:layout_height="169dp"
-        android:visibility="invisible"
+        android:id="@+id/mushrooms_rightHalf"
+        android:layout_width="@dimen/toppingsRightHalfFinal_width"
+        android:layout_height="@dimen/toppingsRightHalfFinal_height"
         android:src="@drawable/mushroom_r"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
         app:layout_constraintEnd_toEndOf="@+id/imageView_pizza"
         app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
         app:layout_constraintVertical_bias="0.351" />
 
     <ImageView
-        android:id="@+id/mushrooms_l"
-        android:layout_width="103dp"
-        android:layout_height="204dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
-        app:layout_constraintStart_toStartOf="@+id/imageView_pizza"
-        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
-        app:layout_constraintVertical_bias="1.0"
-        android:src="@drawable/mushroom_l" />
-
-
-    <ImageView
-        android:id="@+id/onion_r"
-        android:layout_width="119dp"
-        android:layout_height="169dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_pizza"
-        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
-        app:layout_constraintVertical_bias="0.351"
-        app:srcCompat="@drawable/onion_r"
-        android:visibility="invisible" />
-
-    <ImageView
-        android:id="@+id/onion_l"
-        android:layout_width="103dp"
-        android:layout_height="204dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
-        app:layout_constraintStart_toStartOf="@+id/imageView_pizza"
-        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
-        app:layout_constraintVertical_bias="1.0"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/onion_l" />
-
-    <ImageView
-        android:id="@+id/pineapple_r"
-        android:layout_width="119dp"
-        android:layout_height="169dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_pizza"
-        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
-        app:layout_constraintVertical_bias="0.351"
-        app:srcCompat="@drawable/pineapple_r"
-        android:visibility="invisible" />
-
-    <ImageView
-        android:id="@+id/pineapple_l"
-        android:layout_width="103dp"
-        android:layout_height="204dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
-        app:layout_constraintStart_toStartOf="@+id/imageView_pizza"
-        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/pineapple_l"
-        android:visibility="invisible" />
-
-    <ImageView
-        android:id="@+id/tomato_r"
-        android:layout_width="119dp"
-        android:layout_height="169dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_pizza"
-        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
-        app:layout_constraintVertical_bias="0.351"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/tomato_r" />
-
-    <ImageView
-        android:id="@+id/tomato_l"
-        android:layout_width="103dp"
-        android:layout_height="204dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
-        app:layout_constraintStart_toStartOf="@+id/imageView_pizza"
-        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
-        app:layout_constraintVertical_bias="1.0"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/tomato_l" />
-
-    <ImageView
-        android:id="@+id/olives_r"
-        android:layout_width="119dp"
-        android:layout_height="169dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_pizza"
-        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
-        app:layout_constraintVertical_bias="0.351"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/olives_r" />
-
-    <ImageView
-        android:id="@+id/olives_l"
-        android:layout_width="103dp"
-        android:layout_height="204dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:src="@drawable/olives_l"
+        android:id="@+id/mushrooms_leftHalf"
+        android:layout_width="@dimen/toppingsLeftHalfFinal_width"
+        android:layout_height="@dimen/toppingsLeftHalfFinal_height"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:src="@drawable/mushroom_l"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
         app:layout_constraintStart_toStartOf="@+id/imageView_pizza"
         app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
         app:layout_constraintVertical_bias="1.0" />
 
+    <ImageView
+        android:id="@+id/onion_rightHalf"
+        android:layout_width="@dimen/toppingsRightHalfFinal_width"
+        android:layout_height="@dimen/toppingsRightHalfFinal_height"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_pizza"
+        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
+        app:layout_constraintVertical_bias="0.351"
+        app:srcCompat="@drawable/onion_r" />
+
+    <ImageView
+        android:id="@+id/onion_leftHalf"
+        android:layout_width="@dimen/toppingsLeftHalfFinal_width"
+        android:layout_height="@dimen/toppingsLeftHalfFinal_height"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
+        app:layout_constraintStart_toStartOf="@+id/imageView_pizza"
+        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/onion_l" />
+
+    <ImageView
+        android:id="@+id/pineapple_rightHalf"
+        android:layout_width="@dimen/toppingsRightHalfFinal_width"
+        android:layout_height="@dimen/toppingsRightHalfFinal_height"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_pizza"
+        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
+        app:layout_constraintVertical_bias="0.351"
+        app:srcCompat="@drawable/pineapple_r" />
+
+    <ImageView
+        android:id="@+id/pineapple_leftHalf"
+        android:layout_width="@dimen/toppingsLeftHalfFinal_width"
+        android:layout_height="@dimen/toppingsLeftHalfFinal_height"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
+        app:layout_constraintStart_toStartOf="@+id/imageView_pizza"
+        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/pineapple_l" />
+
+    <ImageView
+        android:id="@+id/tomato_rightHalf"
+        android:layout_width="@dimen/toppingsRightHalfFinal_width"
+        android:layout_height="@dimen/toppingsRightHalfFinal_height"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_pizza"
+        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
+        app:layout_constraintVertical_bias="0.351"
+        app:srcCompat="@drawable/tomato_r" />
+
+    <ImageView
+        android:id="@+id/tomato_leftHalf"
+        android:layout_width="@dimen/toppingsLeftHalfFinal_width"
+        android:layout_height="@dimen/toppingsLeftHalfFinal_height"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
+        app:layout_constraintStart_toStartOf="@+id/imageView_pizza"
+        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/tomato_l" />
+
+    <ImageView
+        android:id="@+id/olives_rightHalf"
+        android:layout_width="@dimen/toppingsRightHalfFinal_width"
+        android:layout_height="@dimen/toppingsRightHalfFinal_height"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_pizza"
+        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
+        app:layout_constraintVertical_bias="0.351"
+        app:srcCompat="@drawable/olives_r" />
+
+    <ImageView
+        android:id="@+id/olives_leftHalf"
+        android:layout_width="@dimen/toppingsLeftHalfFinal_width"
+        android:layout_height="@dimen/toppingsLeftHalfFinal_height"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:src="@drawable/olives_l"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_pizza"
+        app:layout_constraintStart_toStartOf="@+id/imageView_pizza"
+        app:layout_constraintTop_toTopOf="@+id/imageView_pizza"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

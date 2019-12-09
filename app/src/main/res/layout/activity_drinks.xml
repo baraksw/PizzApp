@@ -10,20 +10,19 @@
     tools:context=".Drinks">
 
     <ImageView
-        android:id="@+id/drinks_headline"
+        android:id="@+id/drinksPage_headline"
         android:layout_width="match_parent"
         android:layout_height="@dimen/headline_height"
-        android:layout_marginTop="@dimen/upper_margin"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/upper_margin"
         app:srcCompat="@drawable/drinks_headline" />
-
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/drinks_viewPager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/drinks_headline"
+        android:layout_below="@id/drinksPage_headline"
         android:layout_centerInParent="true"
         android:layout_centerHorizontal="true"
         android:background="#00FFFFFF"
@@ -33,31 +32,29 @@
 
     </androidx.viewpager.widget.ViewPager>
 
-
-
     <ImageButton
         android:id="@+id/next_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/next_and_previous_button_size"
+        android:layout_height="@dimen/next_and_previous_button_size"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="@dimen/left_margin"
         android:layout_marginLeft="@dimen/left_margin"
         android:layout_marginBottom="@dimen/bottom_margin"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
         android:background="#00FFFFFF"
         android:contentDescription="@string/next_button_description"
         android:onClick="launchCustomerDetailsPage"
-        app:srcCompat="@drawable/next_button"/>
+        app:srcCompat="@drawable/next_button" />
 
     <ImageButton
         android:id="@+id/previous_button"
         android:layout_width="@dimen/next_and_previous_button_size"
         android:layout_height="@dimen/next_and_previous_button_size"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginEnd="@dimen/right_margin"
         android:layout_marginRight="@dimen/right_margin"
         android:layout_marginBottom="@dimen/bottom_margin"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
         android:background="#00FFFFFF"
         android:contentDescription="@string/next_button_description"
         android:onClick="launchToppingsPage"
@@ -67,11 +64,10 @@
         android:id="@+id/dots_level_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/bottom_margin"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/bottom_margin"
         android:contentDescription="@string/first_dots_description"
         app:srcCompat="@drawable/dots_3" />
-
 
 </RelativeLayout>
