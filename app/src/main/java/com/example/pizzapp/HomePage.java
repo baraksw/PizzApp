@@ -19,20 +19,27 @@ public class HomePage extends AppCompatActivity {
     List<Model> models;
     private static final String LOG_TAG = HomePage.class.getSimpleName();
 
+
     public static final String SIZEPRICE = "price_for_size";
-    public static final String TOPPINGSPRICE = "price_for_toppings";
+    public static final String PIZZASIZE="size_of_pizza";
     public static final String DRINKSPRICE = "price_for_drink";
+    public static final String DRINKTYPE="drink_type";
+    public static final String TOPPINGSPRICE = "price_for_toppings";
     public static final String MUSHROOMVISIBLE = "mushroom_visable";
     public static final String OLIVESVISIBLE = "olives_visable";
     public static final String TOMATOVISIBLE = "tomato_visable";
     public static final String ONIONVISIBLE = "onion_visable";
     public static final String PINEAPPLEVISIBLE = "pineapple_visable";
-    public static final String PIZZASIZE="size_of_pizza";
+
     private int size_price=0;
     private int toppings_price=0;
     private int drink_price=0;
+    private int pizza_size=0;
+    private int drink_type=0;
+    private int total_price=0;
+
     public boolean personal_flag=false,family_flag=false,big_flag=false;
-    public int pizza_size=0;
+
     private int mushrooms_visible = 0, olives_visible = 0, onion_visible = 0, tomatos_visible = 0, pineapple_visible = 0;
 
 
@@ -88,6 +95,9 @@ public class HomePage extends AppCompatActivity {
         Intent ToppingsIntent = new Intent(this, Toppings.class);
         ToppingsIntent.putExtra(SIZEPRICE,size_price);
         ToppingsIntent.putExtra(PIZZASIZE,pizza_size);
+        ToppingsIntent.putExtra(TOPPINGSPRICE,toppings_price);
+        ToppingsIntent.putExtra(DRINKSPRICE,drink_price);
+        ToppingsIntent.putExtra(DRINKTYPE,drink_type);
         ToppingsIntent.putExtra(MUSHROOMVISIBLE,mushrooms_visible);
         ToppingsIntent.putExtra(OLIVESVISIBLE,olives_visible);
         ToppingsIntent.putExtra(TOMATOVISIBLE,tomatos_visible);

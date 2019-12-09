@@ -14,12 +14,16 @@ import android.widget.Toast;
 
 public class CustomerDetails extends AppCompatActivity {
 
+    public static final String SIZEPRICE = "price_for_size";
+    public static final String PIZZASIZE="size_of_pizza";
+    public static final String DRINKSPRICE = "price_for_drink";
+    public static final String DRINKTYPE="drink_type";
+    public static final String TOPPINGSPRICE = "price_for_toppings";
     public static final String MUSHROOMVISIBLE = "mushroom_visable";
     public static final String OLIVESVISIBLE = "olives_visable";
     public static final String TOMATOVISIBLE = "tomato_visable";
     public static final String ONIONVISIBLE = "onion_visable";
     public static final String PINEAPPLEVISIBLE = "pineapple_visable";
-    public static final String DRINKTYPE = "drink_type";
 
     public static final String EXTRA_MESSAGE = "com.example.pizzapp.extra.MESSAGE";
     public static final String EXTRA_MESSAGE2 = "com.example.pizzapp.extra.MESSAGE2";
@@ -27,9 +31,15 @@ public class CustomerDetails extends AppCompatActivity {
     private EditText PhoneNumberEditText;
     private String howToPay;
 
-    private int pizza_price_for_drink;
-    private int mushrooms_visible, olives_visible, onion_visible, tomatos_visible , pineapple_visible;
+
+    private int size_price=0;
+    private int toppings_price=0;
+    private int drink_price=0;
+    private int pizza_size=0;
     private int drink_type=0;
+    private int total_price=0;
+
+    private int mushrooms_visible, olives_visible, onion_visible, tomatos_visible , pineapple_visible;
     private int topping=0;
 
     private ImageView mushrooms_image_r, mushrooms_image_l;
@@ -44,17 +54,21 @@ public class CustomerDetails extends AppCompatActivity {
         setContentView(R.layout.activity_customer_details);
         AdressEditText = findViewById(R.id.adress_editText);
         PhoneNumberEditText = findViewById(R.id.phoneNumber_editText);
+
         Intent intent = getIntent();
-        pizza_price_for_drink = intent.getIntExtra(Drinks.DRINKSPRICE, 0);
+        toppings_price=intent.getIntExtra(Drinks.TOPPINGSPRICE,0);
+        drink_price=intent.getIntExtra(Drinks.DRINKSPRICE,0);
+        size_price=intent.getIntExtra(Drinks.SIZEPRICE,0);
+        total_price=toppings_price+size_price+drink_price;
         TextView current_price = findViewById(R.id.total_price_text_view);
-        current_price.setText(String.valueOf(pizza_price_for_drink));
+        current_price.setText(String.valueOf(total_price));
 
         mushrooms_visible = intent.getIntExtra(Drinks.MUSHROOMVISIBLE, 0);
         olives_visible = intent.getIntExtra(Drinks.OLIVESVISIBLE, 0);
         tomatos_visible = intent.getIntExtra(Drinks.TOMATOVISIBLE, 0);
         onion_visible = intent.getIntExtra(Drinks.ONIONVISIBLE, 0);
         pineapple_visible = intent.getIntExtra(Drinks.PINEAPPLEVISIBLE, 0);
-        drink_type = intent.getIntExtra(Drinks.DRINKTYPE, 0);
+        drink_type = intent.getIntExtra(Drinks.DRINKTYPE, 4);
 
         mushrooms_image_r = findViewById(R.id.mushrooms_r);
         mushrooms_image_l = findViewById(R.id.mushrooms_l);
@@ -72,12 +86,25 @@ public class CustomerDetails extends AppCompatActivity {
         ImageView fanta_view = findViewById(R.id.fanta_drink);
 
         switch (drink_type) {
-            case 1:
+            case 1: {
                 cola_view.setVisibility(View.VISIBLE);
-            case 2:
-                sprite_view.setVisibility(View.VISIBLE);
-            case 3:
+                sprite_view.setVisibility(View.INVISIBLE);
+                fanta_view.setVisibility(View.INVISIBLE);
+                break;
+            }
+                case 2: {
+                    cola_view.setVisibility(View.INVISIBLE);
+                    sprite_view.setVisibility(View.VISIBLE);
+                    fanta_view.setVisibility(View.INVISIBLE);
+                    break;
+                }
+            case 3: {
+                cola_view.setVisibility(View.INVISIBLE);
+                sprite_view.setVisibility(View.INVISIBLE);
                 fanta_view.setVisibility(View.VISIBLE);
+                break;
+            }
+            default:;
         }
 
         show_default();
@@ -297,12 +324,16 @@ public class CustomerDetails extends AppCompatActivity {
 
     public void launchDrinksPagePage(View view) {
         Intent intent = new Intent(this, Drinks.class);
-        intent.putExtra(MUSHROOMVISIBLE, mushrooms_visible);
-        intent.putExtra(OLIVESVISIBLE, olives_visible);
-        intent.putExtra(TOMATOVISIBLE, tomatos_visible);
-        intent.putExtra(ONIONVISIBLE, onion_visible);
-        intent.putExtra(PINEAPPLEVISIBLE, pineapple_visible);
-        intent.putExtra(DRINKTYPE, drink_type);
+        intent.putExtra(SIZEPRICE,size_price);
+        intent.putExtra(PIZZASIZE,pizza_size);
+        intent.putExtra(TOPPINGSPRICE,toppings_price);
+        intent.putExtra(DRINKSPRICE,drink_price);
+        intent.putExtra(DRINKTYPE,drink_type);
+        intent.putExtra(MUSHROOMVISIBLE,mushrooms_visible);
+        intent.putExtra(OLIVESVISIBLE,olives_visible);
+        intent.putExtra(TOMATOVISIBLE,tomatos_visible);
+        intent.putExtra(ONIONVISIBLE,onion_visible);
+        intent.putExtra(PINEAPPLEVISIBLE,pineapple_visible);
 
         startActivity(intent);
     }
