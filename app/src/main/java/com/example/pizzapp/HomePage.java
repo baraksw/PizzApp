@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -31,12 +32,14 @@ public class HomePage extends AppCompatActivity {
     public static final String ONIONVISIBLE = "onion_visable";
     public static final String PINEAPPLEVISIBLE = "pineapple_visable";
 
+
     private int size_price=0;
     private int toppings_price=0;
     private int drink_price=0;
     private int pizza_size=0;
     private int drink_type=0;
     private int total_price=0;
+
 
     public boolean personal_flag=false,family_flag=false,big_flag=false;
 

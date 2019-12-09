@@ -112,7 +112,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
-        app:srcCompat="@drawable/full_pizza" />
+        app:srcCompat="@drawable/full_pizza"
+        android:visibility="invisible"
+        />
 
     <ImageView
         android:id="@+id/rightHalfPizzaTopping_choose"
@@ -123,7 +125,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/fullPizzaTopping_choose"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
-        app:srcCompat="@drawable/half_right" />
+        app:srcCompat="@drawable/half_right"
+        android:visibility="invisible"
+        />
 
     <ImageView
         android:id="@+id/leftHalfPizzaTopping_choose"
@@ -134,7 +138,9 @@
         app:layout_constraintEnd_toStartOf="@+id/fullPizzaTopping_choose"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
-        app:srcCompat="@drawable/half_left" />
+        app:srcCompat="@drawable/half_left"
+        android:visibility="invisible"
+        />
 
     <ImageView
         android:id="@+id/pizza_imageView"
@@ -146,7 +152,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
         app:layout_constraintVertical_bias="0.495"
-        app:srcCompat="@drawable/pizza" />
+        app:srcCompat="@drawable/pizza"
+        />
 
     <ImageView
         android:id="@+id/mushrooms_rightHalf"

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -30,6 +31,8 @@ public class Toppings extends AppCompatActivity {
     private int drink_type = 0;
     private int total_price = 0;
     private int topping;
+    private int buttons_visibility=0;
+
 
     private boolean is_mushroom_pressed = false;
     private boolean is_tomato_pressed = false;
@@ -49,6 +52,7 @@ public class Toppings extends AppCompatActivity {
     private Button button_onion;
     private Button button_pineapple;
 
+    private ImageView button_full, button_left,button_right;
 
     private int mushrooms_visible, olives_visible, onion_visible, tomatos_visible, pineapple_visible;
 
@@ -57,12 +61,19 @@ public class Toppings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_toppings);
 
+        button_full = findViewById(R.id.fullPizzaTopping_choose);
+        button_left = findViewById(R.id.leftHalfPizzaTopping_choose);
+        button_right = findViewById(R.id.rightHalfPizzaTopping_choose);
+
         Intent intent = getIntent();
         mushrooms_visible = 0;
         olives_visible = 0;
         onion_visible = 0;
         tomatos_visible = 0;
         pineapple_visible = 0;
+        buttons_visibility=0;
+
+        show_buttons(false);
 
         mushrooms_visible = intent.getIntExtra(Drinks.MUSHROOMVISIBLE, 0);
         olives_visible = intent.getIntExtra(Drinks.OLIVESVISIBLE, 0);
@@ -123,6 +134,14 @@ public class Toppings extends AppCompatActivity {
     }
 
     public void showMushroom(View view) {
+        if(buttons_visibility!=1)
+        {
+            show_buttons(true);
+            buttons_visibility=1;
+        }
+        else
+            show_buttons(false);
+
         topping = 0;
         if (!is_mushroom_pressed) {
             button_mushrooms.setBackgroundResource(R.drawable.toppings_button_clicked_shape);
@@ -142,6 +161,13 @@ public class Toppings extends AppCompatActivity {
     }
 
     public void showOnion(View view) {
+        if(buttons_visibility!=2)
+        {
+            show_buttons(true);
+            buttons_visibility=2;
+        }
+        else
+            show_buttons(false);
         topping = 1;
         if (!is_onion_pressed) {
             button_onion.setBackgroundResource(R.drawable.toppings_button_clicked_shape);
@@ -161,6 +187,13 @@ public class Toppings extends AppCompatActivity {
     }
 
     public void showTomatos(View view) {
+        if(buttons_visibility!=3)
+        {
+            show_buttons(true);
+            buttons_visibility=3;
+        }
+       else
+            show_buttons(false);
         topping = 2;
         if (!is_tomato_pressed) {
             button_tomato.setBackgroundResource(R.drawable.toppings_button_clicked_shape);
@@ -180,6 +213,13 @@ public class Toppings extends AppCompatActivity {
     }
 
     public void showPineapple(View view) {
+        if(buttons_visibility!=4)
+        {
+            show_buttons(true);
+            buttons_visibility=4;
+        }
+       else
+            show_buttons(false);
         topping = 3;
         if (!is_pineapple_pressed) {
             button_pineapple.setBackgroundResource(R.drawable.toppings_button_clicked_shape);
@@ -199,6 +239,14 @@ public class Toppings extends AppCompatActivity {
     }
 
     public void showOlives(View view) {
+        if(buttons_visibility!=5)
+        {
+            show_buttons(true);
+            buttons_visibility=5;
+        }
+       else
+            show_buttons(false);
+
         topping = 4;
         if (!is_olives_pressed) {
             button_olives.setBackgroundResource(R.drawable.toppings_button_clicked_shape);
@@ -253,6 +301,23 @@ public class Toppings extends AppCompatActivity {
 
         add_topping();
         add_toppings_price();
+    }
+
+    public void show_buttons(boolean buttons_flag){
+        if(buttons_flag==true)
+        {
+            button_full.setVisibility(View.VISIBLE);
+            button_left.setVisibility(View.VISIBLE);
+            button_right.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            button_full.setVisibility(View.INVISIBLE);
+            button_left.setVisibility(View.INVISIBLE);
+            button_right.setVisibility(View.INVISIBLE);
+            buttons_visibility=0;
+
+        }
     }
 
     public void showR_half(View view) {

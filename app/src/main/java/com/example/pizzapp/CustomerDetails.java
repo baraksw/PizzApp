@@ -25,6 +25,7 @@ public class CustomerDetails extends AppCompatActivity {
     public static final String ONIONVISIBLE = "onion_visable";
     public static final String PINEAPPLEVISIBLE = "pineapple_visable";
 
+
     private int size_price = 0;
     private int toppings_price = 0;
     private int drink_price = 0;
@@ -60,11 +61,15 @@ public class CustomerDetails extends AppCompatActivity {
         current_price.setText("מחיר: " + String.valueOf(total_price) + '₪');
 
         drink_type = intent.getIntExtra(Drinks.DRINKTYPE, 4);
+        drink_type=intent.getIntExtra(Credit.DRINKTYPE,4);
         mushrooms_visible = intent.getIntExtra(Drinks.MUSHROOMVISIBLE, 0);
         olives_visible = intent.getIntExtra(Drinks.OLIVESVISIBLE, 0);
         tomatos_visible = intent.getIntExtra(Drinks.TOMATOVISIBLE, 0);
         onion_visible = intent.getIntExtra(Drinks.ONIONVISIBLE, 0);
         pineapple_visible = intent.getIntExtra(Drinks.PINEAPPLEVISIBLE, 0);
+
+
+
         mushrooms_image_right = findViewById(R.id.mushrooms_rightHalf);
         mushrooms_image_left = findViewById(R.id.mushrooms_leftHalf);
         olives_image_right = findViewById(R.id.olives_rightHalf);
@@ -80,7 +85,7 @@ public class CustomerDetails extends AppCompatActivity {
         fanta_view = findViewById(R.id.fanta_drink);
         AddressEditText = findViewById(R.id.adress_editText);
         PhoneNumberEditText = findViewById(R.id.phoneNumber_editText);
-
+        show_default();
 
         switch (drink_type) {
             case 1: {
@@ -105,7 +110,6 @@ public class CustomerDetails extends AppCompatActivity {
                 ;
         }
 
-        show_default();
 
     }
 
@@ -290,6 +294,17 @@ public class CustomerDetails extends AppCompatActivity {
             Toast.makeText(CustomerDetails.this, "נא למלא את כל השדות", Toast.LENGTH_SHORT).show();
         } else {
             Intent intent = new Intent(this, Credit.class);
+            intent.putExtra(SIZEPRICE, size_price);
+            intent.putExtra(PIZZASIZE, pizza_size);
+            intent.putExtra(TOPPINGSPRICE, toppings_price);
+            intent.putExtra(DRINKSPRICE, drink_price);
+            intent.putExtra(DRINKTYPE, drink_type);
+            intent.putExtra(MUSHROOMVISIBLE, mushrooms_visible);
+            intent.putExtra(OLIVESVISIBLE, olives_visible);
+            intent.putExtra(TOMATOVISIBLE, tomatos_visible);
+            intent.putExtra(ONIONVISIBLE, onion_visible);
+            intent.putExtra(PINEAPPLEVISIBLE, pineapple_visible);
+
             startActivity(intent);
         }
     }
