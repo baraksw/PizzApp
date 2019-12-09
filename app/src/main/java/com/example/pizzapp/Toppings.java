@@ -29,6 +29,9 @@ public class Toppings extends AppCompatActivity {
     private int pizza_price_for_size=0;
     private int pizza_price_for_toppings=0;
     public int drink_type;
+    private int pizza_price_for_drink=0;
+    private int toppings_price=0;
+
     private int topping;
     private ImageView mushrooms_image_r, mushrooms_image_l;
     private ImageView olives_image_r, olives_image_l;
@@ -62,6 +65,7 @@ public class Toppings extends AppCompatActivity {
         add_toppings_price();
         pizza_price_for_size = intent.getIntExtra(HomePage.SIZEPRICE,0)+intent.getIntExtra(Drinks.DRINKSPRICE,0)-toppings_price;
 
+        pizza_price_for_drink=intent.getIntExtra(Drinks.DRINKSPRICE,0);
 
 
         TextView current_price_view = findViewById(R.id.Current_Price);
@@ -77,7 +81,7 @@ public class Toppings extends AppCompatActivity {
         tomato_image_l = findViewById(R.id.tomato_l);
         pineapple_image_r = findViewById(R.id.pineapple_r);
         pineapple_image_l = findViewById(R.id.pineapple_l);
-        show_from_drinks();
+        show_default();
 
 
     }
@@ -305,7 +309,7 @@ public class Toppings extends AppCompatActivity {
 
     }
 
-    public void show_from_drinks()
+    public void show_default()
     {
        topping=0;
        add_topping();
@@ -318,8 +322,6 @@ public class Toppings extends AppCompatActivity {
         topping=4;
         add_topping();
         add_toppings_price();
-
-
     }
 
     public void launchHomePage(View view) {

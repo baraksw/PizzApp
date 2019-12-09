@@ -9,10 +9,19 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Drinks extends AppCompatActivity {
 
     public static final String DRINKSPRICE = "price_for_drink";
+  
+    ViewPager drinks_viewPager;
+    Adapter drinks_adapter;
+    List<Model> drinks_models;
+
     public static final String MUSHROOMVISIBLE = "mushroom_visable";
     public static final String OLIVESVISIBLE = "olives_visable";
     public static final String TOMATOVISIBLE = "tomato_visable";
@@ -52,6 +61,35 @@ public class Drinks extends AppCompatActivity {
         textView1.setText(String.valueOf(pizza_price_for_toppings));
         pizza_price_for_drink = pizza_price_for_toppings+drinks_price;
 
+        drinks_models = new ArrayList<>();
+        drinks_models.add(new Model(R.drawable.coke_bottle, "7 שקלים"));
+        drinks_models.add(new Model(R.drawable.sprite_bottle, "7 שקלים"));
+        drinks_models.add(new Model(R.drawable.fanta_bottle, "7 שקלים"));
+
+        drinks_adapter = new Adapter(drinks_models, this);
+
+        drinks_viewPager = findViewById(R.id.drinks_viewPager);
+        drinks_viewPager.setAdapter(drinks_adapter);
+        drinks_viewPager.setPadding(130, 0, 0, 130);
+
+        drinks_viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
+
     }
 
 
@@ -89,12 +127,11 @@ public class Drinks extends AppCompatActivity {
             drinks_price=0;
 
         pizza_price_for_drink = pizza_price_for_toppings+drinks_price;
-        TextView textView1 = findViewById(R.id.tomer_text);
-        textView1.setText(String.valueOf(pizza_price_for_drink));
     }
 
     public void launchToppingsPage(View view) {
         Intent toppingsIntent = new Intent(this, Toppings.class);
+        toppingsIntent.putExtra(DRINKSPRICE,pizza_price_for_drink);
         toppingsIntent.putExtra(MUSHROOMVISIBLE,mushrooms_visible);
         toppingsIntent.putExtra(OLIVESVISIBLE,olives_visible);
         toppingsIntent.putExtra(TOMATOVISIBLE,tomatos_visible);
