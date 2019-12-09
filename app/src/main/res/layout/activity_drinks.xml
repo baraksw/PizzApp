@@ -29,6 +29,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/drinks_headline">
 
+
         <RadioGroup
             android:layout_width="440dp"
             android:layout_height="519dp"
