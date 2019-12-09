@@ -19,21 +19,17 @@
             android:gravity="center">
 
             <ImageView
-                android:id="@+id/personal_size_button"
+                android:id="@+id/coke_bottle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/left_margin"
+                android:layout_marginRight="@dimen/right_margin"
+                android:background="#00FFFFFF"
                 android:contentDescription="@string/personal_size_description"
-                android:src="@drawable/pizza_size_small" />
-
-            <TextView
-                android:id="@+id/personal_pizza_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentBottom="true"
-                android:text="40 שקלים"
-                android:textSize="24sp" />
+                android:fadeScrollbars="false"
+                app:srcCompat="@drawable/coke_bottle"
+                android:onClick="add_cola"/>
 
         </RelativeLayout>
 

@@ -26,7 +26,6 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:contentDescription="@string/big_size_description"
-                android:onClick="big_size"
                 app:srcCompat="@drawable/pizza_size_large" />
 
 
