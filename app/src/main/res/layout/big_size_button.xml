@@ -36,10 +36,10 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentBottom="true"
-                android:text="60 שקלים"
+                android:text="@string/sixty_shekels"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#E8961F1F"
-                android:textSize="25sp"
+                android:textSize="@dimen/priceText_size"
                 android:textStyle="bold" />
 
         </RelativeLayout>
