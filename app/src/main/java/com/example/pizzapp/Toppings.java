@@ -31,7 +31,6 @@ public class Toppings extends AppCompatActivity {
     private int total_price = 0;
     private int topping;
 
-
     private boolean is_mushroom_pressed = false;
     private boolean is_tomato_pressed = false;
     private boolean is_onion_pressed = false;

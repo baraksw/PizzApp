@@ -61,7 +61,6 @@ public class Drinks extends AppCompatActivity {
         onion_visible = intent.getIntExtra(Toppings.ONIONVISIBLE,0);
         pineapple_visible = intent.getIntExtra(Toppings.PINEAPPLEVISIBLE,0);
         pizza_size=intent.getIntExtra(Toppings.PIZZASIZE,0);
-        pizza_price_for_drink = pizza_price_for_toppings+drinks_price;
         size_price = intent.getIntExtra(Toppings.SIZEPRICE,0);
         toppings_price = intent.getIntExtra(Toppings.TOPPINGSPRICE,0);
         drink_price = intent.getIntExtra(Toppings.DRINKSPRICE,0);
