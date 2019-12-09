@@ -68,6 +68,7 @@ public class Drinks extends AppCompatActivity {
         add_price();
         total_price = size_price+toppings_price+drink_price;
 
+
         drinks_models = new ArrayList<>();
         drinks_models.add(new Model(R.drawable.coke_bottle, "7 שקלים"));
         drinks_models.add(new Model(R.drawable.sprite_bottle, "7 שקלים"));
