@@ -57,6 +57,7 @@
                 android:onClick="showMushroom"
                 android:text="@string/mushrooms"
                 android:textColor="#A34326"
+                android:textIsSelectable="false"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -80,7 +81,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@android:dimen/app_icon_size"
                 android:layout_weight="1"
-                android:background="@drawable/toppings_button_shape"
                 android:onClick="showOnion"
                 android:text="@string/onion"
                 android:textColor="#A34326"
@@ -93,7 +93,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@android:dimen/app_icon_size"
                 android:layout_weight="1"
-                android:background="@drawable/toppings_button_shape"
                 android:onClick="showTomatos"
                 android:text="@string/tomatos"
                 android:textColor="#A34326"
@@ -163,135 +162,112 @@
 
     <ImageView
         android:id="@+id/mushrooms_r"
-        android:layout_width="166dp"
-        android:layout_height="184dp"
-        android:src="@drawable/mushroom_r"
+        android:layout_width="183dp"
+        android:layout_height="216dp"
         android:visibility="invisible"
+        android:src="@drawable/mushroom_r"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.915"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.372" />
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/mushrooms_l"
-        android:layout_width="141dp"
-        android:layout_height="231dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
+        android:layout_width="148dp"
+        android:layout_height="267dp"
+        android:layout_marginLeft="30dp"
         android:src="@drawable/mushroom_l"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/olives_r"
+        android:layout_width="143dp"
+        android:layout_height="251dp"
+        android:layout_marginRight="30dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.434" />
+        app:srcCompat="@drawable/olives_r" />
 
 
     <ImageView
         android:id="@+id/olives_l"
-        android:layout_width="194dp"
-        android:layout_height="213dp"
+        android:layout_width="167dp"
+        android:layout_height="260dp"
+        android:layout_marginLeft="30dp"
+        android:visibility="invisible"
         android:src="@drawable/olives_l"
-        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.392" />
-
-    <ImageView
-        android:id="@+id/onion_l"
-        android:layout_width="120dp"
-        android:layout_height="163dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.31"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:srcCompat="@drawable/onion_l" />
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/onion_r"
         android:layout_width="127dp"
         android:layout_height="194dp"
+        android:layout_marginRight="30dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.808"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.465"
         app:srcCompat="@drawable/onion_r" />
 
     <ImageView
+        android:id="@+id/onion_l"
+        android:layout_width="131dp"
+        android:layout_height="178dp"
+        android:layout_marginLeft="30dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@drawable/onion_l" />
+
+    <ImageView
         android:id="@+id/pineapple_r"
-        android:layout_width="87dp"
-        android:layout_height="164dp"
+        android:layout_width="115dp"
+        android:layout_height="235dp"
+        android:layout_marginRight="30dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.751"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.497"
         app:srcCompat="@drawable/pineapple_r" />
 
     <ImageView
         android:id="@+id/pineapple_l"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="223dp"
+        android:layout_marginLeft="30dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.402"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.47"
         app:srcCompat="@drawable/pineapple_l" />
 
     <ImageView
-        android:id="@+id/tomato_l"
-        android:layout_width="127dp"
-        android:layout_height="213dp"
-        android:layout_marginTop="55dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.341"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/tomato_l" />
-
-    <ImageView
         android:id="@+id/tomato_r"
-        android:layout_width="198dp"
-        android:layout_height="206dp"
+        android:layout_width="197dp"
+        android:layout_height="237dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.852"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.36"
         app:srcCompat="@drawable/tomato_r" />
 
     <ImageView
-        android:id="@+id/olives_r"
-        android:layout_width="162dp"
-        android:layout_height="214dp"
+        android:id="@+id/tomato_l"
+        android:layout_width="148dp"
+        android:layout_height="247dp"
+        android:layout_marginLeft="30dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.784"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.388"
-        app:srcCompat="@drawable/olives_r" />
-
+        app:srcCompat="@drawable/tomato_l" />
 
     <TextView
         android:id="@+id/Current_Price"

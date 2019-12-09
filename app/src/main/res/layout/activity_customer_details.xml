@@ -26,9 +26,9 @@
         android:background="#00FFFFFF"
         android:contentDescription="@string/next_button_description"
         android:onClick="launchDrinksPagePage"
-        app:layout_constraintBottom_toBottomOf="@+id/payment_headline"
+        app:layout_constraintBottom_toBottomOf="@+id/dots_image_4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/payment_headline"
+        app:layout_constraintTop_toTopOf="@+id/dots_image_4"
         app:srcCompat="@drawable/previous_button" />
 
     <EditText
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/left_margin"
         android:layout_marginLeft="@dimen/left_margin"
-        android:layout_marginTop="@dimen/under_headline_space"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="@dimen/right_margin"
         android:layout_marginRight="@dimen/right_margin"
         android:ems="10"
@@ -75,54 +75,42 @@
         app:srcCompat="@drawable/pizza" />
 
 
-    <TextView
+    <ImageView
         android:id="@+id/second_headline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="@string/price_text"
-        android:textSize="@dimen/second_headline_size"
-        android:textStyle="bold"
+        android:layout_width="86dp"
+        android:layout_height="93dp"
+        android:src="@drawable/price"
+        app:layout_constraintBottom_toBottomOf="@+id/dots_image_4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintHorizontal_bias="0.588"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_pizza" />
-
-    <TextView
-        android:id="@+id/tomer_view"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/creditCard_button"
-        app:layout_constraintEnd_toStartOf="@+id/second_headline"
-        app:layout_constraintHorizontal_bias="0.355"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_pizza" />
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumber_editText" />
 
     <ImageButton
         android:id="@+id/creditCard_button"
-        android:layout_width="@dimen/bigButton_width"
-        android:layout_height="@dimen/bigButton_height"
-        android:layout_marginStart="@dimen/wideSize_margin"
-        android:layout_marginLeft="@dimen/wideSize_margin"
+        android:layout_width="132dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginBottom="24dp"
         android:background="#00FFFFFF"
         android:onClick="launchCredit"
         app:layout_constraintBottom_toTopOf="@+id/dots_image_4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/second_headline"
         app:srcCompat="@drawable/creditcard" />
 
     <ImageButton
         android:id="@+id/cash_button"
-        android:layout_width="@dimen/bigButton_width"
-        android:layout_height="@dimen/bigButton_height"
-        android:layout_marginEnd="@dimen/wideSize_margin"
-        android:layout_marginRight="@dimen/wideSize_margin"
+        android:layout_width="135dp"
+        android:layout_height="154dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
         android:background="#00FFFFFF"
         android:onClick="launchLastScreen"
         app:layout_constraintBottom_toTopOf="@+id/dots_image_4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/second_headline"
+        app:layout_constraintTop_toTopOf="@+id/creditCard_button"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/cash" />
 
     <ImageView
@@ -138,18 +126,16 @@
 
     <TextView
         android:id="@+id/total_price_text_view"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#E8961F1F"
+        android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/creditCard_button"
+        android:layout_marginTop="11dp"
         app:layout_constraintEnd_toStartOf="@+id/second_headline"
-        app:layout_constraintHorizontal_bias="0.587"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_pizza"
-        app:layout_constraintVertical_bias="0.625" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_pizza" />
 
     <ImageView
         android:id="@+id/fanta_drink"
