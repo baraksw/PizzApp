@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,24 +9,22 @@
     android:isScrollContainer="false"
     tools:context=".HomePage">
 
-    <TextView
-        android:id="@+id/page_headline_textView"
+    <ImageView
+        android:id="@+id/size_choosing_page_headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/upper_margin"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
-        android:text="@string/size_choose_headline_text"
-        android:textSize="@dimen/page_headline_size"
-        android:textStyle="bold" />
+        app:srcCompat="@drawable/size_headline" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pizza_size_viewPager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/page_headline_textView"
+        android:layout_below="@id/size_choosing_page_headline"
         android:layout_centerInParent="true"
-        android:layout_centerHorizontal="false"
+        android:layout_centerHorizontal="true"
         android:background="#00FFFFFF"
         android:clipToPadding="false"
         android:foregroundGravity="center"
@@ -33,18 +32,6 @@
 
     </androidx.viewpager.widget.ViewPager>
 
-
-    <ImageView
-        android:id="@+id/dots_level_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="@dimen/bottom_margin"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="@string/first_dots_description"
-        android:foregroundGravity="center_horizontal"
-        android:src="@drawable/dots_1"/>
 
     <ImageButton
         android:id="@+id/next_button"
@@ -59,5 +46,17 @@
         android:contentDescription="@string/next_button_description"
         android:onClick="launchToppingsPage"
         android:src="@drawable/next_button"/>
+
+    <ImageView
+        android:id="@+id/dots_level_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/bottom_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/first_dots_description"
+        android:foregroundGravity="center_horizontal"
+        android:src="@drawable/dots_1"/>
 
 </RelativeLayout>
