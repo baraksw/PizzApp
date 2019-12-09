@@ -40,9 +40,7 @@ public class HomePage extends AppCompatActivity {
         pizza_size_viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                if (position < (adapter.getCount() -1)) {
 
-                }
             }
 
             @Override
