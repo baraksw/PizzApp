@@ -5,10 +5,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +14,7 @@ public class HomePage extends AppCompatActivity {
 
     ViewPager pizza_size_viewPager;
     Adapter adapter;
-    List<Model> models;
+    List<Model> pizza_size_models;
     private static final String LOG_TAG = HomePage.class.getSimpleName();
 
 
@@ -53,15 +50,18 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-        models = new ArrayList<>();
-        models.add(new Model(R.drawable.pizza_size_small, "40 שקלים"));
-        models.add(new Model(R.drawable.pizza_size_medium, "50 שקלים"));
-        models.add(new Model(R.drawable.pizza_size_large, "60 שקלים"));
+        pizza_size_models = new ArrayList<>();
+        pizza_size_models.add(new Model(R.drawable.pizza_size_large, "60 שקלים"));
+        pizza_size_models.add(new Model(R.drawable.pizza_size_small, "40 שקלים"));
+        pizza_size_models.add(new Model(R.drawable.pizza_size_medium, "50 שקלים"));
+        pizza_size_models.add(new Model(R.drawable.pizza_size_large, "60 שקלים"));
+        pizza_size_models.add(new Model(R.drawable.pizza_size_small, "40 שקלים"));
 
-        adapter = new Adapter(models, this);
+        adapter = new Adapter(pizza_size_models, this);
 
         pizza_size_viewPager = findViewById(R.id.pizza_size_viewPager);
         pizza_size_viewPager.setAdapter(adapter);
+        pizza_size_viewPager.setCurrentItem(1);
         pizza_size_viewPager.setPadding(0, 0, 0, 0);
 
         Intent intent = getIntent();
@@ -73,7 +73,11 @@ public class HomePage extends AppCompatActivity {
 
         add_size_price();
 
+
         pizza_size_viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            int mCurrentPosition;
+            int lastPageIndex = pizza_size_models.size() - 1;
+
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -83,11 +87,16 @@ public class HomePage extends AppCompatActivity {
             public void onPageSelected(int position) {
                 pizza_size=position;
                 add_size_price();
+                mCurrentPosition = position;
             }
 
             @Override
             public void onPageScrollStateChanged(int state) {
-
+                if (mCurrentPosition == 0) {
+                    pizza_size_viewPager.setCurrentItem(lastPageIndex - 1, false);
+                } else if (mCurrentPosition == lastPageIndex) {
+                    pizza_size_viewPager.setCurrentItem(1, false);
+                }
             }
         });
     }
