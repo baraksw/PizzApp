@@ -75,7 +75,7 @@ public class HomePage extends AppCompatActivity {
 
 
         pizza_size_viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            int mCurrentPosition;
+            int mCurrentPosition = 1;
             int lastPageIndex = pizza_size_models.size() - 1;
 
             @Override

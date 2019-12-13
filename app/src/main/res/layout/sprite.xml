@@ -27,11 +27,10 @@
                 android:layout_marginLeft="@dimen/left_margin"
                 android:layout_marginRight="@dimen/right_margin"
                 android:background="#00FFFFFF"
-                android:contentDescription="@string/personal_size_description"
-                android:fadeScrollbars="false"
+                android:contentDescription="@string/sprite_description"
                 app:srcCompat="@drawable/sprite_bottle"
-                android:onClick="add_sprite"
-                />
+                android:layout_marginStart="@dimen/left_margin"
+                android:layout_marginEnd="@dimen/right_margin" />
 
         </RelativeLayout>
 

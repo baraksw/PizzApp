@@ -71,10 +71,11 @@ public class Drinks extends AppCompatActivity {
         total_price = size_price+toppings_price+drink_price;
 
         drinks_models = new ArrayList<>();
-        drinks_models.add(new Model(R.drawable.fanta_bottle, "7 שקלים"));
+        drinks_models.add(new Model(R.drawable.none_drink, "ללא עלות"));
         drinks_models.add(new Model(R.drawable.coke_bottle, "7 שקלים"));
         drinks_models.add(new Model(R.drawable.sprite_bottle, "7 שקלים"));
         drinks_models.add(new Model(R.drawable.fanta_bottle, "7 שקלים"));
+        drinks_models.add(new Model(R.drawable.none_drink, "ללא עלות"));
         drinks_models.add(new Model(R.drawable.coke_bottle, "7 שקלים"));
 
         drinks_adapter = new Adapter(drinks_models, this);
@@ -85,8 +86,8 @@ public class Drinks extends AppCompatActivity {
         drinks_viewPager.setPadding(0, 0, 0, 110);
 
         drinks_viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            int mCurrentPosition;
-            int lastPageIndex = drinks_models.size() - 1;
+            int mCurrentPosition = 1;
+            int lastPageIndex = drinks_models.size() -1;
 
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

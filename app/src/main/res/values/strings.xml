@@ -34,4 +34,12 @@
     <string name="fifty_shekels">50 שקלים</string>
     <string name="sixty_shekels">60 שקלים</string>
     <string name="forty_shekels">40 שקלים</string>
+    <string name="none_drink_description">Without drink option</string>
+    <string name="cola_description">drink option: coke</string>
+    <string name="fanta_descrition">drink option: fanta</string>
+    <string name="sprite_description">drink option: Sprite</string>
+    <string name="drink_page_headline_description">drinks page headline : Drinks</string>
+    <string name="right_arrow_description">Right arrow</string>
+    <string name="left_arrow_description">Left arrow</string>
+    <string name="homePage_headline_description">HomePage headline description: Choose Pizza</string>
 </resources>
