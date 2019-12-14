@@ -27,10 +27,10 @@
                 android:layout_marginLeft="@dimen/left_margin"
                 android:layout_marginRight="@dimen/right_margin"
                 android:background="#00FFFFFF"
-                android:contentDescription="@string/personal_size_description"
-                android:fadeScrollbars="false"
+                android:contentDescription="@string/cola_description"
                 app:srcCompat="@drawable/coke_bottle"
-                android:onClick="add_cola"/>
+                android:layout_marginStart="@dimen/left_margin"
+                android:layout_marginEnd="@dimen/right_margin" />
 
         </RelativeLayout>
 

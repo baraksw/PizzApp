@@ -71,17 +71,24 @@ public class Drinks extends AppCompatActivity {
         total_price = size_price+toppings_price+drink_price;
 
         drinks_models = new ArrayList<>();
+        drinks_models.add(new Model(R.drawable.none_drink, "ללא עלות"));
         drinks_models.add(new Model(R.drawable.coke_bottle, "7 שקלים"));
         drinks_models.add(new Model(R.drawable.sprite_bottle, "7 שקלים"));
         drinks_models.add(new Model(R.drawable.fanta_bottle, "7 שקלים"));
+        drinks_models.add(new Model(R.drawable.none_drink, "ללא עלות"));
+        drinks_models.add(new Model(R.drawable.coke_bottle, "7 שקלים"));
 
         drinks_adapter = new Adapter(drinks_models, this);
 
         drinks_viewPager = findViewById(R.id.drinks_viewPager);
         drinks_viewPager.setAdapter(drinks_adapter);
+        drinks_viewPager.setCurrentItem(1);
         drinks_viewPager.setPadding(0, 0, 0, 110);
 
         drinks_viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            int mCurrentPosition = 1;
+            int lastPageIndex = drinks_models.size() -1;
+
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -91,10 +98,16 @@ public class Drinks extends AppCompatActivity {
             public void onPageSelected(int position) {
                 drink_type=position+1;
                 add_price();
+                mCurrentPosition = position;
             }
 
             @Override
             public void onPageScrollStateChanged(int state) {
+                if (mCurrentPosition == 0) {
+                    drinks_viewPager.setCurrentItem(lastPageIndex - 1, false);
+                } else if (mCurrentPosition == lastPageIndex) {
+                    drinks_viewPager.setCurrentItem(1, false);
+                }
 
             }
         });

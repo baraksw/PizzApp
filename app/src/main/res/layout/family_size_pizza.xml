@@ -20,14 +20,13 @@
                 android:gravity="center">
 
 
-                <ImageView
-                    android:id="@+id/family_size_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:contentDescription="@string/family_size_description"
-                    android:scaleType="center"
-                    android:src="@drawable/pizza_size_medium" />
+            <ImageView
+                android:id="@+id/family_size_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/family_size_description"
+                android:src="@drawable/pizza_size_medium" />
 
 
                 <TextView
