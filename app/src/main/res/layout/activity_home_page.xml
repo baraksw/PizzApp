@@ -58,6 +58,11 @@
         android:foregroundGravity="center"
         android:overScrollMode="never">
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
     </androidx.viewpager.widget.ViewPager>
 
     <ImageButton
@@ -85,5 +90,23 @@
         android:contentDescription="@string/first_dots_description"
         android:foregroundGravity="center_horizontal"
         android:src="@drawable/dots_1" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="88dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/homePage_headline"
+        android:layout_alignBottom="@+id/homePage_headline"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="-17dp"
+        android:layout_marginEnd="299dp"
+        android:layout_marginRight="299dp"
+        android:layout_marginBottom="22dp"
+        android:text="TextView" />
 
 </RelativeLayout>
