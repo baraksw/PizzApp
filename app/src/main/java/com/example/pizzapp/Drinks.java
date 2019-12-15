@@ -41,6 +41,7 @@ public class Drinks extends AppCompatActivity {
     private int drink_type=1;
     private int total_price=0;
 
+    TextView t1;
 
 
 
@@ -85,6 +86,9 @@ public class Drinks extends AppCompatActivity {
         drinks_viewPager.setCurrentItem(1);
         drinks_viewPager.setPadding(0, 0, 0, 110);
 
+        t1 = findViewById(R.id.textView);
+        t1.setText(String.valueOf(drink_type));
+
         drinks_viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             int mCurrentPosition = 1;
             int lastPageIndex = drinks_models.size() -1;
@@ -96,9 +100,10 @@ public class Drinks extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                drink_type=position+1;
-                add_price();
                 mCurrentPosition = position;
+                drink_type=mCurrentPosition;
+                t1 = findViewById(R.id.textView);
+                t1.setText(String.valueOf(drink_type));
             }
 
             @Override
@@ -116,7 +121,7 @@ public class Drinks extends AppCompatActivity {
     }
 
     public void add_price() {
-        if(drink_type!=0)
+        if(drink_type!=4 || drink_type==0)
             drink_price=7;
         else
             drink_price=0;
@@ -125,6 +130,7 @@ public class Drinks extends AppCompatActivity {
     }
 
     public void launchToppingsPage(View view) {
+        add_price();
         Intent toppingsIntent = new Intent(this, Toppings.class);
         toppingsIntent.putExtra(SIZEPRICE,size_price);
         toppingsIntent.putExtra(PIZZASIZE,pizza_size);
@@ -141,6 +147,7 @@ public class Drinks extends AppCompatActivity {
     }
 
     public void launchCustomerDetailsPage(View view) {
+        add_price();
         Intent customerDetailsIntent = new Intent(this, CustomerDetails.class);
         total_price = drink_price+size_price+toppings_price;
         customerDetailsIntent.putExtra(SIZEPRICE,size_price);

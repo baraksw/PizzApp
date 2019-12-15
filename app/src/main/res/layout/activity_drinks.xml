@@ -98,4 +98,18 @@
         android:contentDescription="@string/first_dots_description"
         app:srcCompat="@drawable/dots_3" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="129dp"
+        android:layout_height="91dp"
+        android:layout_alignTop="@+id/drinksPage_headline"
+        android:layout_alignBottom="@+id/drinksPage_headline"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-8dp"
+        android:layout_marginEnd="281dp"
+        android:layout_marginRight="281dp"
+        android:layout_marginBottom="-6dp"
+        android:text="TextView" />
+
 </RelativeLayout>

@@ -6,6 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,12 +31,14 @@ public class HomePage extends AppCompatActivity {
     public static final String PINEAPPLEVISIBLE = "pineapple_visable";
 
 
+    TextView t1;
     private int size_price=0;
     private int toppings_price=0;
     private int drink_price=0;
-    private int pizza_size=0;
+    private int pizza_size=1;
     private int drink_type=0;
     private int total_price=0;
+    int mCurrentPosition = 1;
 
 
     public boolean personal_flag=false,family_flag=false,big_flag=false;
@@ -45,6 +48,8 @@ public class HomePage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
 
 
         super.onCreate(savedInstanceState);
@@ -71,11 +76,12 @@ public class HomePage extends AppCompatActivity {
         onion_visible = intent.getIntExtra(Toppings.ONIONVISIBLE,0);
         pineapple_visible = intent.getIntExtra(Toppings.PINEAPPLEVISIBLE,0);
 
+        t1 = findViewById(R.id.textView3);
+        t1.setText(String.valueOf(pizza_size));
         add_size_price();
 
 
         pizza_size_viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            int mCurrentPosition = 1;
             int lastPageIndex = pizza_size_models.size() - 1;
 
             @Override
@@ -88,6 +94,9 @@ public class HomePage extends AppCompatActivity {
                 pizza_size=position;
                 add_size_price();
                 mCurrentPosition = position;
+                pizza_size=mCurrentPosition;
+                t1 = findViewById(R.id.textView3);
+                t1.setText(String.valueOf(pizza_size));
             }
 
             @Override
@@ -124,11 +133,11 @@ public class HomePage extends AppCompatActivity {
 
     public void add_size_price()
     {
-        if(pizza_size==0)
-            size_price=40;
         if(pizza_size==1)
-            size_price=50;
+            size_price=40;
         if(pizza_size==2)
+            size_price=50;
+        if(pizza_size==3)
             size_price=60;
     }
 }
