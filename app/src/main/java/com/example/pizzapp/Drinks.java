@@ -86,9 +86,6 @@ public class Drinks extends AppCompatActivity {
         drinks_viewPager.setCurrentItem(1);
         drinks_viewPager.setPadding(0, 0, 0, 110);
 
-        t1 = findViewById(R.id.textView);
-        t1.setText(String.valueOf(drink_type));
-
         drinks_viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             int mCurrentPosition = 1;
             int lastPageIndex = drinks_models.size() -1;
@@ -102,8 +99,6 @@ public class Drinks extends AppCompatActivity {
             public void onPageSelected(int position) {
                 mCurrentPosition = position;
                 drink_type=mCurrentPosition;
-                t1 = findViewById(R.id.textView);
-                t1.setText(String.valueOf(drink_type));
             }
 
             @Override

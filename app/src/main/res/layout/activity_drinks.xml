@@ -19,38 +19,25 @@
         android:contentDescription="@string/drink_page_headline_description"
         app:srcCompat="@drawable/drinks_headline" />
 
-    <ImageView
-        android:id="@+id/left_arrow"
-        android:layout_width="@dimen/arrow_width"
-        android:layout_height="@dimen/arrow_height"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="@dimen/left_margin"
-        android:layout_marginLeft="@dimen/left_margin"
-        android:alpha=".35"
-        android:contentDescription="@string/left_arrow_description"
-        android:src="@drawable/left_arrow" />
-
-    <ImageView
-        android:id="@+id/right_arrow"
-        android:layout_width="@dimen/arrow_width"
-        android:layout_height="@dimen/arrow_height"
-        android:layout_centerVertical="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="@dimen/right_margin"
-        android:layout_marginRight="@dimen/right_margin"
-        android:alpha=".35"
-        android:contentDescription="@string/right_arrow_description"
-        android:src="@drawable/right_arrow" />
+    <TextView
+        android:id="@+id/scrollingInstruction_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/drinksPage_headline"
+        android:layout_marginTop="@dimen/upper_margin"
+        android:text="גלול כדי לבחור"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#E8961F1F"
+        android:textSize="@dimen/priceText_size"
+        android:textStyle="bold" />
 
     <androidx.viewpager.widget.ViewPager
 
         android:id="@+id/drinks_viewPager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/drinksPage_headline"
+        android:layout_below="@id/scrollingInstruction_textView"
         android:layout_centerInParent="true"
         android:layout_centerHorizontal="true"
         android:background="#00FFFFFF"
@@ -97,19 +84,5 @@
         android:layout_marginBottom="@dimen/bottom_margin"
         android:contentDescription="@string/first_dots_description"
         app:srcCompat="@drawable/dots_3" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="129dp"
-        android:layout_height="91dp"
-        android:layout_alignTop="@+id/drinksPage_headline"
-        android:layout_alignBottom="@+id/drinksPage_headline"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="-8dp"
-        android:layout_marginEnd="281dp"
-        android:layout_marginRight="281dp"
-        android:layout_marginBottom="-6dp"
-        android:text="TextView" />
 
 </RelativeLayout>

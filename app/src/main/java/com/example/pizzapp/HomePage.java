@@ -76,8 +76,6 @@ public class HomePage extends AppCompatActivity {
         onion_visible = intent.getIntExtra(Toppings.ONIONVISIBLE,0);
         pineapple_visible = intent.getIntExtra(Toppings.PINEAPPLEVISIBLE,0);
 
-        t1 = findViewById(R.id.textView3);
-        t1.setText(String.valueOf(pizza_size));
         add_size_price();
 
 
@@ -95,8 +93,6 @@ public class HomePage extends AppCompatActivity {
                 add_size_price();
                 mCurrentPosition = position;
                 pizza_size=mCurrentPosition;
-                t1 = findViewById(R.id.textView3);
-                t1.setText(String.valueOf(pizza_size));
             }
 
             @Override

@@ -7,15 +7,21 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.santalu.maskedittext.MaskEditText;
+
+import org.w3c.dom.Text;
 
 
 public class Credit extends AppCompatActivity {
 
-    private EditText numOfCard;
-    private EditText cvv;
-    private EditText validity;
-    private EditText email;
+    private MaskEditText numOfCard;
+    private MaskEditText cvv;
+    private MaskEditText validity;
+    private MaskEditText email;
+    TextView tuval;
 
     public static final String SIZEPRICE = "price_for_size";
     public static final String PIZZASIZE = "size_of_pizza";
@@ -27,6 +33,8 @@ public class Credit extends AppCompatActivity {
     public static final String TOMATOVISIBLE = "tomato_visable";
     public static final String ONIONVISIBLE = "onion_visable";
     public static final String PINEAPPLEVISIBLE = "pineapple_visable";
+
+            public String s="NON";
 
 
     private int size_price = 0;
@@ -47,6 +55,10 @@ public class Credit extends AppCompatActivity {
         cvv = findViewById(R.id.CVV_editText);
         validity = findViewById(R.id.validity_editText);
         email = findViewById(R.id.email_editText);
+
+        s=String.valueOf(numOfCard);
+        tuval=findViewById(R.id.textView4);
+        tuval.setText(s);
 
         Intent intent = getIntent();
         size_price=intent.getIntExtra(CustomerDetails.SIZEPRICE,0);
