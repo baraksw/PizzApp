@@ -130,13 +130,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/dots_4" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/creditCardOnly" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
