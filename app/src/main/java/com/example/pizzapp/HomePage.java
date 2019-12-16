@@ -29,6 +29,11 @@ public class HomePage extends AppCompatActivity {
     public static final String TOMATOVISIBLE = "tomato_visable";
     public static final String ONIONVISIBLE = "onion_visable";
     public static final String PINEAPPLEVISIBLE = "pineapple_visable";
+    public static final String PHONENUMBER = "phone_number";
+    public static final String ADDRESS = "address";
+
+    private String phone_number ;
+    private String address;
 
 
     TextView t1;
@@ -78,6 +83,8 @@ public class HomePage extends AppCompatActivity {
 
         add_size_price();
 
+        address = intent.getStringExtra(Drinks.ADDRESS);
+        phone_number = intent.getStringExtra(Drinks.PHONENUMBER);
 
         pizza_size_viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             int lastPageIndex = pizza_size_models.size() - 1;
@@ -118,6 +125,8 @@ public class HomePage extends AppCompatActivity {
         ToppingsIntent.putExtra(TOMATOVISIBLE,tomatos_visible);
         ToppingsIntent.putExtra(ONIONVISIBLE,onion_visible);
         ToppingsIntent.putExtra(PINEAPPLEVISIBLE,pineapple_visible);
+        ToppingsIntent.putExtra(ADDRESS,address);
+        ToppingsIntent.putExtra(PHONENUMBER,phone_number);
         startActivity(ToppingsIntent);
     }
 
