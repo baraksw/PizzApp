@@ -62,8 +62,6 @@ public class Credit extends AppCompatActivity {
         email = findViewById(R.id.email_editText);
 
         s=String.valueOf(numOfCard);
-        tuval=findViewById(R.id.textView4);
-        tuval.setText(s);
 
         Intent intent = getIntent();
 
