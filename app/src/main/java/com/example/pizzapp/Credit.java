@@ -33,8 +33,13 @@ public class Credit extends AppCompatActivity {
     public static final String TOMATOVISIBLE = "tomato_visable";
     public static final String ONIONVISIBLE = "onion_visable";
     public static final String PINEAPPLEVISIBLE = "pineapple_visable";
+    public static final String PHONENUMBER = "phone_number";
+    public static final String ADDRESS = "address";
 
-            public String s="NON";
+    private String phone_number = "NULL";
+    private String address = "NULL";
+
+    public String s="NON";
 
 
     private int size_price = 0;
@@ -61,6 +66,7 @@ public class Credit extends AppCompatActivity {
         tuval.setText(s);
 
         Intent intent = getIntent();
+
         size_price=intent.getIntExtra(CustomerDetails.SIZEPRICE,0);
         toppings_price=intent.getIntExtra(CustomerDetails.TOPPINGSPRICE,0);
         drink_price=intent.getIntExtra(CustomerDetails.DRINKSPRICE,0);
@@ -71,6 +77,9 @@ public class Credit extends AppCompatActivity {
         tomatos_visible = intent.getIntExtra(CustomerDetails.TOMATOVISIBLE, 0);
         onion_visible = intent.getIntExtra(CustomerDetails.ONIONVISIBLE, 0);
         pineapple_visible = intent.getIntExtra(CustomerDetails.PINEAPPLEVISIBLE, 0);
+
+        address = intent.getStringExtra(CustomerDetails.ADDRESS);
+        phone_number = intent.getStringExtra(CustomerDetails.PHONENUMBER);
 
     }
 
@@ -95,6 +104,10 @@ public class Credit extends AppCompatActivity {
         intent.putExtra(TOMATOVISIBLE, tomatos_visible);
         intent.putExtra(ONIONVISIBLE, onion_visible);
         intent.putExtra(PINEAPPLEVISIBLE, pineapple_visible);
+
+        intent.putExtra(ADDRESS,address);
+        intent.putExtra(PHONENUMBER,phone_number);
+
         startActivity(intent);
     }
 }

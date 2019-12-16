@@ -32,6 +32,11 @@ public class Drinks extends AppCompatActivity {
     public static final String TOMATOVISIBLE = "tomato_visable";
     public static final String ONIONVISIBLE = "onion_visable";
     public static final String PINEAPPLEVISIBLE = "pineapple_visable";
+    public static final String PHONENUMBER = "phone_number";
+    public static final String ADDRESS = "address";
+
+    private String phone_number ;
+    private String address;
 
 
     private int size_price=0;
@@ -70,6 +75,8 @@ public class Drinks extends AppCompatActivity {
         drink_price = intent.getIntExtra(Toppings.DRINKSPRICE,0);
         add_price();
         total_price = size_price+toppings_price+drink_price;
+        address = intent.getStringExtra(Credit.ADDRESS);
+        phone_number = intent.getStringExtra(Credit.PHONENUMBER);
 
         drinks_models = new ArrayList<>();
         drinks_models.add(new Model(R.drawable.none_drink, "ללא עלות"));
@@ -137,6 +144,9 @@ public class Drinks extends AppCompatActivity {
         toppingsIntent.putExtra(TOMATOVISIBLE,tomatos_visible);
         toppingsIntent.putExtra(ONIONVISIBLE,onion_visible);
         toppingsIntent.putExtra(PINEAPPLEVISIBLE,pineapple_visible);
+
+        toppingsIntent.putExtra(ADDRESS,address);
+        toppingsIntent.putExtra(PHONENUMBER,phone_number);
         startActivity(toppingsIntent);
 
     }
@@ -145,6 +155,10 @@ public class Drinks extends AppCompatActivity {
         add_price();
         Intent customerDetailsIntent = new Intent(this, CustomerDetails.class);
         total_price = drink_price+size_price+toppings_price;
+
+        customerDetailsIntent.putExtra(ADDRESS,address);
+        customerDetailsIntent.putExtra(PHONENUMBER,phone_number);
+
         customerDetailsIntent.putExtra(SIZEPRICE,size_price);
         customerDetailsIntent.putExtra(PIZZASIZE,pizza_size);
         customerDetailsIntent.putExtra(TOPPINGSPRICE,toppings_price);

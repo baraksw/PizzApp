@@ -23,6 +23,11 @@ public class Toppings extends AppCompatActivity {
     public static final String TOMATOVISIBLE = "tomato_visable";
     public static final String ONIONVISIBLE = "onion_visable";
     public static final String PINEAPPLEVISIBLE = "pineapple_visable";
+    public static final String PHONENUMBER = "phone_number";
+    public static final String ADDRESS = "address";
+
+    private String phone_number ;
+    private String address;
 
     private int size_price = 0;
     private int toppings_price = 0;
@@ -74,6 +79,9 @@ public class Toppings extends AppCompatActivity {
         buttons_visibility=0;
 
         show_buttons(false);
+
+        address = intent.getStringExtra(Drinks.ADDRESS);
+        phone_number = intent.getStringExtra(Drinks.PHONENUMBER);
 
         mushrooms_visible = intent.getIntExtra(Drinks.MUSHROOMVISIBLE, 0);
         olives_visible = intent.getIntExtra(Drinks.OLIVESVISIBLE, 0);
@@ -491,6 +499,8 @@ public class Toppings extends AppCompatActivity {
         homePageIntent.putExtra(TOMATOVISIBLE, tomatos_visible);
         homePageIntent.putExtra(ONIONVISIBLE, onion_visible);
         homePageIntent.putExtra(PINEAPPLEVISIBLE, pineapple_visible);
+        homePageIntent.putExtra(ADDRESS,address);
+        homePageIntent.putExtra(PHONENUMBER,phone_number);
 
         startActivity(homePageIntent);
     }
@@ -507,6 +517,8 @@ public class Toppings extends AppCompatActivity {
         drinksIntent.putExtra(TOMATOVISIBLE, tomatos_visible);
         drinksIntent.putExtra(ONIONVISIBLE, onion_visible);
         drinksIntent.putExtra(PINEAPPLEVISIBLE, pineapple_visible);
+        drinksIntent.putExtra(ADDRESS,address);
+        drinksIntent.putExtra(PHONENUMBER,phone_number);
 
         startActivity(drinksIntent);
     }
