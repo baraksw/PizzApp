@@ -44,4 +44,7 @@
     <string name="left_arrow_description">Left arrow</string>
     <string name="homePage_headline_description">HomePage headline description: Choose Pizza</string>
     <string name="scroll_to_choose_text">גלול כדי לבחור</string>
+    <string name="met_mask_text">###-#######</string>
+    <string name="digits_text">0123456789</string>
+    <string name="howToPay_text">בחר אמצעי תשלום</string>
 </resources>
