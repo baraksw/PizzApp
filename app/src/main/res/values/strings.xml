@@ -18,6 +18,7 @@
     <string name="payment_text">תשלום</string>
     <string name="address_text">כתובת</string>
     <string name="phone_text">טלפון</string>
+    <string name="phoneNumber_text">מספר טלפון</string>
     <string name="price_text">מחיר ההזמנה:</string>
     <string name="creditPayment">תשלום באשראי</string>
     <string name="price">מחיר:</string>

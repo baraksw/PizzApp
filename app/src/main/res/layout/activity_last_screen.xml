@@ -18,15 +18,6 @@
         app:srcCompat="@drawable/order_ready" />
 
     <ImageView
-        android:id="@+id/V_Sign_imageView"
-        android:layout_width="@dimen/next_and_previous_button_size"
-        android:layout_height="@dimen/next_and_previous_button_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/thanks_imageView"
-        app:srcCompat="@drawable/aprrove_payment" />
-
-    <ImageView
         android:id="@+id/motorcycle_imageView"
         android:layout_width="@dimen/motorcycle_size"
         android:layout_height="@dimen/motorcycle_size"

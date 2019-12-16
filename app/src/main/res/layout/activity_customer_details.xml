@@ -48,7 +48,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/customerDetailsPage_headline" />
 
-    <EditText
+    <com.santalu.maskedittext.MaskEditText
         android:id="@+id/phoneNumber_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,8 +58,10 @@
         android:layout_marginEnd="@dimen/right_margin"
         android:layout_marginRight="@dimen/right_margin"
         android:ems="10"
-        android:hint="@string/phone_text"
-        android:inputType="textLongMessage|textPersonName"
+        android:hint="@string/phoneNumber_text"
+        android:digits="0123456789"
+        app:met_mask="###-#######"
+        android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -124,10 +126,25 @@
         android:textSize="@dimen/priceText_size"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/creditCard_button"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/howToPay_text_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mushrooms_rightHalf" />
 
+
+    <TextView
+        android:id="@+id/howToPay_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/right_margin"
+        android:layout_marginRight="@dimen/right_margin"
+        android:text=":בחר אמצעי תשלום"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#E8961F1F"
+        android:textSize="@dimen/priceText_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/creditCard_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mushrooms_rightHalf" />
 
     <ImageView
         android:id="@+id/fanta_drink"

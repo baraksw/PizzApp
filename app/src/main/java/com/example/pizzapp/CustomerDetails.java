@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.santalu.maskedittext.MaskEditText;
+
 
 public class CustomerDetails extends AppCompatActivity {
 
@@ -36,7 +38,7 @@ public class CustomerDetails extends AppCompatActivity {
     private int mushrooms_visible, olives_visible, onion_visible, tomatos_visible, pineapple_visible;
 
     private EditText AddressEditText;
-    private EditText PhoneNumberEditText;
+    private MaskEditText PhoneNumberEditText;
 
     private ImageView mushrooms_image_right, mushrooms_image_left;
     private ImageView olives_image_right, olives_image_left;
@@ -51,6 +53,10 @@ public class CustomerDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_details);
+
+        AddressEditText = findViewById(R.id.adress_editText);
+        PhoneNumberEditText = findViewById(R.id.phoneNumber_editText);
+
 
         Intent intent = getIntent();
         toppings_price = intent.getIntExtra(Drinks.TOPPINGSPRICE, 0);

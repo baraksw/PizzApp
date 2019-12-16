@@ -17,35 +17,36 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/creditcard_headline" />
 
-
     <ImageView
         android:id="@+id/creditCardOnly"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/numOfCard_editText"
+        app:layout_constraintBottom_toTopOf="@+id/dots_level_5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/creditPage_headline"
+        app:layout_constraintTop_toBottomOf="@+id/email_editText"
         app:srcCompat="@drawable/credit_card_only" />
 
-    <EditText
+    <com.santalu.maskedittext.MaskEditText
         android:id="@+id/numOfCard_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/left_margin"
         android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginTop="@dimen/upper_margin"
         android:layout_marginEnd="@dimen/right_margin"
         android:layout_marginRight="@dimen/right_margin"
         android:ems="10"
         android:hint="@string/creditCardNum"
-        android:inputType="textLongMessage|textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/dots_level_5"
+        android:inputType="number"
+        android:digits="0123456789"
+        app:met_mask="####-####-####-####"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/creditPage_headline" />
+        app:layout_constraintTop_toBottomOf="@+id/creditPage_headline"/>
 
-    <EditText
+    <com.santalu.maskedittext.MaskEditText
         android:id="@+id/CVV_editText"
         android:layout_width="@dimen/halfScreenEditText_width"
         android:layout_height="wrap_content"
@@ -53,12 +54,14 @@
         android:layout_marginRight="@dimen/right_margin"
         android:ems="10"
         android:hint="@string/cvv"
-        android:inputType="textLongMessage|textPersonName"
+        android:inputType="number"
+        android:digits="0123456789"
+        app:met_mask="###"
         app:layout_constraintBottom_toBottomOf="@+id/validity_editText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/validity_editText" />
 
-    <EditText
+    <com.santalu.maskedittext.MaskEditText
         android:id="@+id/validity_editText"
         android:layout_width="@dimen/halfScreenEditText_width"
         android:layout_height="wrap_content"
@@ -67,11 +70,13 @@
         android:layout_marginTop="@dimen/closeFromBottom_margin"
         android:ems="10"
         android:hint="@string/validity"
-        android:inputType="textLongMessage|textPersonName"
+        android:inputType="date"
+        android:digits="0123456789"
+        app:met_mask="##/##/##"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numOfCard_editText" />
 
-    <EditText
+    <com.santalu.maskedittext.MaskEditText
         android:id="@+id/email_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -82,7 +87,7 @@
         android:layout_marginRight="@dimen/right_margin"
         android:ems="10"
         android:hint="@string/email"
-        android:inputType="textLongMessage|textPersonName"
+        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,6 +128,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/dots_5" />
+        app:srcCompat="@drawable/dots_4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/creditCardOnly" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
