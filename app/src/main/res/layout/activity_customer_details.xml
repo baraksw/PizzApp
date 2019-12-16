@@ -32,7 +32,7 @@
         app:srcCompat="@drawable/previous_button" />
 
     <EditText
-        android:id="@+id/adress_editText"
+        android:id="@+id/address_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/left_margin"
@@ -59,13 +59,13 @@
         android:layout_marginRight="@dimen/right_margin"
         android:ems="10"
         android:hint="@string/phoneNumber_text"
-        android:digits="0123456789"
-        app:met_mask="###-#######"
+        android:digits="@string/digits_text"
+        app:met_mask="@string/met_mask_text"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/adress_editText" />
+        app:layout_constraintTop_toBottomOf="@id/address_editText" />
 
     <ImageView
         android:id="@+id/imageView_pizza"
@@ -120,16 +120,14 @@
         android:id="@+id/total_price_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#E8961F1F"
         android:textSize="@dimen/priceText_size"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/creditCard_button"
-        app:layout_constraintEnd_toStartOf="@+id/howToPay_text_view"
+        app:layout_constraintBottom_toTopOf="@+id/howToPay_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mushrooms_rightHalf" />
-
 
     <TextView
         android:id="@+id/howToPay_text_view"
@@ -137,14 +135,17 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/right_margin"
         android:layout_marginRight="@dimen/right_margin"
-        android:text=":בחר אמצעי תשלום"
+        android:foregroundGravity="center_horizontal"
+        android:text="@string/howToPay_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#E8961F1F"
         android:textSize="@dimen/priceText_size"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/creditCard_button"
+        app:layout_constraintBottom_toTopOf="@id/creditCard_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mushrooms_rightHalf" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/total_price_text_view" />
+
 
     <ImageView
         android:id="@+id/fanta_drink"

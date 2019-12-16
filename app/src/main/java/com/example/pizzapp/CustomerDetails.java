@@ -60,8 +60,7 @@ public class CustomerDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_details);
 
-        AddressEditText = findViewById(R.id.adress_editText);
-        AddressEditText.setText(address);
+        AddressEditText = findViewById(R.id.address_editText);
         PhoneNumberEditText = findViewById(R.id.phoneNumber_editText);
         PhoneNumberEditText.setText(phone_number);
 
@@ -71,7 +70,7 @@ public class CustomerDetails extends AppCompatActivity {
         size_price = intent.getIntExtra(Drinks.SIZEPRICE, 0);
         total_price = toppings_price + size_price + drink_price;
         TextView current_price = findViewById(R.id.total_price_text_view);
-        current_price.setText("מחיר: " + String.valueOf(total_price) + '₪');
+        current_price.setText("מחיר: " + String.valueOf(total_price) + "₪");
 
         drink_type = intent.getIntExtra(Drinks.DRINKTYPE, 4);
         drink_type = intent.getIntExtra(Credit.DRINKTYPE, 4);
@@ -101,7 +100,7 @@ public class CustomerDetails extends AppCompatActivity {
         cola_view = findViewById(R.id.cola_drink);
         sprite_view = findViewById(R.id.sprite_drink);
         fanta_view = findViewById(R.id.fanta_drink);
-        AddressEditText = findViewById(R.id.adress_editText);
+        AddressEditText = findViewById(R.id.address_editText);
         PhoneNumberEditText = findViewById(R.id.phoneNumber_editText);
         show_default();
 
