@@ -18,7 +18,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/upper_margin"
         android:contentDescription="@string/homePage_headline_description"
-        app:srcCompat="@drawable/size_headline" />
+        app:srcCompat="@drawable/size_headline"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/scrollingInstruction_textView"
@@ -27,7 +28,7 @@
         android:layout_centerInParent="true"
         android:layout_below="@id/homePage_headline"
         android:layout_marginTop="@dimen/upper_margin"
-        android:text="גלול כדי לבחור"
+        android:text="@string/scroll_to_choose_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#E8961F1F"
         android:textSize="@dimen/priceText_size"
@@ -40,6 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/scrollingInstruction_textView"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:layout_marginTop="-76dp"
         android:background="#00FFFFFF"
